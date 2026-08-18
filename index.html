@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIPSA POLIGRAFIA | Servicios profesionales</title>
+<meta name="description" content="SIPSA POLIGRAFIA - servicios profesionales de poligrafía, estudios socioeconómicos y verificación.">
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#102033;
+  background:#f7f9fc;
+  line-height:1.6
+}
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid #e5e9ef
+}
+nav{
+  max-width:1120px;
+  margin:auto;
+  padding:18px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center
+}
+.logo{
+  font-weight:800;
+  letter-spacing:.5px;
+  color:#102033;
+  text-decoration:none;
+  font-size:20px
+}
+.logo span{color:#1476c6}
+.links{
+  display:flex;
+  gap:25px
+}
+.links a{
+  color:#33485c;
+  text-decoration:none;
+  font-weight:600
+}
+.hero{
+  max-width:1120px;
+  margin:auto;
+  padding:90px 24px;
+  display:grid;
+  grid-template-columns:1.5fr .8fr;
+  gap:50px;
+  align-items:center;
+  min-height:650px
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:800;
+  color:#1476c6
+}
+h1{
+  font-size:clamp(42px,6vw,70px);
+  line-height:1.05;
+  margin:12px 0 22px
+}
+.hero p{
+  font-size:19px;
+  max-width:700px;
+  color:#536577
+}
+.buttons{
+  display:flex;
+  gap:14px;
+  margin-top:30px;
+  flex-wrap:wrap
+}
+.btn{
+  display:inline-block;
+  padding:13px 21px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700
+}
+.primary{
+  background:#1476c6;
+  color:white
+}
+.secondary{
+  border:1px solid #cbd5df;
+  color:#102033;
+  background:white
+}
+.hero-card{
+  background:linear-gradient(145deg,#0c1d31,#176cae);
+  color:white;
+  padding:55px 35px;
+  border-radius:24px;
+  box-shadow:0 25px 60px rgba(20,65,100,.2);
+  text-align:center
+}
+.polygraph{
+  font-size:70px
+}
+.hero-card h2{
+  font-size:38px;
+  margin:5px 0
+}
+.hero-card p{
+  color:white;
+  margin:0;
+  font-weight:800;
+  letter-spacing:3px
+}
+.hero-card small{
+  display:block;
+  margin-top:20px;
+  color:#dbeeff
+}
+.section{
+  max-width:1120px;
+  margin:auto;
+  padding:85px 24px
+}
+.section h2,
+.about h2,
+.contact h2{
+  font-size:42px;
+  line-height:1.15;
+  margin:5px 0 35px
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px
+}
+.card{
+  background:white;
+  border:1px solid #e5eaf0;
+  border-radius:16px;
+  padding:30px;
+  box-shadow:0 8px 30px rgba(20,40,60,.05)
+}
+.icon{
+  font-size:34px;
+  color:#1476c6
+}
+.card h3{
+  font-size:22px
+}
+.card p,
+.about p,
+.contact p{
+  color:#5c6c7b
+}
+.about{
+  background:#eaf3fa;
+  padding:80px max(24px,calc((100% - 1072px)/2));
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px
+}
+.contact{
+  max-width:1120px;
+  margin:auto;
+  padding:85px 24px;
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  gap:50px;
+  align-items:center
+}
+.contact-box{
+  background:white;
+  border:1px solid #e2e8ef;
+  border-radius:18px;
+  padding:30px;
+  box-shadow:0 10px 35px rgba(20,40,60,.06)
+}
+footer{
+  text-align:center;
+  padding:28px;
+  background:#0c1d31;
+  color:#cbd8e5;
+  font-size:14px
+}
+@media(max-width:760px){
+  .links{display:none}
+  .hero,
+  .about,
+  .contact{
+    grid-template-columns:1fr
+  }
+  .hero{
+    padding-top:55px;
+    min-height:auto
+  }
+  .hero-card{
+    padding:40px 25px
+  }
+  .grid{
+    grid-template-columns:1fr
+  }
+  .section,
+  .contact{
+    padding:60px 24px
+  }
+  .about{
+    padding:60px 24px
+  }
+  h1{
+    font-size:44px
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="#inicio" class="logo">SIPSA <span>POLIGRAFIA</span></a>
+
+<div class="links">
+<a href="#inicio">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+</div>
+</nav>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+
+<div>
+<p class="eyebrow">PROFESIONALISMO · CONFIDENCIALIDAD · CONFIANZA</p>
+
+<h1>Información confiable para tomar mejores decisiones.</h1>
+
+<p>
+Servicios profesionales de poligrafía, estudios socioeconómicos
+y verificación de información para empresas y particulares.
+</p>
+
+<div class="buttons">
+<a href="#contacto" class="btn primary">Solicitar información</a>
+<a href="#servicios" class="btn secondary">Ver servicios</a>
+</div>
+</div>
+
+<div class="hero-card">
+<div class="polygraph">◉</div>
+<h2>SIPSA</h2>
+<p>POLIGRAFIA</p>
+<small>
+Evaluaciones profesionales con manejo
+confidencial de la información.
+</small>
+</div>
+
+</section>
+
+<section class="section" id="servicios">
+
+<p class="eyebrow">NUESTROS SERVICIOS</p>
+
+<h2>Soluciones de verificación</h2>
+
+<div class="grid">
+
+<article class="card">
+<div class="icon">◉</div>
+<h3>Pruebas de Poligrafía</h3>
+<p>
+Evaluaciones poligráficas realizadas con metodología
+profesional y manejo confidencial de la información.
+</p>
+</article>
+
+<article class="card">
+<div class="icon">▣</div>
+<h3>Estudios Socioeconómicos</h3>
+<p>
+Recopilación y verificación de información relevante
+para procesos de selección y conocimiento del candidato.
+</p>
+</article>
+
+<article class="card">
+<div class="icon">✓</div>
+<h3>Verificación e Investigación</h3>
+<p>
+Apoyo en procesos de verificación de información
+para contribuir a decisiones empresariales más seguras.
+</p>
+</article>
+
+</div>
+</section>
+
+<section class="about" id="nosotros">
+
+<div>
+<p class="eyebrow">SOBRE SIPSA</p>
+
+<h2>
+Compromiso con la información
+y la confidencialidad.
+</h2>
+</div>
+
+<p>
+En SIPSA POLIGRAFIA trabajamos para brindar información
+útil, clara y profesional. Nuestro enfoque busca apoyar
+a nuestros clientes en procesos donde la confianza,
+la verificación y la confidencialidad son fundamentales.
+</p>
+
+</section>
+
+<section class="contact" id="contacto">
+
+<div>
+
+<p class="eyebrow">CONTACTO</p>
+
+<h2>¿Necesitas información?</h2>
+
+<p>
+Contáctanos para conocer nuestros servicios,
+disponibilidad y proceso de atención.
+</p>
+
+</div>
+
+<div class="contact-box">
+
+<p><strong>SIPSA POLIGRAFIA</strong></p>
+
+<p>
+Poligrafía · Estudios Socioeconómicos · Verificación
+</p>
+
+<a
+class="btn primary"
+href="https://www.facebook.com/estudiossocioeconomicos.sipsa.5"
+target="_blank">
+Visitar Facebook
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+© 2026 SIPSA POLIGRAFIA · Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
