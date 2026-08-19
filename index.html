@@ -50,7 +50,7 @@ nav {
 }
 
 /* =========================
-   LOGO SIPSA
+   LOGO
 ========================= */
 
 .logo {
@@ -210,7 +210,7 @@ h1 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
@@ -224,10 +224,14 @@ h1 {
   justify-content: flex-end;
   padding: 30px;
   color: white;
+
   background-size: cover;
   background-position: center;
+
   box-shadow: 0 12px 35px rgba(20,40,60,.15);
 }
+
+/* CAPA OSCURA */
 
 .card::before {
   content: "";
@@ -277,11 +281,11 @@ h1 {
 }
 
 .card-socioeconomico {
-  background-image: url("./Socioeconomico.svg");
+  background-image: url("./socioeconómico.svg");
 }
 
 .card-infornet {
-  background-image: url("./infornet.png");
+  background-image: url("./infornet.jpeg");
 }
 
 /* =========================
@@ -291,7 +295,7 @@ h1 {
 .about {
   background: #eaf3fa;
 
-  padding: 80px max(24px,calc((100% - 1072px)/2));
+  padding: 80px max(24px, calc((100% - 1072px)/2));
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -324,7 +328,7 @@ h1 {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
@@ -373,11 +377,10 @@ h1 {
 
 /* =========================
    REDES SOCIALES
-   VERTICAL Y FIJAS
+   VERTICAL - ESQUINA DERECHA
 ========================= */
 
 .social-row {
-
   position: fixed;
 
   right: 24px;
@@ -386,7 +389,6 @@ h1 {
   z-index: 9999;
 
   display: flex;
-
   flex-direction: column;
 
   align-items: center;
@@ -395,7 +397,6 @@ h1 {
 }
 
 .social-row a {
-
   width: 68px;
   height: 68px;
 
@@ -416,14 +417,13 @@ h1 {
 }
 
 .social-row a:hover {
-
   transform: scale(1.1);
 
-  box-shadow: 0 7px 24px rgba(0,0,0,.32);
+  box-shadow:
+    0 7px 24px rgba(0,0,0,.32);
 }
 
 .social-row img {
-
   width: 42px;
   height: 42px;
 
@@ -435,12 +435,10 @@ h1 {
 /* WHATSAPP */
 
 .whatsapp-button {
-
   background: #25D366 !important;
 }
 
 .whatsapp-button img {
-
   width: 44px;
   height: 44px;
 }
@@ -450,7 +448,6 @@ h1 {
 ========================= */
 
 footer {
-
   text-align: center;
 
   padding: 28px;
@@ -469,26 +466,20 @@ footer {
 @media(max-width:760px) {
 
   nav {
-
     min-height: 150px;
-
     padding: 8px 18px;
   }
 
   .logo img {
-
     height: 145px;
-
     max-width: 350px;
   }
 
   .links {
-
     display: none;
   }
 
   .hero {
-
     grid-template-columns: 1fr;
 
     padding: 55px 24px;
@@ -497,72 +488,58 @@ footer {
   }
 
   .hero-card {
-
     padding: 40px 25px;
   }
 
   .grid {
-
     grid-template-columns: 1fr;
   }
 
   .section {
-
     padding: 60px 24px;
   }
 
   .about {
-
     grid-template-columns: 1fr;
 
     padding: 60px 24px;
   }
 
   .contact {
-
     padding: 60px 24px;
   }
 
   .contact-grid {
-
     grid-template-columns: 1fr;
   }
 
   h1 {
-
     font-size: 44px;
   }
 
   .card {
-
     min-height: 420px;
   }
 
-  /* REDES VERTICALES EN CELULAR */
+  /* REDES VERTICALES */
 
   .social-row {
-
     right: 12px;
-
     bottom: 12px;
-
     gap: 8px;
   }
 
   .social-row a {
-
     width: 58px;
     height: 58px;
   }
 
   .social-row img {
-
     width: 36px;
     height: 36px;
   }
 
   .whatsapp-button img {
-
     width: 38px;
     height: 38px;
   }
@@ -594,21 +571,13 @@ alt="SIPSA POLIGRAFIA">
 
 <div class="links">
 
-<a href="#inicio">
-Inicio
-</a>
+<a href="#inicio">Inicio</a>
 
-<a href="#servicios">
-Servicios
-</a>
+<a href="#servicios">Servicios</a>
 
-<a href="#nosotros">
-Nosotros
-</a>
+<a href="#nosotros">Nosotros</a>
 
-<a href="#contacto">
-Contacto
-</a>
+<a href="#contacto">Contacto</a>
 
 </div>
 
@@ -618,14 +587,15 @@ Contacto
 
 
 <!-- =========================
-     PORTADA
+     CONTENIDO
 ========================= -->
 
 <main>
 
-<section
-class="hero"
-id="inicio">
+
+<!-- PORTADA -->
+
+<section class="hero" id="inicio">
 
 <div>
 
@@ -648,17 +618,13 @@ de información para empresas y particulares.
 <a
 href="#contacto"
 class="btn primary">
-
 Solicitar información
-
 </a>
 
 <a
 href="#servicios"
 class="btn secondary">
-
 Ver servicios
-
 </a>
 
 </div>
@@ -672,13 +638,9 @@ Ver servicios
 ◉
 </div>
 
-<h2>
-SIPSA
-</h2>
+<h2>SIPSA</h2>
 
-<p>
-POLIGRAFIA
-</p>
+<p>POLIGRAFIA</p>
 
 <small>
 Evaluaciones profesionales con manejo
@@ -694,9 +656,7 @@ confidencial de la información.
      SERVICIOS
 ========================= -->
 
-<section
-class="section"
-id="servicios">
+<section class="section" id="servicios">
 
 <p class="eyebrow">
 NUESTROS SERVICIOS
@@ -709,14 +669,11 @@ Soluciones de verificación
 <div class="grid">
 
 
-<!-- POLIGRAFIA -->
+<!-- POLIGRAFÍA -->
 
-<article
-class="card card-poligrafia">
+<article class="card card-poligrafia">
 
-<div class="icon">
-◉
-</div>
+<div class="icon">◉</div>
 
 <h3>
 Pruebas de Poligrafía
@@ -733,14 +690,11 @@ casos específicos.
 </article>
 
 
-<!-- SOCIOECONOMICO -->
+<!-- SOCIOECONÓMICO -->
 
-<article
-class="card card-socioeconomico">
+<article class="card card-socioeconomico">
 
-<div class="icon">
-▣
-</div>
+<div class="icon">▣</div>
 
 <h3>
 Estudios Socioeconómicos
@@ -758,12 +712,9 @@ de un candidato.
 
 <!-- INFORNET -->
 
-<article
-class="card card-infornet">
+<article class="card card-infornet">
 
-<div class="icon">
-✓
-</div>
+<div class="icon">✓</div>
 
 <h3>
 Verificación de Infornet
@@ -789,9 +740,7 @@ de verificación.
      NOSOTROS
 ========================= -->
 
-<section
-class="about"
-id="nosotros">
+<section class="about" id="nosotros">
 
 <div>
 
@@ -822,9 +771,7 @@ la confidencialidad son fundamentales.
      CONTACTO
 ========================= -->
 
-<section
-class="contact"
-id="contacto">
+<section class="contact" id="contacto">
 
 <div class="contact-intro">
 
@@ -892,11 +839,8 @@ CORREO ELECTRÓNICO
 
 <p>
 
-<a
-href="mailto:rrhh@sipsapoligrafia.com">
-
+<a href="mailto:rrhh@sipsapoligrafia.com">
 rrhh@sipsapoligrafia.com
-
 </a>
 
 </p>
@@ -933,10 +877,13 @@ Torre A, zona 10, Guatemala.
 
 
 <!-- =========================
-     FACEBOOK
+     REDES SOCIALES
 ========================= -->
 
 <div class="social-row">
+
+
+<!-- FACEBOOK -->
 
 <a
 href="https://www.facebook.com/estudiossocioeconomicos.sipsa.5"
@@ -951,9 +898,7 @@ alt="Facebook">
 </a>
 
 
-<!-- =========================
-     INSTAGRAM
-========================= -->
+<!-- INSTAGRAM -->
 
 <a
 href="https://www.instagram.com/sipsa_gt/"
@@ -968,9 +913,7 @@ alt="Instagram">
 </a>
 
 
-<!-- =========================
-     WHATSAPP
-========================= -->
+<!-- WHATSAPP -->
 
 <a
 href="https://wa.me/50232775737"
@@ -985,6 +928,7 @@ alt="WhatsApp">
 
 </a>
 
+
 </div>
 
 
@@ -997,6 +941,7 @@ alt="WhatsApp">
 © 2026 SIPSA POLIGRAFIA · Todos los derechos reservados.
 
 </footer>
+
 
 </body>
 </html>
