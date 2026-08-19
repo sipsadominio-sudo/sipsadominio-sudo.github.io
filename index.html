@@ -54,7 +54,6 @@ nav {
 
   margin: 0;
 
-  /* SIN ESPACIO A LA IZQUIERDA */
   padding: 0 25px 0 0;
 
   display: flex;
@@ -68,8 +67,6 @@ nav {
 
 /* =========================
    LOGO
-   TOTALMENTE PEGADO
-   AL BORDE IZQUIERDO
 ========================= */
 
 .logo {
@@ -246,7 +243,6 @@ h1 {
 
 /* =========================
    TARJETA PRINCIPAL
-   IMAGEN ANTERIOR
 ========================= */
 
 .hero-card {
@@ -802,27 +798,101 @@ footer {
 @media(max-width:760px) {
 
   header {
-    min-height: 150px;
+    min-height: 205px;
 
     background-position: center;
   }
 
   nav {
-    min-height: 150px;
+    width: 100%;
 
-    padding: 5px 10px 5px 0;
+    min-height: 205px;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
 
     justify-content: flex-start;
+
+    gap: 0;
+  }
+
+  /* LOGO PEGADO AL BORDE IZQUIERDO */
+
+  .logo {
+    width: auto;
+
+    margin: 0;
+
+    padding: 0;
+
+    align-self: flex-start;
   }
 
   .logo img {
     height: 145px;
 
+    width: auto;
+
     max-width: 350px;
+
+    display: block;
+
+    margin: 0;
+
+    padding: 0;
   }
 
+  /* MENU VISIBLE EN TELEFONO */
+
   .links {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    padding: 5px 8px 10px 0;
+
+    margin: 0;
+
+    flex-shrink: 0;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+  }
+
+  .links::-webkit-scrollbar {
     display: none;
+  }
+
+  .links a {
+    flex: 0 0 auto;
+
+    font-size: 18px;
+
+    padding: 8px 11px;
+
+    border-radius: 7px;
+
+    white-space: nowrap;
   }
 
   .hero {
@@ -1298,7 +1368,7 @@ rrhh@sipsapoligrafia.com
 </div>
 
 
-<!-- DIRECCIÓN -->
+<!-- UBICACION -->
 
 <div class="contact-card">
 
@@ -1307,7 +1377,7 @@ rrhh@sipsapoligrafia.com
 </div>
 
 <h3>
-DIRECCIÓN
+UBICACION
 </h3>
 
 <p>
