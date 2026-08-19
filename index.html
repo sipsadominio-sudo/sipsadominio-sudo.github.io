@@ -30,19 +30,13 @@ body {
 
 /* =========================
    ENCABEZADO
-   IMAGEN HORIZONTAL COMO FONDO
 ========================= */
 
 header {
   width: 100%;
   min-height: 210px;
 
-  background-image:
-    linear-gradient(
-      rgba(255,255,255,.10),
-      rgba(255,255,255,.10)
-    ),
-    url("./horizontal.jpeg");
+  background-image: url("./horizontal.jpeg");
 
   background-size: cover;
   background-position: center;
@@ -58,31 +52,31 @@ nav {
   width: 100%;
   min-height: 210px;
 
-  margin: auto;
-
-  padding: 10px 24px;
+  margin: 0;
+  padding: 0 25px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
-  gap: 30px;
+  gap: 25px;
 }
 
 /* =========================
    LOGO
+   PEGADO A LA ESQUINA
 ========================= */
 
 .logo {
   display: flex;
-
   align-items: center;
 
   text-decoration: none;
 
   flex-shrink: 0;
+
+  margin: 0;
+  padding: 0;
 }
 
 .logo img {
@@ -95,6 +89,11 @@ nav {
   object-fit: contain;
 
   display: block;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
 }
 
 /* =========================
@@ -104,7 +103,7 @@ nav {
 .links {
   display: flex;
 
-  gap: 25px;
+  gap: 18px;
 
   align-items: center;
 
@@ -112,30 +111,37 @@ nav {
 }
 
 .links a {
-  color: #102033;
+  color: #ffffff;
 
   text-decoration: none;
 
-  font-weight: 700;
+  font-weight: 900;
 
-  font-size: 21px;
+  font-size: 25px;
 
-  transition: color .2s ease;
+  letter-spacing: .3px;
 
-  /* Fondo suave para que el texto se pueda leer
-     sobre cualquier parte de la imagen */
+  text-shadow:
+    2px 2px 4px rgba(0,0,0,.85),
+    -1px -1px 2px rgba(0,0,0,.45);
 
-  background: rgba(255,255,255,.82);
+  background: rgba(0,0,0,.38);
 
-  padding: 8px 12px;
+  padding: 10px 15px;
 
   border-radius: 8px;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
 }
 
 .links a:hover {
-  color: #1476c6;
+  color: #ffffff;
 
-  background: rgba(255,255,255,.95);
+  background: rgba(20,118,198,.85);
+
+  transform: scale(1.05);
 }
 
 /* =========================
@@ -232,7 +238,6 @@ h1 {
 
 /* =========================
    TARJETA PRINCIPAL
-   REGRESA IMAGEN ANTERIOR
 ========================= */
 
 .hero-card {
@@ -272,8 +277,6 @@ h1 {
     box-shadow .35s ease;
 }
 
-/* Capa para mejorar lectura */
-
 .hero-card::before {
   content: "";
 
@@ -302,10 +305,6 @@ h1 {
 
   z-index: 1;
 }
-
-/* =========================
-   TÍTULO SIPSA POLIGRAFIA
-========================= */
 
 .polygraph {
   display: none;
@@ -513,7 +512,7 @@ h1 {
 }
 
 /* =========================
-   IMÁGENES DE SERVICIOS
+   IMÁGENES
 ========================= */
 
 .card-poligrafia {
@@ -641,10 +640,6 @@ h1 {
     0 10px 35px rgba(20,40,60,.06);
 }
 
-/* =========================
-   ÍCONOS CONTACTO
-========================= */
-
 .contact-icon {
   width: 78px;
 
@@ -674,10 +669,6 @@ h1 {
 
   font-size: 21px;
 }
-
-/* =========================
-   DATOS CONTACTO
-========================= */
 
 .contact-card p {
   margin: 0;
@@ -810,9 +801,9 @@ footer {
   nav {
     min-height: 150px;
 
-    padding: 8px 18px;
+    padding: 5px 10px;
 
-    gap: 10px;
+    justify-content: flex-start;
   }
 
   .logo img {
