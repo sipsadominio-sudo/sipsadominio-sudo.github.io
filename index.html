@@ -157,24 +157,65 @@ h1 {
 
 /* =========================
    TARJETA PRINCIPAL
+   CON IMAGEN DE FONDO
 ========================= */
 
 .hero-card {
-  background: linear-gradient(145deg,#0c1d31,#176cae);
+  position: relative;
+  overflow: hidden;
+
+  background-image: url("./poligrafia.png");
+  background-size: cover;
+  background-position: center;
+
   color: white;
   padding: 55px 35px;
   border-radius: 24px;
+
   box-shadow: 0 25px 60px rgba(20,65,100,.2);
+
   text-align: center;
+
+  min-height: 390px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CAPA OSCURA SOBRE LA IMAGEN */
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(5,20,35,.72),
+      rgba(5,20,35,.78)
+    );
+
+  z-index: 0;
+}
+
+/* CONTENIDO DEL CUADRO */
+
+.hero-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .polygraph {
   font-size: 70px;
+  color: white;
 }
 
 .hero-card h2 {
-  font-size: 38px;
+  font-size: 42px;
   margin: 5px 0;
+  color: white;
 }
 
 .hero-card p {
@@ -182,12 +223,15 @@ h1 {
   margin: 0;
   font-weight: 800;
   letter-spacing: 3px;
+  font-size: 20px;
 }
 
 .hero-card small {
   display: block;
   margin-top: 20px;
-  color: #dbeeff;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /* =========================
@@ -214,6 +258,10 @@ h1 {
   gap: 22px;
 }
 
+/* =========================
+   TARJETAS DE SERVICIOS
+========================= */
+
 .card {
   min-height: 390px;
   position: relative;
@@ -224,9 +272,25 @@ h1 {
   justify-content: flex-end;
   padding: 30px;
   color: white;
+
   background-size: cover;
   background-position: center;
+
   box-shadow: 0 12px 35px rgba(20,40,60,.15);
+
+  /* EFECTO SUAVE */
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.card:hover {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 22px 50px rgba(20,40,60,.30);
 }
 
 /* CAPA OSCURA */
@@ -244,6 +308,19 @@ h1 {
   );
 
   z-index: 0;
+
+  transition: background .35s ease;
+}
+
+/* OSCURECER UN POCO AL PASAR EL MOUSE */
+
+.card:hover::before {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.92),
+    rgba(0,0,0,.50),
+    rgba(0,0,0,.18)
+  );
 }
 
 .card > * {
@@ -257,10 +334,16 @@ h1 {
   margin-bottom: 5px;
 }
 
+/* =========================
+   TÍTULOS MÁS GRANDES
+========================= */
+
 .card h3 {
-  font-size: 25px;
-  margin: 8px 0 12px;
+  font-size: 32px;
+  line-height: 1.15;
+  margin: 8px 0 14px;
   color: white;
+  font-weight: 800;
 }
 
 .card p {
@@ -368,7 +451,6 @@ h1 {
 
 /* =========================
    REDES SOCIALES
-   VERTICAL - ESQUINA DERECHA
 ========================= */
 
 .social-row {
@@ -464,6 +546,11 @@ footer {
 
   .hero-card {
     padding: 40px 25px;
+    min-height: 350px;
+  }
+
+  .hero-card h2 {
+    font-size: 38px;
   }
 
   .grid {
@@ -493,6 +580,18 @@ footer {
 
   .card {
     min-height: 420px;
+  }
+
+  /* TÍTULOS EN CELULAR */
+
+  .card h3 {
+    font-size: 30px;
+  }
+
+  /* EFECTO MÁS PEQUEÑO EN CELULAR */
+
+  .card:hover {
+    transform: scale(1.02);
   }
 
   .social-row {
@@ -592,6 +691,8 @@ Ver servicios
 
 </div>
 
+
+<!-- TARJETA SIPSA CON IMAGEN -->
 
 <div class="hero-card">
 
