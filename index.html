@@ -33,21 +33,21 @@ body {
 header {
   position: sticky;
   top: 0;
-  z-index: 10;
-  background: rgba(255,255,255,.97);
+  z-index: 100;
+  background: rgba(255,255,255,.98);
   border-bottom: 1px solid #e5e9ef;
 }
 
 nav {
   max-width: 1120px;
   margin: auto;
-  padding: 6px 24px;
+  padding: 5px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* LOGO GRANDE */
+/* LOGO 3 VECES MÁS GRANDE */
 
 .logo {
   display: flex;
@@ -56,8 +56,9 @@ nav {
 }
 
 .logo img {
-  height: 125px;
+  height: 375px;
   width: auto;
+  max-width: 100%;
   display: block;
 }
 
@@ -66,6 +67,7 @@ nav {
 .links {
   display: flex;
   gap: 25px;
+  align-items: center;
 }
 
 .links a {
@@ -144,9 +146,7 @@ h1 {
   background: white;
 }
 
-/* =========================
-   TARJETA PRINCIPAL
-========================= */
+/* TARJETA PRINCIPAL */
 
 .hero-card {
   background: linear-gradient(145deg,#0c1d31,#176cae);
@@ -197,33 +197,88 @@ h1 {
   margin: 5px 0 35px;
 }
 
+/* TARJETAS DE SERVICIOS */
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
 .card {
-  background: white;
-  border: 1px solid #e5eaf0;
-  border-radius: 16px;
+  min-height: 390px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 30px;
-  box-shadow: 0 8px 30px rgba(20,40,60,.05);
+  color: white;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 12px 35px rgba(20,40,60,.15);
 }
 
-.icon {
-  font-size: 34px;
-  color: #1476c6;
+/* CAPA OSCURA SOBRE LAS IMÁGENES */
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.88),
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.12)
+  );
+  z-index: 0;
+}
+
+/* CONTENIDO SOBRE LA IMAGEN */
+
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card .icon {
+  font-size: 38px;
+  color: white;
+  margin-bottom: 5px;
 }
 
 .card h3 {
-  font-size: 22px;
+  font-size: 25px;
+  margin: 8px 0 12px;
+  color: white;
 }
 
-.card p,
-.about p,
-.contact p {
-  color: #5c6c7b;
+.card p {
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* FONDOS DE CADA SERVICIO */
+
+/* POLIGRAFÍA */
+
+.card-poligrafia {
+  background-image: url("IMAGEN%20POLIGRAFIA.PNG");
+}
+
+/* ESTUDIO SOCIOECONÓMICO */
+
+.card-socioeconomico {
+  background-image: url("socioecon%C3%B3mico.svg");
+}
+
+/* INFORNET */
+
+.card-infornet {
+  background-image: url("Tecnolog%C3%ADa.svg");
 }
 
 /* =========================
@@ -236,6 +291,10 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 70px;
+}
+
+.about p {
+  color: #5c6c7b;
 }
 
 /* =========================
@@ -302,18 +361,14 @@ h1 {
   font-weight: 700;
 }
 
-.contact-card a:hover {
-  text-decoration: underline;
-}
-
 /* =========================
    WHATSAPP
 ========================= */
 
 .whatsapp-float {
   position: fixed;
-  width: 66px;
-  height: 66px;
+  width: 68px;
+  height: 68px;
   right: 24px;
   bottom: 24px;
   background: #25D366;
@@ -332,8 +387,8 @@ h1 {
 }
 
 .whatsapp-float img {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   display: block;
 }
 
@@ -350,7 +405,7 @@ footer {
 }
 
 /* =========================
-   TELÉFONOS
+   RESPONSIVE
 ========================= */
 
 @media(max-width:760px) {
@@ -364,15 +419,11 @@ footer {
   }
 
   .logo img {
-    height: 105px;
-  }
-
-  .hero,
-  .about {
-    grid-template-columns: 1fr;
+    height: 250px;
   }
 
   .hero {
+    grid-template-columns: 1fr;
     padding-top: 55px;
     min-height: auto;
   }
@@ -390,6 +441,7 @@ footer {
   }
 
   .about {
+    grid-template-columns: 1fr;
     padding: 60px 24px;
   }
 
@@ -405,6 +457,10 @@ footer {
     font-size: 44px;
   }
 
+  .card {
+    min-height: 420px;
+  }
+
   .whatsapp-float {
     width: 60px;
     height: 60px;
@@ -413,8 +469,8 @@ footer {
   }
 
   .whatsapp-float img {
-    width: 35px;
-    height: 35px;
+    width: 36px;
+    height: 36px;
   }
 
 }
@@ -453,13 +509,10 @@ footer {
 
 
 <!-- =========================
-     CONTENIDO
+     PORTADA
 ========================= -->
 
 <main>
-
-
-<!-- PORTADA -->
 
 <section class="hero" id="inicio">
 
@@ -528,7 +581,9 @@ Soluciones de verificación
 <div class="grid">
 
 
-<article class="card">
+<!-- POLIGRAFÍA -->
+
+<article class="card card-poligrafia">
 
 <div class="icon">◉</div>
 
@@ -539,13 +594,15 @@ Pruebas de Poligrafía
 <p>
 Evaluaciones poligráficas realizadas con metodología
 profesional y manejo confidencial de la información.
-Pruebas pre-empleo, rutinarias o casos específicos.
+Pruebas pre-empleo, rutinarias y casos específicos.
 </p>
 
 </article>
 
 
-<article class="card">
+<!-- SOCIOECONÓMICO -->
+
+<article class="card card-socioeconomico">
 
 <div class="icon">▣</div>
 
@@ -554,15 +611,17 @@ Estudios Socioeconómicos
 </h3>
 
 <p>
-Validación de referencias laborales, validación de
-documentación y visita domiciliar para conocer el
-entorno laboral y social de un candidato.
+Validación de referencias laborales, documentación
+y visita domiciliar para conocer el entorno laboral
+y social de un candidato.
 </p>
 
 </article>
 
 
-<article class="card">
+<!-- INFORNET -->
+
+<article class="card card-infornet">
 
 <div class="icon">✓</div>
 
@@ -571,9 +630,9 @@ Verificación de Infornet
 </h3>
 
 <p>
-Validación de historial crediticio, demandas, procesos
-judiciales, créditos en instancias de mora, incobrables
-o embargo, apoyando procesos de verificación de información.
+Validación de historial crediticio, demandas,
+procesos judiciales, créditos en mora, incobrables
+o embargo, apoyando procesos de verificación.
 </p>
 
 </article>
@@ -653,14 +712,17 @@ PBX
 </h3>
 
 <p>
+
 <a href="tel:+50222326698">
 2232-6698
 </a>
+
 <br>
 
 <a href="tel:+50222322563">
 2232-2563
 </a>
+
 </p>
 
 </div>
@@ -703,7 +765,7 @@ Dirección
 
 <p>
 Avenida Reforma 12 calle 12-01,
-Edificios Reforma Montúfar,
+Edificio Reforma Montúfar,
 Torre A, zona 10, Guatemala.
 </p>
 
