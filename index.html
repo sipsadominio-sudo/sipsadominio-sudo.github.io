@@ -53,13 +53,10 @@ nav {
   min-height: 210px;
 
   margin: 0;
-
   padding: 0 25px 0 0;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   gap: 25px;
@@ -71,33 +68,23 @@ nav {
 
 .logo {
   display: flex;
-
   align-items: center;
-
   text-decoration: none;
-
   flex-shrink: 0;
-
   margin: 0;
-
   padding: 0;
 }
 
 .logo img {
   height: 230px;
-
   width: auto;
-
   max-width: 560px;
 
   object-fit: contain;
-
   display: block;
 
   margin: 0;
-
   padding: 0;
-
   border: none;
 }
 
@@ -130,7 +117,8 @@ nav {
     2px 2px 4px rgba(0,0,0,.85),
     -1px -1px 2px rgba(0,0,0,.45);
 
-  background: rgba(0,0,0,.38);
+  /* FONDO AZUL SUAVE */
+  background: rgba(30,105,160,.72);
 
   padding: 10px 15px;
 
@@ -138,15 +126,32 @@ nav {
 
   transition:
     background .2s ease,
-    transform .2s ease;
+    transform .2s ease,
+    box-shadow .2s ease;
 }
+
+/* EFECTO AL PASAR EL CURSOR */
 
 .links a:hover {
   color: #ffffff;
 
-  background: rgba(20,118,198,.85);
+  background: rgba(20,118,198,.92);
 
-  transform: scale(1.05);
+  transform: scale(1.06);
+
+  box-shadow:
+    0 5px 14px rgba(0,0,0,.20);
+}
+
+/* EFECTO AL TOCAR EN CELULAR */
+
+.links a:active {
+  transform: scale(1.08);
+
+  background: rgba(20,118,198,.95);
+
+  box-shadow:
+    0 5px 15px rgba(0,0,0,.25);
 }
 
 /* =========================
@@ -199,16 +204,11 @@ h1 {
 
 /* =========================
    BOTONES
+   Eliminados de la portada
 ========================= */
 
 .buttons {
-  display: flex;
-
-  gap: 14px;
-
-  margin-top: 30px;
-
-  flex-wrap: wrap;
+  display: none;
 }
 
 .btn {
@@ -537,11 +537,19 @@ h1 {
 }
 
 /* =========================
-   NOSOTROS
+   NOSOTROS / SOBRE SIPSA
 ========================= */
 
 .about {
-  background: #eaf3fa;
+  position: relative;
+
+  background-image: url("./sobresipsa.jpeg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
 
   padding:
     80px
@@ -552,6 +560,36 @@ h1 {
   grid-template-columns: 1fr 1fr;
 
   gap: 70px;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+/* CAPA OSCURA PARA QUE EL TEXTO SE LEA MEJOR */
+
+.about::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(5,25,45,.55),
+      rgba(5,25,45,.65)
+    );
+
+  z-index: 0;
+}
+
+/* CONTENIDO SOBRE LA IMAGEN */
+
+.about > * {
+  position: relative;
+
+  z-index: 1;
 }
 
 .about h2 {
@@ -560,10 +598,12 @@ h1 {
   line-height: 1.15;
 
   margin: 5px 0 35px;
+
+  color: white;
 }
 
 .about p {
-  color: #5c6c7b;
+  color: white;
 }
 
 .about .eyebrow {
@@ -572,12 +612,16 @@ h1 {
   letter-spacing: 3px;
 
   font-weight: 900;
+
+  color: #ffffff;
 }
 
 .about > p {
   font-size: 20px;
 
   line-height: 1.75;
+
+  color: white;
 }
 
 /* =========================
@@ -895,6 +939,14 @@ footer {
     white-space: nowrap;
   }
 
+  /* EFECTO AL TOCAR LOS BOTONES */
+
+  .links a:active {
+    transform: scale(1.08);
+
+    background: rgba(20,118,198,.95);
+  }
+
   .hero {
     grid-template-columns: 1fr;
 
@@ -964,12 +1016,16 @@ footer {
     transform: scale(1.02);
   }
 
-  /* NOSOTROS */
+  /* =========================
+     SOBRE SIPSA EN CELULAR
+  ========================= */
 
   .about {
     grid-template-columns: 1fr;
 
     padding: 60px 24px;
+
+    background-position: center;
   }
 
   .about .eyebrow {
@@ -1113,18 +1169,6 @@ Servicios profesionales de poligrafía,
 estudios socioeconómicos y verificación
 de información para empresas y particulares.
 </p>
-
-<div class="buttons">
-
-<a href="#contacto" class="btn primary">
-Solicitar información
-</a>
-
-<a href="#servicios" class="btn secondary">
-Ver servicios
-</a>
-
-</div>
 
 </div>
 
