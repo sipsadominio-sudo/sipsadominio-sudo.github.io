@@ -81,7 +81,11 @@ nav {
   color: #102033;
   text-decoration: none;
   font-weight: 700;
-  font-size: 18px;
+
+  /* MÁS GRANDE */
+  font-size: 21px;
+
+  transition: color .2s ease;
 }
 
 .links a:hover {
@@ -205,16 +209,6 @@ h1 {
     );
 
   z-index: 0;
-
-  transition: background .35s ease;
-}
-
-.hero-card:hover::before {
-  background:
-    linear-gradient(
-      rgba(5,20,35,.76),
-      rgba(5,20,35,.82)
-    );
 }
 
 .hero-card > * {
@@ -254,38 +248,79 @@ h1 {
 ========================= */
 
 .section {
-  max-width: 1120px;
+  max-width: 100%;
   margin: auto;
   padding: 85px 24px;
 }
 
-/* TÍTULO PRINCIPAL MÁS GRANDE */
+/* TÍTULO NUESTROS SERVICIOS */
 
 .section > .eyebrow {
-  font-size: 22px;
+  font-size: 30px;
   letter-spacing: 3px;
-  margin-bottom: 25px;
+  font-weight: 900;
+  margin: 5px 0 40px;
+
+  text-align: center;
 }
 
 /* =========================
-   TARJETAS
+   FILA HORIZONTAL
 ========================= */
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  display: flex;
+
+  flex-wrap: nowrap;
+
+  gap: 25px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 15px 15px 30px;
+
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch;
 }
 
+/* BARRA DE DESPLAZAMIENTO */
+
+.grid::-webkit-scrollbar {
+  height: 10px;
+}
+
+.grid::-webkit-scrollbar-track {
+  background: #e5edf4;
+  border-radius: 10px;
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background: #1476c6;
+  border-radius: 10px;
+}
+
+/* TARJETAS */
+
 .card {
+  min-width: 300px;
+  width: 300px;
   min-height: 390px;
+
+  flex: 0 0 300px;
+
   position: relative;
   overflow: hidden;
+
   border-radius: 20px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
   padding: 30px;
+
   color: white;
 
   background-size: cover;
@@ -298,10 +333,16 @@ h1 {
     box-shadow .35s ease;
 }
 
+/* EFECTO AL PASAR EL MOUSE */
+
 .card:hover {
   transform: scale(1.04);
-  box-shadow: 0 22px 50px rgba(20,40,60,.30);
+
+  box-shadow:
+    0 22px 50px rgba(20,40,60,.30);
 }
+
+/* CAPA OSCURA */
 
 .card::before {
   content: "";
@@ -330,17 +371,23 @@ h1 {
 }
 
 .card h3 {
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1.15;
+
   margin: 8px 0 14px;
+
   color: white;
+
   font-weight: 800;
 }
 
 .card p {
   margin: 0;
+
   color: white;
+
   font-size: 16px;
+
   line-height: 1.55;
 }
 
@@ -360,8 +407,6 @@ h1 {
   background-image: url("./1infornet.jpeg");
 }
 
-/* NUEVO SERVICIO */
-
 .card-visita {
   background-image: url("./visita.jpg.jpeg");
 }
@@ -372,15 +417,21 @@ h1 {
 
 .about {
   background: #eaf3fa;
+
   padding: 80px max(24px, calc((100% - 1072px)/2));
+
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 70px;
 }
 
 .about h2 {
   font-size: 42px;
+
   line-height: 1.15;
+
   margin: 5px 0 35px;
 }
 
@@ -394,108 +445,106 @@ h1 {
 
 .contact {
   max-width: 1120px;
+
   margin: auto;
+
   padding: 85px 24px;
 }
 
 .contact-intro {
   text-align: center;
+
   max-width: 700px;
+
   margin: 0 auto 45px;
 }
 
 .contact-intro h2 {
   margin-bottom: 15px;
+
   font-size: 42px;
 }
 
-/* =========================
-   ANIMACIÓN CONTACTO
-========================= */
+.contact-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+/* SIN ANIMACIÓN */
 
 .contact-card {
   background: white;
+
   border: 1px solid #e2e8ef;
+
   border-radius: 18px;
+
   padding: 30px 25px;
+
   text-align: center;
-  box-shadow: 0 10px 35px rgba(20,40,60,.06);
 
-  opacity: 0;
-  transform: translateY(45px);
-
-  animation: aparecerContacto .8s ease forwards;
+  box-shadow:
+    0 10px 35px rgba(20,40,60,.06);
 }
-
-/* Entrada escalonada */
-
-.contact-card:nth-child(1) {
-  animation-delay: .1s;
-}
-
-.contact-card:nth-child(2) {
-  animation-delay: .25s;
-}
-
-.contact-card:nth-child(3) {
-  animation-delay: .4s;
-}
-
-@keyframes aparecerContacto {
-
-  from {
-    opacity: 0;
-    transform: translateY(45px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-}
-
-/* =========================
-   ICONOS CONTACTO
-========================= */
 
 .contact-icon {
   width: 58px;
+
   height: 58px;
+
   margin: 0 auto 18px;
+
   border-radius: 50%;
+
   background: #eaf3fa;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   font-size: 28px;
+
   color: #1476c6;
 }
 
 .contact-card h3 {
   margin: 8px 0 12px;
+
   font-size: 20px;
 }
 
-/* DATOS SIN NEGRITA */
+/* DATOS DE CONTACTO */
 
 .contact-card p {
   margin: 0;
+
   color: #1476c6;
+
   font-size: 18px;
+
   font-weight: 400;
+
   line-height: 1.65;
 }
 
 .contact-card a {
   color: #1476c6;
+
   text-decoration: none;
+
   font-weight: 400;
+
   font-size: 18px;
 }
 
 .contact-card a:hover {
   color: #0d5f9e;
+
   text-decoration: underline;
 }
 
@@ -505,28 +554,39 @@ h1 {
 
 .social-row {
   position: fixed;
+
   right: 24px;
+
   bottom: 24px;
+
   z-index: 9999;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   gap: 12px;
 }
 
 .social-row a {
   width: 68px;
+
   height: 68px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 50%;
+
   background: white;
 
-  box-shadow: 0 5px 18px rgba(0,0,0,.25);
+  box-shadow:
+    0 5px 18px rgba(0,0,0,.25);
 
   transition:
     transform .2s ease,
@@ -535,13 +595,18 @@ h1 {
 
 .social-row a:hover {
   transform: scale(1.1);
-  box-shadow: 0 7px 24px rgba(0,0,0,.32);
+
+  box-shadow:
+    0 7px 24px rgba(0,0,0,.32);
 }
 
 .social-row img {
   width: 42px;
+
   height: 42px;
+
   object-fit: contain;
+
   display: block;
 }
 
@@ -551,6 +616,7 @@ h1 {
 
 .whatsapp-button img {
   width: 44px;
+
   height: 44px;
 }
 
@@ -560,9 +626,13 @@ h1 {
 
 footer {
   text-align: center;
+
   padding: 28px;
+
   background: #0c1d31;
+
   color: #cbd8e5;
+
   font-size: 14px;
 }
 
@@ -574,11 +644,13 @@ footer {
 
   nav {
     min-height: 150px;
+
     padding: 8px 18px;
   }
 
   .logo img {
     height: 145px;
+
     max-width: 350px;
   }
 
@@ -588,12 +660,15 @@ footer {
 
   .hero {
     grid-template-columns: 1fr;
+
     padding: 55px 24px;
+
     min-height: auto;
   }
 
   .hero-card {
     padding: 40px 25px;
+
     min-height: 350px;
   }
 
@@ -601,19 +676,33 @@ footer {
     font-size: 38px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
   .section {
-    padding: 60px 24px;
+    padding: 60px 12px;
   }
 
   .section > .eyebrow {
-    font-size: 19px;
+    font-size: 24px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+  }
+
+  .grid {
+    gap: 18px;
+
+    padding-left: 12px;
+
+    padding-right: 12px;
   }
 
   .card {
+    min-width: 300px;
+
+    width: 300px;
+
+    flex-basis: 300px;
+
     min-height: 420px;
   }
 
@@ -628,6 +717,7 @@ footer {
 
   .about {
     grid-template-columns: 1fr;
+
     padding: 60px 24px;
   }
 
@@ -650,22 +740,27 @@ footer {
 
   .social-row {
     right: 12px;
+
     bottom: 12px;
+
     gap: 8px;
   }
 
   .social-row a {
     width: 58px;
+
     height: 58px;
   }
 
   .social-row img {
     width: 36px;
+
     height: 36px;
   }
 
   .whatsapp-button img {
     width: 38px;
+
     height: 38px;
   }
 
@@ -676,6 +771,10 @@ footer {
 </head>
 
 <body>
+
+<!-- =========================
+     ENCABEZADO
+========================= -->
 
 <header>
 
@@ -692,8 +791,11 @@ alt="SIPSA POLIGRAFIA">
 <div class="links">
 
 <a href="#inicio">Inicio</a>
+
 <a href="#servicios">Servicios</a>
+
 <a href="#nosotros">Nosotros</a>
+
 <a href="#contacto">Contacto</a>
 
 </div>
@@ -742,6 +844,8 @@ Ver servicios
 </div>
 
 
+<!-- TARJETA SIPSA -->
+
 <div class="hero-card">
 
 <div class="polygraph">
@@ -771,6 +875,7 @@ confidencial de la información.
 <p class="eyebrow">
 NUESTROS SERVICIOS
 </p>
+
 
 <div class="grid">
 
@@ -930,6 +1035,8 @@ atención profesional.
 <div class="contact-grid">
 
 
+<!-- TELÉFONOS -->
+
 <div class="contact-card">
 
 <div class="contact-icon">
@@ -957,6 +1064,8 @@ PBX
 </div>
 
 
+<!-- CORREO -->
+
 <div class="contact-card">
 
 <div class="contact-icon">
@@ -977,6 +1086,8 @@ rrhh@sipsapoligrafia.com
 
 </div>
 
+
+<!-- DIRECCIÓN -->
 
 <div class="contact-card">
 
@@ -1010,6 +1121,9 @@ Torre A, zona 10, Guatemala.
 
 <div class="social-row">
 
+
+<!-- FACEBOOK -->
+
 <a
 href="https://www.facebook.com/estudiossocioeconomicos.sipsa.5"
 target="_blank"
@@ -1022,6 +1136,8 @@ alt="Facebook">
 
 </a>
 
+
+<!-- INSTAGRAM -->
 
 <a
 href="https://www.instagram.com/sipsa_gt/"
@@ -1036,6 +1152,8 @@ alt="Instagram">
 </a>
 
 
+<!-- WHATSAPP -->
+
 <a
 href="https://wa.me/50232775737"
 class="whatsapp-button"
@@ -1049,8 +1167,13 @@ alt="WhatsApp">
 
 </a>
 
+
 </div>
 
+
+<!-- =========================
+     PIE DE PÁGINA
+========================= -->
 
 <footer>
 
