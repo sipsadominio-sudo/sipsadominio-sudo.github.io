@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420">
+<rect width="700" height="420" rx="30" fill="#eef3f6"/>
+<rect x="90" y="70" width="520" height="280" rx="18" fill="#fff" stroke="#d5dde3" stroke-width="4"/>
+<circle cx="190" cy="160" r="45" fill="#d8b46a"/><path d="M125 280c12-55 118-55 130 0" fill="#17364b"/>
+<rect x="280" y="115" width="230" height="18" rx="9" fill="#17364b"/><rect x="280" y="155" width="190" height="12" rx="6" fill="#c6d0d7"/>
+<rect x="280" y="190" width="210" height="12" rx="6" fill="#c6d0d7"/>
+<rect x="135" y="270" width="370" height="12" rx="6" fill="#e0e6ea"/>
+<path d="M535 265l18 18 38-48" fill="none" stroke="#b98d3d" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="90" y="385" fill="#071827" font-family="Arial,sans-serif" font-size="22" font-weight="700">ESTUDIO SOCIOECONÓMICO</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420">
+<rect width="700" height="420" rx="30" fill="#eef3f6"/>
+<rect x="120" y="100" width="460" height="210" rx="12" fill="#d9e1e6"/>
+<path d="M95 110L350 45l255 65" fill="#17364b"/>
+<rect x="290" y="190" width="120" height="120" fill="#b98d3d"/><circle cx="350" cy="250" r="9" fill="#fff"/>
+<rect x="160" y="160" width="80" height="70" fill="#fff"/><rect x="460" y="160" width="80" height="70" fill="#fff"/>
+<circle cx="245" cy="345" r="26" fill="#c98f6a"/><path d="M210 410c6-65 64-65 70 0" fill="#17364b"/>
+<path d="M505 345l38 38 75-95" fill="none" stroke="#b98d3d" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="120" y="385" fill="#071827" font-family="Arial,sans-serif" font-size="22" font-weight="700">VISITA DOMICILIAR</text>
+</svg>
