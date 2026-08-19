@@ -40,13 +40,13 @@ header {
 }
 
 nav {
-  max-width: 1120px;
+  max-width: 100%;
   min-height: 210px;
   margin: auto;
   padding: 10px 24px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 25px;
 }
 
 /* =========================
@@ -57,6 +57,7 @@ nav {
   display: flex;
   align-items: center;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logo img {
@@ -68,6 +69,27 @@ nav {
 }
 
 /* =========================
+   IMAGEN HORIZONTAL JUNTO AL LOGO
+========================= */
+
+.header-banner {
+  flex: 1;
+  height: 190px;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.header-banner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================
    MENU
 ========================= */
 
@@ -75,6 +97,7 @@ nav {
   display: flex;
   gap: 25px;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .links a {
@@ -159,14 +182,14 @@ h1 {
 
 /* =========================
    TARJETA PRINCIPAL
-   IMAGEN HORIZONTAL
+   IMAGEN ANTERIOR
 ========================= */
 
 .hero-card {
   position: relative;
   overflow: hidden;
 
-  background-image: url("./horizontal.jpeg");
+  background-image: url("./fondo.jpg.jpeg");
   background-size: cover;
   background-position: center;
 
@@ -277,18 +300,12 @@ h1 {
 
 .grid {
   display: flex;
-
   flex-wrap: nowrap;
-
   gap: 25px;
-
   overflow-x: auto;
   overflow-y: hidden;
-
   padding: 15px 15px 30px;
-
   scroll-behavior: smooth;
-
   -webkit-overflow-scrolling: touch;
 }
 
@@ -688,14 +705,20 @@ footer {
 
   nav {
     min-height: 150px;
-
     padding: 8px 18px;
+    gap: 12px;
   }
 
   .logo img {
     height: 145px;
-
     max-width: 350px;
+  }
+
+  /* IMAGEN HORIZONTAL EN CELULAR */
+
+  .header-banner {
+    height: 125px;
+    flex: 1;
   }
 
   .links {
@@ -710,7 +733,7 @@ footer {
     min-height: auto;
   }
 
-  /* IMAGEN HORIZONTAL EN CELULAR */
+  /* IMAGEN ANTERIOR EN PORTADA */
 
   .hero-card {
     padding: 35px 20px;
@@ -879,6 +902,16 @@ alt="SIPSA POLIGRAFIA">
 
 </a>
 
+<!-- IMAGEN HORIZONTAL JUNTO AL LOGO -->
+
+<div class="header-banner">
+
+<img
+src="horizontal.jpeg"
+alt="SIPSA">
+
+</div>
+
 <div class="links">
 
 <a href="#inicio">Inicio</a>
@@ -967,9 +1000,7 @@ confidencial de la información.
 NUESTROS SERVICIOS
 </p>
 
-
 <div class="grid">
-
 
 <!-- POLIGRAFÍA -->
 
@@ -1060,7 +1091,6 @@ descripción fotografiada de la vivienda.
 
 </article>
 
-
 </div>
 
 </section>
@@ -1124,7 +1154,6 @@ atención profesional.
 
 
 <div class="contact-grid">
-
 
 <!-- TELÉFONOS -->
 
@@ -1198,7 +1227,6 @@ Torre A, zona 10, Guatemala.
 
 </div>
 
-
 </div>
 
 </section>
@@ -1211,7 +1239,6 @@ Torre A, zona 10, Guatemala.
 ========================= -->
 
 <div class="social-row">
-
 
 <!-- FACEBOOK -->
 
@@ -1257,7 +1284,6 @@ src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
 alt="WhatsApp">
 
 </a>
-
 
 </div>
 
