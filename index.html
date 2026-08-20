@@ -117,6 +117,7 @@ nav {
     2px 2px 4px rgba(0,0,0,.85),
     -1px -1px 2px rgba(0,0,0,.45);
 
+  /* FONDO AZUL SUAVE */
   background: rgba(30,105,160,.72);
 
   padding: 10px 15px;
@@ -129,6 +130,8 @@ nav {
     box-shadow .2s ease;
 }
 
+/* EFECTO AL PASAR EL CURSOR */
+
 .links a:hover {
   color: #ffffff;
 
@@ -139,6 +142,8 @@ nav {
   box-shadow:
     0 5px 14px rgba(0,0,0,.20);
 }
+
+/* EFECTO AL TOCAR EN CELULAR */
 
 .links a:active {
   transform: scale(1.08);
@@ -199,6 +204,7 @@ h1 {
 
 /* =========================
    BOTONES
+   Eliminados de la portada
 ========================= */
 
 .buttons {
@@ -531,7 +537,7 @@ h1 {
 }
 
 /* =========================
-   NOSOTROS
+   NOSOTROS / SOBRE SIPSA
 ========================= */
 
 .about {
@@ -560,6 +566,8 @@ h1 {
   overflow: hidden;
 }
 
+/* CAPA OSCURA PARA QUE EL TEXTO SE LEA MEJOR */
+
 .about::before {
   content: "";
 
@@ -575,6 +583,8 @@ h1 {
 
   z-index: 0;
 }
+
+/* CONTENIDO SOBRE LA IMAGEN */
 
 .about > * {
   position: relative;
@@ -739,11 +749,6 @@ h1 {
 
 /* =========================
    REDES SOCIALES
-   ORDEN:
-   WHATSAPP
-   FACEBOOK
-   INSTAGRAM
-   LINKEDIN
 ========================= */
 
 .social-row {
@@ -819,111 +824,13 @@ h1 {
 ========================= */
 
 footer {
-  background: #0c1d31;
-
-  color: #d7e2ec;
-
-  margin-top: 0;
-
-  padding: 60px 24px 20px;
-}
-
-.footer-container {
-  max-width: 1120px;
-
-  margin: auto;
-
-  display: grid;
-
-  grid-template-columns: 1.3fr 1fr 1fr;
-
-  gap: 55px;
-
-  padding-bottom: 45px;
-}
-
-.footer-column h3 {
-  color: #ffffff;
-
-  font-size: 20px;
-
-  margin: 0 0 18px;
-
-  font-weight: 800;
-}
-
-.footer-column p {
-  margin: 0 0 10px;
-
-  font-size: 15px;
-
-  line-height: 1.7;
-
-  color: #cbd8e5;
-}
-
-.footer-logo {
-  width: 190px;
-
-  max-width: 100%;
-
-  height: auto;
-
-  margin-bottom: 15px;
-}
-
-.footer-description {
-  max-width: 380px;
-}
-
-.footer-links {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 9px;
-}
-
-.footer-links a {
-  color: #cbd8e5;
-
-  text-decoration: none;
-
-  font-size: 15px;
-
-  transition: color .2s ease;
-}
-
-.footer-links a:hover {
-  color: #ffffff;
-
-  text-decoration: underline;
-}
-
-.footer-contact a {
-  color: #cbd8e5;
-
-  text-decoration: none;
-}
-
-.footer-contact a:hover {
-  color: #ffffff;
-
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  max-width: 1120px;
-
-  margin: auto;
-
-  padding-top: 20px;
-
-  border-top: 1px solid rgba(255,255,255,.15);
-
   text-align: center;
 
-  color: #aebdca;
+  padding: 28px;
+
+  background: #0c1d31;
+
+  color: #cbd8e5;
 
   font-size: 14px;
 }
@@ -960,6 +867,8 @@ footer {
     gap: 0;
   }
 
+  /* LOGO PEGADO AL BORDE IZQUIERDO */
+
   .logo {
     width: auto;
 
@@ -983,6 +892,8 @@ footer {
 
     padding: 0;
   }
+
+  /* MENU VISIBLE EN TELEFONO */
 
   .links {
     width: 100%;
@@ -1027,6 +938,8 @@ footer {
 
     white-space: nowrap;
   }
+
+  /* EFECTO AL TOCAR LOS BOTONES */
 
   .links a:active {
     transform: scale(1.08);
@@ -1103,7 +1016,9 @@ footer {
     transform: scale(1.02);
   }
 
-  /* SOBRE SIPSA */
+  /* =========================
+     SOBRE SIPSA EN CELULAR
+  ========================= */
 
   .about {
     grid-template-columns: 1fr;
@@ -1164,8 +1079,6 @@ footer {
     font-size: 18px;
   }
 
-  /* REDES SOCIALES */
-
   .social-row {
     right: 12px;
 
@@ -1190,38 +1103,6 @@ footer {
     width: 38px;
 
     height: 38px;
-  }
-
-  /* PIE DE PÁGINA */
-
-  footer {
-    padding: 50px 24px 20px;
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-    text-align: center;
-
-    padding-bottom: 35px;
-  }
-
-  .footer-logo {
-    width: 180px;
-  }
-
-  .footer-description {
-    margin: auto;
-  }
-
-  .footer-links {
-    align-items: center;
-  }
-
-  .footer-contact {
-    text-align: center;
   }
 
 }
@@ -1292,6 +1173,8 @@ de información para empresas y particulares.
 </div>
 
 
+<!-- TARJETA SIPSA -->
+
 <div class="hero-card">
 
 <div class="polygraph">
@@ -1324,6 +1207,8 @@ NUESTROS SERVICIOS
 
 <div class="grid">
 
+<!-- POLIGRAFÍA -->
+
 <article class="card card-poligrafia">
 
 <div class="icon">
@@ -1345,6 +1230,8 @@ casos específicos.
 </article>
 
 
+<!-- SOCIOECONÓMICO -->
+
 <article class="card card-socioeconomico">
 
 <div class="icon">
@@ -1364,6 +1251,8 @@ de un candidato.
 
 </article>
 
+
+<!-- INFORNET -->
 
 <article class="card card-infornet">
 
@@ -1385,6 +1274,8 @@ de verificación.
 
 </article>
 
+
+<!-- VISITA DOMICILIAR -->
 
 <article class="card card-visita">
 
@@ -1469,6 +1360,8 @@ atención profesional.
 
 <div class="contact-grid">
 
+<!-- TELÉFONOS -->
+
 <div class="contact-card">
 
 <div class="contact-icon">
@@ -1496,6 +1389,8 @@ PBX
 </div>
 
 
+<!-- CORREO -->
+
 <div class="contact-card">
 
 <div class="contact-icon">
@@ -1516,6 +1411,8 @@ rrhh@sipsapoligrafia.com
 
 </div>
 
+
+<!-- UBICACION -->
 
 <div class="contact-card">
 
@@ -1544,30 +1441,9 @@ Torre A, zona 10, Guatemala.
 
 <!-- =========================
      REDES SOCIALES
-     ORDEN:
-     WHATSAPP
-     FACEBOOK
-     INSTAGRAM
-     LINKEDIN
 ========================= -->
 
 <div class="social-row">
-
-<!-- WHATSAPP -->
-
-<a
-href="https://wa.me/50232775737"
-class="whatsapp-button"
-target="_blank"
-rel="noopener"
-aria-label="WhatsApp SIPSA">
-
-<img
-src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-alt="WhatsApp">
-
-</a>
-
 
 <!-- FACEBOOK -->
 
@@ -1599,17 +1475,18 @@ alt="Instagram">
 </a>
 
 
-<!-- LINKEDIN -->
+<!-- WHATSAPP -->
 
 <a
-href="https://www.linkedin.com/in/sipsa-poligrafia-311319371"
+href="https://wa.me/50232775737"
+class="whatsapp-button"
 target="_blank"
 rel="noopener"
-aria-label="LinkedIn SIPSA POLIGRAFIA">
+aria-label="WhatsApp SIPSA">
 
 <img
-src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-alt="LinkedIn">
+src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+alt="WhatsApp">
 
 </a>
 
@@ -1622,24 +1499,9 @@ alt="LinkedIn">
 
 <footer>
 
-<div class="footer-container">
+© 2026 SIPSA POLIGRAFIA · Todos los derechos reservados.
 
+</footer>
 
-<!-- INFORMACIÓN SIPSA -->
-
-<div class="footer-column">
-
-<img
-src="NUEVO%20LOGO%20SIPSA%202026.PNG"
-alt="SIPSA POLIGRAFIA"
-class="footer-logo">
-
-<p class="footer-description">
-
-<strong>SIPSA POLIGRAFIA</strong>
-
-<br>
-
-Servicios profesionales de poligrafía,
-estudios socioeconómicos y verificación
-de infornet
+</body>
+</html>
