@@ -10,10 +10,12 @@
 <meta name="description"
 content="SIPSA POLIGRAFIA - servicios profesionales de poligrafía, estudios socioeconómicos y verificación.">
 
-<!-- FUENTE MONTSERRAT EXTRA BOLD -->
+<!-- =========================
+     FUENTE MONTSERRAT
+========================= -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
 href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
@@ -37,6 +39,7 @@ body {
   line-height: 1.6;
 }
 
+
 /* =========================
    ENCABEZADO
 ========================= */
@@ -45,11 +48,9 @@ header {
   width: 100%;
   min-height: 210px;
 
-  background-image: url("./horizontal.jpeg");
+  position: relative;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
 
   border-bottom: 1px solid #e5e9ef;
 
@@ -57,31 +58,122 @@ header {
     0 2px 12px rgba(20,40,60,.12);
 }
 
+
+/* =========================
+   FONDO ANIMADO
+========================= */
+
+header::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -10%;
+
+  width: 120%;
+  height: 100%;
+
+  background-image:
+    url("./horizontalgrande.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  animation:
+    movimientoHorizontal
+    18s
+    ease-in-out
+    infinite alternate;
+
+  z-index: 0;
+}
+
+
+/* MOVIMIENTO HORIZONTAL */
+
+@keyframes movimientoHorizontal {
+
+  0% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(5%);
+  }
+
+}
+
+
+/* =========================
+   CAPA SUAVE
+========================= */
+
+header::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    rgba(0,0,0,.05);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
 nav {
+
   width: 100%;
+
   min-height: 210px;
 
   margin: 0;
+
   padding: 0 25px 0 0;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   gap: 25px;
+
+  position: relative;
+
+  z-index: 2;
 }
+
 
 /* =========================
    LOGO
 ========================= */
 
 .logo {
+
   display: flex;
+
   align-items: center;
+
   text-decoration: none;
+
   flex-shrink: 0;
 
   margin: 0;
+
   padding: 0;
 
   transition:
@@ -89,31 +181,48 @@ nav {
     filter .35s ease;
 }
 
+
+/* EFECTO DEL LOGO */
+
 .logo:hover {
-  transform: scale(1.06) translateY(-4px);
+
+  transform:
+    scale(1.06)
+    translateY(-4px);
 
   filter:
-    drop-shadow(0 8px 12px rgba(0,0,0,.25));
+    drop-shadow(
+      0 8px 12px rgba(0,0,0,.25)
+    );
 }
 
+
 .logo img {
+
   height: 230px;
+
   width: auto;
+
   max-width: 560px;
 
   object-fit: contain;
+
   display: block;
 
   margin: 0;
+
   padding: 0;
+
   border: none;
 }
+
 
 /* =========================
    MENU
 ========================= */
 
 .links {
+
   display: flex;
 
   gap: 18px;
@@ -123,7 +232,9 @@ nav {
   flex-shrink: 0;
 }
 
+
 .links a {
+
   color: #ffffff;
 
   text-decoration: none;
@@ -138,7 +249,8 @@ nav {
     2px 2px 4px rgba(0,0,0,.85),
     -1px -1px 2px rgba(0,0,0,.45);
 
-  background: rgba(30,105,160,.48);
+  background:
+    rgba(30,105,160,.48);
 
   padding: 10px 15px;
 
@@ -150,31 +262,41 @@ nav {
     box-shadow .2s ease;
 }
 
+
 .links a:hover {
+
   color: #ffffff;
 
-  background: rgba(20,118,198,.78);
+  background:
+    rgba(20,118,198,.78);
 
-  transform: scale(1.06);
+  transform:
+    scale(1.06);
 
   box-shadow:
     0 5px 14px rgba(0,0,0,.20);
 }
 
-.links a:active {
-  transform: scale(1.08);
 
-  background: rgba(20,118,198,.82);
+.links a:active {
+
+  transform:
+    scale(1.08);
+
+  background:
+    rgba(20,118,198,.82);
 
   box-shadow:
     0 5px 15px rgba(0,0,0,.25);
 }
+
 
 /* =========================
    PORTADA
 ========================= */
 
 .hero {
+
   max-width: 1120px;
 
   margin: auto;
@@ -183,7 +305,8 @@ nav {
 
   display: grid;
 
-  grid-template-columns: 1.5fr .8fr;
+  grid-template-columns:
+    1.5fr .8fr;
 
   gap: 50px;
 
@@ -192,7 +315,9 @@ nav {
   min-height: 650px;
 }
 
+
 .eyebrow {
+
   font-size: 12px;
 
   letter-spacing: 2px;
@@ -202,15 +327,20 @@ nav {
   color: #1476c6;
 }
 
+
 h1 {
-  font-size: clamp(42px,6vw,70px);
+
+  font-size:
+    clamp(42px,6vw,70px);
 
   line-height: 1.05;
 
   margin: 12px 0 22px;
 }
 
+
 .hero p {
+
   font-size: 19px;
 
   max-width: 700px;
@@ -218,16 +348,19 @@ h1 {
   color: #536577;
 }
 
+
 /* =========================
    TARJETA PRINCIPAL
 ========================= */
 
 .hero-card {
+
   position: relative;
 
   overflow: hidden;
 
-  background-image: url("./fondo.jpg.jpeg");
+  background-image:
+    url("./fondo.jpg.jpeg");
 
   background-size: cover;
 
@@ -240,7 +373,8 @@ h1 {
   border-radius: 24px;
 
   box-shadow:
-    0 25px 60px rgba(20,65,100,.2);
+    0 25px 60px
+    rgba(20,65,100,.2);
 
   text-align: center;
 
@@ -259,7 +393,9 @@ h1 {
     box-shadow .35s ease;
 }
 
+
 .hero-card::before {
+
   content: "";
 
   position: absolute;
@@ -275,24 +411,34 @@ h1 {
   z-index: 0;
 }
 
+
 .hero-card:hover {
-  transform: scale(1.04);
+
+  transform:
+    scale(1.04);
 
   box-shadow:
-    0 22px 50px rgba(20,40,60,.30);
+    0 22px 50px
+    rgba(20,40,60,.30);
 }
 
+
 .hero-card > * {
+
   position: relative;
 
   z-index: 1;
 }
 
+
 .polygraph {
+
   display: none;
 }
 
+
 .hero-card h2 {
+
   font-size: 46px;
 
   line-height: 1.05;
@@ -304,7 +450,9 @@ h1 {
   font-weight: 800;
 }
 
+
 .hero-card p {
+
   color: white;
 
   margin: 0;
@@ -316,7 +464,9 @@ h1 {
   font-size: 24px;
 }
 
+
 .hero-card small {
+
   display: block;
 
   margin-top: 20px;
@@ -330,11 +480,13 @@ h1 {
   font-weight: 600;
 }
 
+
 /* =========================
    SERVICIOS
 ========================= */
 
 .section {
+
   max-width: 100%;
 
   margin: auto;
@@ -342,8 +494,15 @@ h1 {
   padding: 85px 24px;
 }
 
+
+/* TÍTULO NUESTROS SERVICIOS */
+
 .section > .eyebrow {
-  font-family: "Montserrat", Arial, sans-serif;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
 
   font-size: 38px;
 
@@ -358,14 +517,17 @@ h1 {
   color: #102033;
 
   text-shadow:
-    0 2px 4px rgba(20,40,60,.12);
+    0 2px 4px
+    rgba(20,40,60,.12);
 }
+
 
 /* =========================
    FILA HORIZONTAL
 ========================= */
 
 .grid {
+
   display: flex;
 
   flex-wrap: nowrap;
@@ -376,34 +538,44 @@ h1 {
 
   overflow-y: hidden;
 
-  padding: 15px 15px 30px;
+  padding:
+    15px 15px 30px;
 
   scroll-behavior: smooth;
 
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling:
+    touch;
 }
 
+
 .grid::-webkit-scrollbar {
+
   height: 10px;
 }
 
+
 .grid::-webkit-scrollbar-track {
+
   background: #e5edf4;
 
   border-radius: 10px;
 }
 
+
 .grid::-webkit-scrollbar-thumb {
+
   background: #1476c6;
 
   border-radius: 10px;
 }
 
+
 /* =========================
-   TARJETAS SERVICIOS
+   TARJETAS
 ========================= */
 
 .card {
+
   min-width: 300px;
 
   width: 300px;
@@ -433,44 +605,56 @@ h1 {
   background-position: center;
 
   box-shadow:
-    0 12px 35px rgba(20,40,60,.15);
+    0 12px 35px
+    rgba(20,40,60,.15);
 
   transition:
     transform .35s ease,
     box-shadow .35s ease;
 }
 
+
 .card:hover {
-  transform: scale(1.04);
+
+  transform:
+    scale(1.04);
 
   box-shadow:
-    0 22px 50px rgba(20,40,60,.30);
+    0 22px 50px
+    rgba(20,40,60,.30);
 }
 
+
 .card::before {
+
   content: "";
 
   position: absolute;
 
   inset: 0;
 
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,.88),
-    rgba(0,0,0,.45),
-    rgba(0,0,0,.12)
-  );
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.88),
+      rgba(0,0,0,.45),
+      rgba(0,0,0,.12)
+    );
 
   z-index: 0;
 }
 
+
 .card > * {
+
   position: relative;
 
   z-index: 1;
 }
 
+
 .card .icon {
+
   font-size: 38px;
 
   color: white;
@@ -478,7 +662,9 @@ h1 {
   margin-bottom: 5px;
 }
 
+
 .card h3 {
+
   font-size: 30px;
 
   line-height: 1.15;
@@ -490,7 +676,9 @@ h1 {
   font-weight: 800;
 }
 
+
 .card p {
+
   margin: 0;
 
   color: white;
@@ -500,34 +688,49 @@ h1 {
   line-height: 1.55;
 }
 
+
 /* =========================
    IMÁGENES SERVICIOS
 ========================= */
 
 .card-poligrafia {
-  background-image: url("./poligrafia.png");
+
+  background-image:
+    url("./poligrafia.png");
 }
+
 
 .card-socioeconomico {
-  background-image: url("./1socioeconomico.jpeg");
+
+  background-image:
+    url("./1socioeconomico.jpeg");
 }
+
 
 .card-infornet {
-  background-image: url("./1infornet.jpeg");
+
+  background-image:
+    url("./1infornet.jpeg");
 }
 
+
 .card-visita {
-  background-image: url("./visita.jpg.jpeg");
+
+  background-image:
+    url("./visita.jpg.jpeg");
 }
+
 
 /* =========================
    SOBRE SIPSA
 ========================= */
 
 .about {
+
   position: relative;
 
-  background-image: url("./sobresipsa.jpeg");
+  background-image:
+    url("./sobresipsa.jpeg");
 
   background-size: cover;
 
@@ -537,11 +740,13 @@ h1 {
 
   padding:
     80px
-    max(24px, calc((100% - 1072px)/2));
+    max(24px,
+    calc((100% - 1072px)/2));
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
   gap: 70px;
 
@@ -550,7 +755,9 @@ h1 {
   overflow: hidden;
 }
 
+
 .about::before {
+
   content: "";
 
   position: absolute;
@@ -566,16 +773,23 @@ h1 {
   z-index: 0;
 }
 
+
 .about > * {
+
   position: relative;
 
   z-index: 1;
 }
 
+
 /* TÍTULO SOBRE SIPSA */
 
 .about .eyebrow {
-  font-family: "Montserrat", Arial, sans-serif;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
 
   font-size: 40px;
 
@@ -586,24 +800,32 @@ h1 {
   color: #ffffff;
 
   text-shadow:
-    0 3px 7px rgba(0,0,0,.45);
+    0 3px 7px
+    rgba(0,0,0,.45);
 }
 
+
 .about h2 {
+
   font-size: 42px;
 
   line-height: 1.15;
 
-  margin: 5px 0 35px;
+  margin:
+    5px 0 35px;
 
   color: white;
 }
+
 
 .about p {
+
   color: white;
 }
 
+
 .about > p {
+
   font-size: 23px;
 
   line-height: 1.75;
@@ -611,11 +833,13 @@ h1 {
   color: white;
 }
 
+
 /* =========================
    CONTACTO
 ========================= */
 
 .contact {
+
   max-width: 1120px;
 
   margin: auto;
@@ -623,18 +847,26 @@ h1 {
   padding: 85px 24px;
 }
 
+
 .contact-intro {
+
   text-align: center;
 
   max-width: 700px;
 
-  margin: 0 auto 45px;
+  margin:
+    0 auto 45px;
 }
+
 
 /* TÍTULO CONTACTO */
 
 .contact-intro .eyebrow {
-  font-family: "Montserrat", Arial, sans-serif;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
 
   font-size: 38px;
 
@@ -645,27 +877,35 @@ h1 {
   color: #102033;
 
   text-shadow:
-    0 2px 4px rgba(20,40,60,.12);
+    0 2px 4px
+    rgba(20,40,60,.12);
 }
 
+
 .contact-intro h2 {
+
   margin-bottom: 15px;
 
   font-size: 42px;
 }
 
+
 .contact-intro p {
+
   font-size: 19px;
 }
+
 
 /* =========================
    TARJETAS CONTACTO
 ========================= */
 
 .contact-grid {
+
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
   gap: 18px;
 
@@ -674,21 +914,26 @@ h1 {
   margin: auto;
 }
 
+
 .contact-card {
+
   position: relative;
 
   overflow: hidden;
 
-  border: 1px solid #344d63;
+  border:
+    1px solid #344d63;
 
   border-radius: 16px;
 
-  padding: 23px 20px;
+  padding:
+    23px 20px;
 
   text-align: center;
 
   box-shadow:
-    0 10px 30px rgba(20,40,60,.20);
+    0 10px 30px
+    rgba(20,40,60,.20);
 
   min-height: 245px;
 
@@ -709,18 +954,25 @@ h1 {
     box-shadow .35s ease;
 }
 
-/* EFECTO AL PASAR EL MOUSE */
+
+/* EFECTO MOUSE */
 
 .contact-card:hover {
-  transform: scale(1.04) translateY(-5px);
+
+  transform:
+    scale(1.04)
+    translateY(-5px);
 
   box-shadow:
-    0 22px 50px rgba(20,40,60,.35);
+    0 22px 50px
+    rgba(20,40,60,.35);
 }
+
 
 /* CAPA OSCURA */
 
 .contact-card::before {
+
   content: "";
 
   position: absolute;
@@ -736,40 +988,59 @@ h1 {
   z-index: 0;
 }
 
+
 .contact-card > * {
+
   position: relative;
 
   z-index: 1;
 }
 
-/* IMAGEN PBX */
+
+/* =========================
+   FONDOS CONTACTO
+========================= */
+
+/* PBX */
 
 .contact-card:nth-child(1) {
-  background-image: url("./callcenter.jpg");
+
+  background-image:
+    url("./callcenter.jpg");
 }
 
-/* IMAGEN CORREO */
+
+/* CORREO */
 
 .contact-card:nth-child(2) {
-  background-image: url("./correo.jpg");
+
+  background-image:
+    url("./correo.jpg");
 }
 
-/* IMAGEN UBICACIÓN */
+
+/* UBICACIÓN */
 
 .contact-card:nth-child(3) {
-  background-image: url("./maps.jpg");
+
+  background-image:
+    url("./maps.jpg");
 }
 
+
 .contact-icon {
+
   width: 70px;
 
   height: 70px;
 
-  margin: 0 auto 15px;
+  margin:
+    0 auto 15px;
 
   border-radius: 50%;
 
-  background: rgba(53,84,109,.80);
+  background:
+    rgba(53,84,109,.80);
 
   display: flex;
 
@@ -784,18 +1055,24 @@ h1 {
   font-weight: 700;
 }
 
+
 .contact-card h3 {
-  margin: 8px 0 12px;
+
+  margin:
+    8px 0 12px;
 
   font-size: 21px;
 
   color: #ffffff;
 
   text-shadow:
-    0 2px 5px rgba(0,0,0,.5);
+    0 2px 5px
+    rgba(0,0,0,.5);
 }
 
+
 .contact-card p {
+
   margin: 0;
 
   color: #ffffff;
@@ -807,10 +1084,13 @@ h1 {
   line-height: 1.65;
 
   text-shadow:
-    0 2px 4px rgba(0,0,0,.65);
+    0 2px 4px
+    rgba(0,0,0,.65);
 }
 
+
 .contact-card a {
+
   color: #ffffff;
 
   text-decoration: none;
@@ -820,20 +1100,25 @@ h1 {
   font-size: 18px;
 
   text-shadow:
-    0 2px 4px rgba(0,0,0,.65);
+    0 2px 4px
+    rgba(0,0,0,.65);
 }
 
+
 .contact-card a:hover {
+
   color: #8ed0ff;
 
   text-decoration: underline;
 }
+
 
 /* =========================
    REDES SOCIALES
 ========================= */
 
 .social-row {
+
   position: fixed;
 
   right: 24px;
@@ -851,7 +1136,9 @@ h1 {
   gap: 12px;
 }
 
+
 .social-row a {
+
   width: 68px;
 
   height: 68px;
@@ -867,21 +1154,28 @@ h1 {
   background: white;
 
   box-shadow:
-    0 5px 18px rgba(0,0,0,.25);
+    0 5px 18px
+    rgba(0,0,0,.25);
 
   transition:
     transform .2s ease,
     box-shadow .2s ease;
 }
 
+
 .social-row a:hover {
-  transform: scale(1.1);
+
+  transform:
+    scale(1.1);
 
   box-shadow:
-    0 7px 24px rgba(0,0,0,.32);
+    0 7px 24px
+    rgba(0,0,0,.32);
 }
 
+
 .social-row img {
+
   width: 42px;
 
   height: 42px;
@@ -891,27 +1185,36 @@ h1 {
   display: block;
 }
 
+
 .whatsapp-button {
-  background: #25D366 !important;
+
+  background:
+    #25D366 !important;
 }
 
+
 .whatsapp-button img {
+
   width: 44px;
 
   height: 44px;
 }
 
+
 .linkedin-button img {
+
   width: 42px;
 
   height: 42px;
 }
+
 
 /* =========================
    PIE DE PÁGINA
 ========================= */
 
 footer {
+
   text-align: center;
 
   padding: 28px;
@@ -923,19 +1226,39 @@ footer {
   font-size: 14px;
 }
 
+
 /* =========================
    CELULAR
 ========================= */
 
 @media(max-width:760px) {
 
+
   header {
+
     min-height: 205px;
 
-    background-position: center;
+    background-position:
+      center;
   }
 
+
+  header::before {
+
+    width: 140%;
+
+    left: -20%;
+
+    animation:
+      movimientoHorizontal
+      18s
+      ease-in-out
+      infinite alternate;
+  }
+
+
   nav {
+
     width: 100%;
 
     min-height: 205px;
@@ -950,22 +1273,28 @@ footer {
 
     align-items: flex-start;
 
-    justify-content: flex-start;
+    justify-content:
+      flex-start;
 
     gap: 0;
   }
 
+
   .logo {
+
     width: auto;
 
     margin: 0;
 
     padding: 0;
 
-    align-self: flex-start;
+    align-self:
+      flex-start;
   }
 
+
   .logo img {
+
     height: 145px;
 
     width: auto;
@@ -979,9 +1308,11 @@ footer {
     padding: 0;
   }
 
-  /* MENU EN TELEFONO */
+
+  /* MENU */
 
   .links {
+
     width: 100%;
 
     display: flex;
@@ -990,7 +1321,8 @@ footer {
 
     align-items: center;
 
-    justify-content: flex-start;
+    justify-content:
+      flex-start;
 
     gap: 8px;
 
@@ -998,77 +1330,114 @@ footer {
 
     overflow-y: hidden;
 
-    padding: 5px 8px 10px 0;
+    padding:
+      5px 8px 10px 0;
 
     margin: 0;
 
     flex-shrink: 0;
 
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling:
+      touch;
 
     scrollbar-width: none;
   }
 
+
   .links::-webkit-scrollbar {
+
     display: none;
   }
 
+
   .links a {
+
     flex: 0 0 auto;
 
     font-size: 18px;
 
-    padding: 8px 11px;
+    padding:
+      8px 11px;
 
     border-radius: 7px;
 
     white-space: nowrap;
 
-    background: rgba(30,105,160,.48);
+    background:
+      rgba(30,105,160,.48);
   }
+
 
   .links a:active {
-    transform: scale(1.08);
 
-    background: rgba(20,118,198,.82);
+    transform:
+      scale(1.08);
+
+    background:
+      rgba(20,118,198,.82);
   }
 
+
+  /* HERO */
+
   .hero {
+
     grid-template-columns: 1fr;
 
-    padding: 55px 24px;
+    padding:
+      55px 24px;
 
     min-height: auto;
   }
 
+
   .hero-card {
-    padding: 35px 20px;
+
+    padding:
+      35px 20px;
 
     min-height: 300px;
 
     background-size: cover;
 
-    background-position: center;
+    background-position:
+      center;
   }
 
+
   .hero-card h2 {
+
     font-size: 40px;
   }
 
+
   .hero-card p {
+
     font-size: 22px;
   }
 
+
   .hero-card small {
+
     font-size: 16px;
   }
 
+
+  /* SERVICIOS */
+
   .section {
-    padding: 60px 12px;
+
+    padding:
+      60px 12px;
   }
 
+
   .section > .eyebrow {
-    font-family: "Montserrat", Arial, sans-serif;
+
+    font-family:
+      "Montserrat",
+      Arial,
+      sans-serif;
 
     font-size: 30px;
 
@@ -1079,7 +1448,9 @@ footer {
     margin-bottom: 25px;
   }
 
+
   .grid {
+
     gap: 18px;
 
     padding-left: 12px;
@@ -1087,7 +1458,9 @@ footer {
     padding-right: 12px;
   }
 
+
   .card {
+
     min-width: 300px;
 
     width: 300px;
@@ -1097,48 +1470,71 @@ footer {
     min-height: 420px;
   }
 
+
   .card h3 {
+
     font-size: 30px;
   }
 
+
   .card:hover,
   .hero-card:hover {
-    transform: scale(1.02);
+
+    transform:
+      scale(1.02);
   }
+
 
   /* SOBRE SIPSA */
 
   .about {
+
     grid-template-columns: 1fr;
 
-    padding: 60px 24px;
+    padding:
+      60px 24px;
 
-    background-position: center;
+    background-position:
+      center;
   }
 
+
   .about .eyebrow {
-    font-family: "Montserrat", Arial, sans-serif;
+
+    font-family:
+      "Montserrat",
+      Arial,
+      sans-serif;
 
     font-size: 30px;
 
     font-weight: 800;
   }
 
+
   .about h2 {
+
     font-size: 36px;
   }
 
+
   .about > p {
+
     font-size: 19px;
   }
+
 
   /* CONTACTO */
 
   .contact {
-    padding: 60px 24px;
+
+    padding:
+      60px 24px;
   }
 
+
   .contact-grid {
+
     grid-template-columns: 1fr;
 
     max-width: 400px;
@@ -1146,29 +1542,44 @@ footer {
     gap: 16px;
   }
 
+
   .contact-intro .eyebrow {
-    font-family: "Montserrat", Arial, sans-serif;
+
+    font-family:
+      "Montserrat",
+      Arial,
+      sans-serif;
 
     font-size: 30px;
 
     font-weight: 800;
   }
 
+
   .contact-intro h2 {
+
     font-size: 36px;
   }
 
+
   .contact-card {
-    padding: 25px 20px;
+
+    padding:
+      25px 20px;
 
     min-height: 230px;
   }
 
+
   .contact-card:hover {
-    transform: scale(1.02);
+
+    transform:
+      scale(1.02);
   }
 
+
   .contact-icon {
+
     width: 78px;
 
     height: 78px;
@@ -1176,18 +1587,24 @@ footer {
     font-size: 42px;
   }
 
+
   h1 {
+
     font-size: 44px;
   }
 
+
   .contact-card p,
   .contact-card a {
+
     font-size: 18px;
   }
+
 
   /* REDES SOCIALES */
 
   .social-row {
+
     right: 12px;
 
     bottom: 12px;
@@ -1195,25 +1612,33 @@ footer {
     gap: 8px;
   }
 
+
   .social-row a {
+
     width: 58px;
 
     height: 58px;
   }
 
+
   .social-row img {
+
     width: 36px;
 
     height: 36px;
   }
 
+
   .whatsapp-button img {
+
     width: 38px;
 
     height: 38px;
   }
 
+
   .linkedin-button img {
+
     width: 36px;
 
     height: 36px;
@@ -1225,7 +1650,9 @@ footer {
 
 </head>
 
+
 <body>
+
 
 <!-- =========================
      ENCABEZADO
@@ -1235,7 +1662,9 @@ footer {
 
 <nav>
 
-<a href="#inicio" class="logo">
+<a
+href="#inicio"
+class="logo">
 
 <img
 src="NUEVO%20LOGO%20SIPSA%202026.PNG"
@@ -1243,15 +1672,24 @@ alt="SIPSA POLIGRAFIA">
 
 </a>
 
+
 <div class="links">
 
-<a href="#inicio">Inicio</a>
+<a href="#inicio">
+Inicio
+</a>
 
-<a href="#servicios">Servicios</a>
+<a href="#servicios">
+Servicios
+</a>
 
-<a href="#nosotros">Nosotros</a>
+<a href="#nosotros">
+Nosotros
+</a>
 
-<a href="#contacto">Contacto</a>
+<a href="#contacto">
+Contacto
+</a>
 
 </div>
 
@@ -1262,26 +1700,44 @@ alt="SIPSA POLIGRAFIA">
 
 <main>
 
+
 <!-- =========================
      PORTADA
 ========================= -->
 
-<section class="hero" id="inicio">
+<section
+class="hero"
+id="inicio">
+
 
 <div>
 
 <p class="eyebrow">
-PROFESIONALISMO · CONFIDENCIALIDAD · CONFIANZA
+
+PROFESIONALISMO ·
+CONFIDENCIALIDAD ·
+CONFIANZA
+
 </p>
 
+
 <h1>
-Información confiable para tomar mejores decisiones.
+
+Información confiable
+para tomar mejores
+decisiones.
+
 </h1>
 
+
 <p>
-Servicios profesionales de poligrafía,
-estudios socioeconómicos y verificación
-de información para empresas y particulares.
+
+Servicios profesionales
+de poligrafía,
+estudios socioeconómicos
+y verificación de información
+para empresas y particulares.
+
 </p>
 
 </div>
@@ -1293,13 +1749,23 @@ de información para empresas y particulares.
 ◉
 </div>
 
-<h2>SIPSA</h2>
 
-<p>POLIGRAFIA</p>
+<h2>
+SIPSA
+</h2>
+
+
+<p>
+POLIGRAFIA
+</p>
+
 
 <small>
-Evaluaciones profesionales con manejo
-confidencial de la información.
+
+Evaluaciones profesionales
+con manejo confidencial
+de la información.
+
 </small>
 
 </div>
@@ -1311,94 +1777,134 @@ confidencial de la información.
      SERVICIOS
 ========================= -->
 
-<section class="section" id="servicios">
+<section
+class="section"
+id="servicios">
+
 
 <p class="eyebrow">
+
 NUESTROS SERVICIOS
+
 </p>
+
 
 <div class="grid">
 
-<article class="card card-poligrafia">
+
+<article
+class="card card-poligrafia">
+
 
 <div class="icon">
 ◉
 </div>
 
+
 <h3>
+
 Pruebas de Poligrafía
+
 </h3>
 
+
 <p>
+
 Evaluaciones poligráficas realizadas
 con metodología profesional y manejo
 confidencial de la información.
 Pruebas pre-empleo, rutinarias y
 casos específicos.
+
 </p>
 
 </article>
 
 
-<article class="card card-socioeconomico">
+<article
+class="card card-socioeconomico">
+
 
 <div class="icon">
 ▣
 </div>
 
+
 <h3>
+
 Estudios Socioeconómicos
+
 </h3>
 
+
 <p>
+
 Validación de referencias laborales,
 documentación y visita domiciliar para
 conocer el entorno laboral y social
 de un candidato.
+
 </p>
 
 </article>
 
 
-<article class="card card-infornet">
+<article
+class="card card-infornet">
+
 
 <div class="icon">
 ✓
 </div>
 
+
 <h3>
+
 Verificación de Infornet
+
 </h3>
 
+
 <p>
+
 Validación de historial crediticio,
 demandas, procesos judiciales,
 créditos en mora, incobrables o
 embargo, apoyando procesos
 de verificación.
+
 </p>
 
 </article>
 
 
-<article class="card card-visita">
+<article
+class="card card-visita">
+
 
 <div class="icon">
 ⌂
 </div>
 
+
 <h3>
+
 Visita Domiciliar
+
 </h3>
 
+
 <p>
+
 Las visitas Domiciliares te permitirán
 conocer el entorno social de un
 candidato, referencias vecinales y
 descripción fotografiada de la vivienda.
+
 </p>
 
 </article>
+
 
 </div>
 
@@ -1409,28 +1915,39 @@ descripción fotografiada de la vivienda.
      NOSOTROS
 ========================= -->
 
-<section class="about" id="nosotros">
+<section
+class="about"
+id="nosotros">
+
 
 <div>
 
 <p class="eyebrow">
+
 SOBRE SIPSA
+
 </p>
 
+
 <h2>
+
 Compromiso con la información
 y la confidencialidad.
+
 </h2>
 
 </div>
 
+
 <p>
+
 En SIPSA POLIGRAFIA trabajamos para
 brindar información útil, clara y
 profesional. Nuestro enfoque busca
 apoyar a nuestros clientes en procesos
 donde la confianza, la verificación y
 la confidencialidad son fundamentales.
+
 </p>
 
 </section>
@@ -1440,23 +1957,35 @@ la confidencialidad son fundamentales.
      CONTACTO
 ========================= -->
 
-<section class="contact" id="contacto">
+<section
+class="contact"
+id="contacto">
+
 
 <div class="contact-intro">
 
+
 <p class="eyebrow">
+
 CONTACTO
+
 </p>
 
+
 <h2>
+
 Estamos para atenderte
+
 </h2>
 
+
 <p>
+
 Comunícate con SIPSA POLIGRAFIA
 para solicitar información sobre
 nuestros servicios y coordinar una
 atención profesional.
+
 </p>
 
 </div>
@@ -1464,28 +1993,38 @@ atención profesional.
 
 <div class="contact-grid">
 
-<!-- TELEFONOS -->
+
+<!-- PBX -->
 
 <div class="contact-card">
+
 
 <div class="contact-icon">
 ☎
 </div>
 
+
 <h3>
-TELEFONOS
+PBX
 </h3>
+
 
 <p>
 
 <a href="tel:+50222326698">
+
 2232-6698
+
 </a>
+
 
 <br>
 
+
 <a href="tel:+50222322563">
+
 2232-2563
+
 </a>
 
 </p>
@@ -1497,18 +2036,25 @@ TELEFONOS
 
 <div class="contact-card">
 
+
 <div class="contact-icon">
 ✉
 </div>
 
+
 <h3>
-CORREO
+
+CORREO ELECTRÓNICO
+
 </h3>
+
 
 <p>
 
 <a href="mailto:rrhh@sipsapoligrafia.com">
+
 rrhh@sipsapoligrafia.com
+
 </a>
 
 </p>
@@ -1520,21 +2066,29 @@ rrhh@sipsapoligrafia.com
 
 <div class="contact-card">
 
+
 <div class="contact-icon">
 📍
 </div>
 
+
 <h3>
+
 UBICACIÓN
+
 </h3>
 
+
 <p>
+
 Avenida Reforma 12 calle 12-01,
 Edificio Reforma Montúfar,
 Torre A, zona 10, Guatemala.
+
 </p>
 
 </div>
+
 
 </div>
 
@@ -1549,12 +2103,16 @@ Torre A, zona 10, Guatemala.
 
 <div class="social-row">
 
+
+<!-- WHATSAPP -->
+
 <a
 href="https://wa.me/50232775737"
 class="whatsapp-button"
 target="_blank"
 rel="noopener"
 aria-label="WhatsApp SIPSA">
+
 
 <img
 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -1563,11 +2121,14 @@ alt="WhatsApp">
 </a>
 
 
+<!-- FACEBOOK -->
+
 <a
 href="https://www.facebook.com/estudiossocioeconomicos.sipsa.5"
 target="_blank"
 rel="noopener"
 aria-label="Facebook SIPSA">
+
 
 <img
 src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg"
@@ -1576,11 +2137,14 @@ alt="Facebook">
 </a>
 
 
+<!-- INSTAGRAM -->
+
 <a
 href="https://www.instagram.com/sipsa_gt/"
 target="_blank"
 rel="noopener"
 aria-label="Instagram SIPSA">
+
 
 <img
 src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
@@ -1589,6 +2153,8 @@ alt="Instagram">
 </a>
 
 
+<!-- LINKEDIN -->
+
 <a
 href="https://www.linkedin.com/in/sipsa-poligrafia-311319371"
 class="linkedin-button"
@@ -1596,11 +2162,13 @@ target="_blank"
 rel="noopener"
 aria-label="LinkedIn SIPSA">
 
+
 <img
 src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
 alt="LinkedIn">
 
 </a>
+
 
 </div>
 
@@ -1611,9 +2179,11 @@ alt="LinkedIn">
 
 <footer>
 
-© 2026 SIPSA POLIGRAFIA · Todos los derechos reservados.
+© 2026 SIPSA POLIGRAFIA ·
+Todos los derechos reservados.
 
 </footer>
+
 
 </body>
 </html>
