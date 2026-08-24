@@ -49,7 +49,6 @@ header {
   box-shadow: 0 2px 12px rgba(20,40,60,.12);
 }
 
-
 header::before {
   content: "";
   position: absolute;
@@ -67,13 +66,12 @@ header::before {
 
   animation:
     movimientoHorizontal
-    15s
+    18s
     ease-in-out
     infinite alternate;
 
   z-index: 0;
 }
-
 
 @keyframes movimientoHorizontal {
 
@@ -86,7 +84,6 @@ header::before {
   }
 
 }
-
 
 header::after {
   content: "";
@@ -138,7 +135,6 @@ nav {
     filter .35s ease;
 }
 
-
 .logo:hover {
   transform:
     scale(1.06)
@@ -149,7 +145,6 @@ nav {
       0 8px 12px rgba(0,0,0,.25)
     );
 }
-
 
 .logo img {
   height: 230px;
@@ -175,7 +170,6 @@ nav {
   flex-shrink: 0;
 }
 
-
 .links a {
   color: #ffffff;
   text-decoration: none;
@@ -198,7 +192,6 @@ nav {
     transform .2s ease,
     box-shadow .2s ease;
 }
-
 
 .links a:hover {
   color: #ffffff;
@@ -236,14 +229,12 @@ nav {
   min-height: 650px;
 }
 
-
 .eyebrow {
   font-size: 12px;
   letter-spacing: 2px;
   font-weight: 800;
   color: #1476c6;
 }
-
 
 h1 {
   font-size:
@@ -252,7 +243,6 @@ h1 {
   line-height: 1.05;
   margin: 12px 0 22px;
 }
-
 
 .hero p {
   font-size: 19px;
@@ -297,7 +287,6 @@ h1 {
     box-shadow .35s ease;
 }
 
-
 .hero-card::before {
   content: "";
   position: absolute;
@@ -312,7 +301,6 @@ h1 {
   z-index: 0;
 }
 
-
 .hero-card:hover {
   transform:
     scale(1.04);
@@ -322,17 +310,14 @@ h1 {
     rgba(20,40,60,.30);
 }
 
-
 .hero-card > * {
   position: relative;
   z-index: 1;
 }
 
-
 .polygraph {
   display: none;
 }
-
 
 .hero-card h2 {
   font-size: 46px;
@@ -343,7 +328,6 @@ h1 {
   font-weight: 800;
 }
 
-
 .hero-card p {
   color: white;
   margin: 0;
@@ -352,7 +336,6 @@ h1 {
   letter-spacing: 3px;
   font-size: 24px;
 }
-
 
 .hero-card small {
   display: block;
@@ -375,7 +358,6 @@ h1 {
   margin: auto;
   padding: 85px 24px;
 }
-
 
 .section > .eyebrow {
   font-family:
@@ -420,17 +402,14 @@ h1 {
     touch;
 }
 
-
 .grid::-webkit-scrollbar {
   height: 10px;
 }
-
 
 .grid::-webkit-scrollbar-track {
   background: #e5edf4;
   border-radius: 10px;
 }
-
 
 .grid::-webkit-scrollbar-thumb {
   background: #1476c6;
@@ -473,7 +452,6 @@ h1 {
     box-shadow .35s ease;
 }
 
-
 .card:hover {
   transform:
     scale(1.04);
@@ -481,7 +459,6 @@ h1 {
   box-shadow:
     0 22px 50px rgba(20,40,60,.30);
 }
-
 
 .card::before {
   content: "";
@@ -499,19 +476,16 @@ h1 {
   z-index: 0;
 }
 
-
 .card > * {
   position: relative;
   z-index: 1;
 }
-
 
 .card .icon {
   font-size: 38px;
   color: white;
   margin-bottom: 5px;
 }
-
 
 .card h3 {
   font-size: 30px;
@@ -524,7 +498,6 @@ h1 {
   font-weight: 800;
 }
 
-
 .card p {
   margin: 0;
 
@@ -536,7 +509,7 @@ h1 {
 
 
 /* =========================
-   BOTÓN VER SERVICIO
+   BOTONES SERVICIOS
 ========================= */
 
 .more-button {
@@ -575,11 +548,61 @@ h1 {
     box-shadow .2s ease;
 }
 
-
 .more-button:hover {
 
   background:
     #0b68b2;
+
+  transform:
+    scale(1.05);
+
+  box-shadow:
+    0 6px 16px rgba(0,0,0,.30);
+}
+
+
+/* BOTÓN COTIZAR */
+
+.quote-button {
+
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 8px 14px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background:
+    #25D366;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+.quote-button:hover {
+
+  background:
+    #1ebe5d;
 
   transform:
     scale(1.05);
@@ -598,18 +621,15 @@ h1 {
     url("./poligrafia.png");
 }
 
-
 .card-socioeconomico {
   background-image:
     url("./1socioeconomico.jpeg");
 }
 
-
 .card-infornet {
   background-image:
     url("./1infornet.jpeg");
 }
-
 
 .card-visita {
   background-image:
@@ -646,11 +666,9 @@ h1 {
     aparecer .45s ease;
 }
 
-
 .service-info.active {
   display: block;
 }
-
 
 @keyframes aparecer {
 
@@ -668,7 +686,6 @@ h1 {
 
 }
 
-
 .service-info h2 {
 
   margin-top: 0;
@@ -685,7 +702,6 @@ h1 {
   font-size: 32px;
 }
 
-
 .service-info p {
 
   color: #536577;
@@ -696,7 +712,6 @@ h1 {
 
   margin-bottom: 18px;
 }
-
 
 .back-button {
 
@@ -725,7 +740,6 @@ h1 {
     background .2s ease,
     transform .2s ease;
 }
-
 
 .back-button:hover {
 
@@ -771,7 +785,6 @@ h1 {
   overflow: hidden;
 }
 
-
 .about::before {
 
   content: "";
@@ -788,13 +801,11 @@ h1 {
   z-index: 0;
 }
 
-
 .about > * {
 
   position: relative;
   z-index: 1;
 }
-
 
 .about .eyebrow {
 
@@ -815,7 +826,6 @@ h1 {
     0 3px 7px rgba(0,0,0,.45);
 }
 
-
 .about h2 {
 
   font-size: 42px;
@@ -827,7 +837,6 @@ h1 {
 
   color: white;
 }
-
 
 .about > p {
 
@@ -852,7 +861,6 @@ h1 {
   padding: 85px 24px;
 }
 
-
 .contact-intro {
 
   text-align: center;
@@ -862,7 +870,6 @@ h1 {
   margin:
     0 auto 45px;
 }
-
 
 .contact-intro .eyebrow {
 
@@ -883,14 +890,12 @@ h1 {
     0 2px 4px rgba(20,40,60,.12);
 }
 
-
 .contact-intro h2 {
 
   margin-bottom: 15px;
 
   font-size: 42px;
 }
-
 
 .contact-intro p {
 
@@ -915,7 +920,6 @@ h1 {
 
   margin: auto;
 }
-
 
 .contact-card {
 
@@ -955,7 +959,6 @@ h1 {
     box-shadow .35s ease;
 }
 
-
 .contact-card:hover {
 
   transform:
@@ -965,7 +968,6 @@ h1 {
   box-shadow:
     0 22px 50px rgba(20,40,60,.35);
 }
-
 
 .contact-card::before {
 
@@ -984,7 +986,6 @@ h1 {
   z-index: 0;
 }
 
-
 .contact-card > * {
 
   position: relative;
@@ -1000,13 +1001,11 @@ h1 {
     url("./callcenter.jpg");
 }
 
-
 .contact-card:nth-child(2) {
 
   background-image:
     url("./correo.jpg");
 }
-
 
 .contact-card:nth-child(3) {
 
@@ -1040,7 +1039,6 @@ h1 {
   font-weight: 700;
 }
 
-
 .contact-card h3 {
 
   margin:
@@ -1053,7 +1051,6 @@ h1 {
   text-shadow:
     0 2px 5px rgba(0,0,0,.5);
 }
-
 
 .contact-card p {
 
@@ -1071,7 +1068,6 @@ h1 {
     0 2px 4px rgba(0,0,0,.65);
 }
 
-
 .contact-card a {
 
   color: #ffffff;
@@ -1086,12 +1082,58 @@ h1 {
     0 2px 4px rgba(0,0,0,.65);
 }
 
-
 .contact-card a:hover {
 
   color: #8ed0ff;
 
   text-decoration: underline;
+}
+
+
+/* =========================
+   BOTÓN UBICACIÓN
+========================= */
+
+.location-button {
+
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 9px 15px;
+
+  border-radius: 8px;
+
+  background:
+    #1476c6;
+
+  color: white !important;
+
+  font-size: 15px !important;
+
+  font-weight: 800 !important;
+
+  text-decoration: none !important;
+
+  text-shadow: none !important;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.location-button:hover {
+
+  background:
+    #0b68b2;
+
+  color: white !important;
+
+  transform:
+    scale(1.05);
 }
 
 
@@ -1110,7 +1152,6 @@ h1 {
   text-align: center;
 }
 
-
 .bottom-navigation-title {
 
   color: white;
@@ -1126,7 +1167,6 @@ h1 {
     0 0 20px;
 }
 
-
 .bottom-links {
 
   display: flex;
@@ -1139,7 +1179,6 @@ h1 {
 
   gap: 12px;
 }
-
 
 .bottom-links a {
 
@@ -1163,7 +1202,6 @@ h1 {
     background .2s ease,
     transform .2s ease;
 }
-
 
 .bottom-links a:hover {
 
@@ -1198,7 +1236,6 @@ h1 {
   gap: 12px;
 }
 
-
 .social-row a {
 
   width: 68px;
@@ -1223,7 +1260,6 @@ h1 {
     box-shadow .2s ease;
 }
 
-
 .social-row a:hover {
 
   transform:
@@ -1232,7 +1268,6 @@ h1 {
   box-shadow:
     0 7px 24px rgba(0,0,0,.32);
 }
-
 
 .social-row img {
 
@@ -1244,20 +1279,17 @@ h1 {
   display: block;
 }
 
-
 .whatsapp-button {
 
   background:
     #25D366 !important;
 }
 
-
 .whatsapp-button img {
 
   width: 44px;
   height: 44px;
 }
-
 
 .linkedin-button img {
 
@@ -1292,7 +1324,6 @@ footer {
 
 @media(max-width:760px) {
 
-
   header {
 
     min-height: 205px;
@@ -1300,7 +1331,6 @@ footer {
     background-position:
       center;
   }
-
 
   header::before {
 
@@ -1310,11 +1340,10 @@ footer {
 
     animation:
       movimientoHorizontal
-      15s
+      18s
       ease-in-out
       infinite alternate;
   }
-
 
   nav {
 
@@ -1338,7 +1367,6 @@ footer {
     gap: 0;
   }
 
-
   .logo {
 
     width: auto;
@@ -1350,7 +1378,6 @@ footer {
     align-self:
       flex-start;
   }
-
 
   .logo img {
 
@@ -1402,12 +1429,10 @@ footer {
     scrollbar-width: none;
   }
 
-
   .links::-webkit-scrollbar {
 
     display: none;
   }
-
 
   .links a {
 
@@ -1439,7 +1464,6 @@ footer {
     min-height: auto;
   }
 
-
   .hero-card {
 
     padding:
@@ -1448,18 +1472,15 @@ footer {
     min-height: 300px;
   }
 
-
   .hero-card h2 {
 
     font-size: 40px;
   }
 
-
   .hero-card p {
 
     font-size: 22px;
   }
-
 
   .hero-card small {
 
@@ -1475,7 +1496,6 @@ footer {
       60px 12px;
   }
 
-
   .section > .eyebrow {
 
     font-size: 30px;
@@ -1487,7 +1507,6 @@ footer {
     margin-bottom: 25px;
   }
 
-
   .grid {
 
     gap: 18px;
@@ -1496,7 +1515,6 @@ footer {
 
     padding-right: 12px;
   }
-
 
   .card {
 
@@ -1509,12 +1527,10 @@ footer {
     min-height: 450px;
   }
 
-
   .card h3 {
 
     font-size: 29px;
   }
-
 
   .card:hover,
   .hero-card:hover {
@@ -1537,12 +1553,10 @@ footer {
     border-radius: 18px;
   }
 
-
   .service-info h2 {
 
     font-size: 28px;
   }
-
 
   .service-info p {
 
@@ -1562,18 +1576,15 @@ footer {
       60px 24px;
   }
 
-
   .about .eyebrow {
 
     font-size: 30px;
   }
 
-
   .about h2 {
 
     font-size: 36px;
   }
-
 
   .about > p {
 
@@ -1589,7 +1600,6 @@ footer {
       60px 24px;
   }
 
-
   .contact-grid {
 
     grid-template-columns: 1fr;
@@ -1599,18 +1609,15 @@ footer {
     gap: 16px;
   }
 
-
   .contact-intro .eyebrow {
 
     font-size: 30px;
   }
 
-
   .contact-intro h2 {
 
     font-size: 36px;
   }
-
 
   .contact-card {
 
@@ -1620,13 +1627,11 @@ footer {
     min-height: 230px;
   }
 
-
   .contact-card:hover {
 
     transform:
       scale(1.02);
   }
-
 
   .contact-icon {
 
@@ -1637,12 +1642,10 @@ footer {
     font-size: 42px;
   }
 
-
   h1 {
 
     font-size: 44px;
   }
-
 
   .contact-card p,
   .contact-card a {
@@ -1659,12 +1662,10 @@ footer {
       30px 15px;
   }
 
-
   .bottom-links {
 
     gap: 8px;
   }
-
 
   .bottom-links a {
 
@@ -1686,14 +1687,12 @@ footer {
     gap: 8px;
   }
 
-
   .social-row a {
 
     width: 58px;
 
     height: 58px;
   }
-
 
   .social-row img {
 
@@ -1702,14 +1701,12 @@ footer {
     height: 36px;
   }
 
-
   .whatsapp-button img {
 
     width: 38px;
 
     height: 38px;
   }
-
 
   .linkedin-button img {
 
@@ -1893,6 +1890,16 @@ Ver servicio
 
 </button>
 
+<a
+class="quote-button"
+href="https://wa.me/50232775737?text=Hola%20SIPSA%20POLIGRAFIA,%20deseo%20cotizar%20el%20servicio%20de%20Pruebas%20de%20Poligraf%C3%ADa."
+target="_blank"
+rel="noopener">
+
+Cotizar servicio
+
+</a>
+
 </article>
 
 
@@ -1923,6 +1930,16 @@ onclick="mostrarServicio('socioeconomico-info')">
 Ver servicio
 
 </button>
+
+<a
+class="quote-button"
+href="https://wa.me/50232775737?text=Hola%20SIPSA%20POLIGRAFIA,%20deseo%20cotizar%20el%20servicio%20de%20Estudio%20Socioecon%C3%B3mico."
+target="_blank"
+rel="noopener">
+
+Cotizar servicio
+
+</a>
 
 </article>
 
@@ -1955,6 +1972,16 @@ Ver servicio
 
 </button>
 
+<a
+class="quote-button"
+href="https://wa.me/50232775737?text=Hola%20SIPSA%20POLIGRAFIA,%20deseo%20cotizar%20el%20servicio%20de%20Verificaci%C3%B3n%20de%20Infornet."
+target="_blank"
+rel="noopener">
+
+Cotizar servicio
+
+</a>
+
 </article>
 
 
@@ -1985,6 +2012,16 @@ onclick="mostrarServicio('visita-info')">
 Ver servicio
 
 </button>
+
+<a
+class="quote-button"
+href="https://wa.me/50232775737?text=Hola%20SIPSA%20POLIGRAFIA,%20deseo%20cotizar%20el%20servicio%20de%20Visita%20Domiciliar."
+target="_blank"
+rel="noopener">
+
+Cotizar servicio
+
+</a>
 
 </article>
 
@@ -2021,7 +2058,7 @@ Las pruebas poligraficas pueden ser las siguientes:
 
 <p>
 
-PRE-EMPLEO: Candidato que está por ingresar a la empresa.
+PRE-EMPLEO: Candidato que está por ingresar a la empresa
 
 </p>
 
@@ -2044,6 +2081,18 @@ confidencial de la información y una atención
 profesional durante todo el proceso.
 
 </p>
+
+<a
+class="quote-button"
+href="https://wa.me/50232775737?text=Hola%20SIPSA%20POLIGRAFIA,%20deseo%20cotizar%20una%20Prueba%20de%20Poligraf%C3%ADa."
+target="_blank"
+rel="noopener">
+
+Cotizar este servicio por WhatsApp
+
+</a>
+
+<br>
 
 <button
 class="back-button"
@@ -2079,7 +2128,7 @@ social y familiar de una persona.
 <p>
 
 El proceso incluye validación de referencias
-laborales, jefes inmediatos, familiares, personales, revisión de documentación y visita
+laborales, Jefes inmediatos, familiares, personales, revisión de documentación y visita
 domiciliar, proporcionando información útil para
 procesos de contratación y verificación.
 
@@ -2091,6 +2140,18 @@ La información recopilada es manejada con
 profesionalismo y confidencialidad.
 
 </p>
+
+<a
+class="quote-button"
+href="https://wa.me/50232775737?text=Hola%20SIPSA%20POLIGRAFIA,%20deseo%20cotizar%20un%20Estudio%20Socioecon%C3%B3mico."
+target="_blank"
+rel="noopener">
+
+Cotizar este servicio por WhatsApp
+
+</a>
+
+<br>
 
 <button
 class="back-button"
@@ -2129,7 +2190,7 @@ fuentes disponibles.
 Puede incluir información sobre créditos,
 moras, procesos judiciales, demandas,
 incobrables o situaciones de embargo,
-según la información disponible en el registro.
+según la información disponible.
 
 </p>
 
@@ -2140,6 +2201,18 @@ selección y evaluación, proporcionando
 información adicional para la toma de decisiones.
 
 </p>
+
+<a
+class="quote-button"
+href="https://wa.me/50232775737?text=Hola%20SIPSA%20POLIGRAFIA,%20deseo%20cotizar%20la%20Verificaci%C3%B3n%20de%20Infornet."
+target="_blank"
+rel="noopener">
+
+Cotizar este servicio por WhatsApp
+
+</a>
+
+<br>
 
 <button
 class="back-button"
@@ -2187,6 +2260,18 @@ La información obtenida se maneja de forma
 profesional y confidencial.
 
 </p>
+
+<a
+class="quote-button"
+href="https://wa.me/50232775737?text=Hola%20SIPSA%20POLIGRAFIA,%20deseo%20cotizar%20una%20Visita%20Domiciliar."
+target="_blank"
+rel="noopener">
+
+Cotizar este servicio por WhatsApp
+
+</a>
+
+<br>
 
 <button
 class="back-button"
@@ -2358,6 +2443,16 @@ Edificio Reforma Montúfar,
 Torre A, zona 10, Guatemala.
 
 </p>
+
+<a
+class="location-button"
+href="https://maps.app.goo.gl/SYx7Fge5bFy73pi79"
+target="_blank"
+rel="noopener">
+
+Ver ubicación en Google Maps
+
+</a>
 
 </div>
 
