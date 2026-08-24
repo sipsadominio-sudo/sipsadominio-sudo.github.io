@@ -563,7 +563,6 @@ h1 {
 
 /* =========================
    BOTÓN COTIZAR
-   SOLO DENTRO DE VER SERVICIO
 ========================= */
 
 .quote-button {
@@ -776,13 +775,6 @@ h1 {
     max(24px,
     calc((100% - 1072px)/2));
 
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 70px;
-
   color: white;
 
   overflow: hidden;
@@ -793,12 +785,13 @@ h1 {
   content: "";
 
   position: absolute;
+
   inset: 0;
 
   background:
     linear-gradient(
-      rgba(5,25,45,.55),
-      rgba(5,25,45,.65)
+      rgba(5,25,45,.58),
+      rgba(5,25,45,.72)
     );
 
   z-index: 0;
@@ -807,7 +800,23 @@ h1 {
 .about > * {
 
   position: relative;
+
   z-index: 1;
+}
+
+
+/* =========================
+   ENCABEZADO SOBRE SIPSA
+========================= */
+
+.about-header {
+
+  text-align: center;
+
+  max-width: 950px;
+
+  margin:
+    0 auto 40px;
 }
 
 .about .eyebrow {
@@ -825,6 +834,9 @@ h1 {
 
   color: #ffffff;
 
+  margin:
+    0 0 8px;
+
   text-shadow:
     0 3px 7px rgba(0,0,0,.45);
 }
@@ -836,18 +848,274 @@ h1 {
   line-height: 1.15;
 
   margin:
-    5px 0 35px;
+    5px 0 20px;
 
   color: white;
 }
 
-.about > p {
+.about-description {
 
-  font-size: 23px;
+  max-width: 900px;
+
+  margin:
+    0 auto;
+
+  font-size: 21px;
 
   line-height: 1.75;
 
   color: white;
+
+  text-shadow:
+    0 2px 5px rgba(0,0,0,.45);
+}
+
+
+/* =========================
+   TARJETAS MISIÓN VISIÓN VALORES
+========================= */
+
+.about-cards {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 22px;
+
+  max-width: 1000px;
+
+  margin:
+    45px auto 0;
+}
+
+.about-card-button {
+
+  appearance: none;
+
+  border:
+    1px solid rgba(255,255,255,.45);
+
+  border-radius: 18px;
+
+  padding:
+    25px 18px;
+
+  min-height: 145px;
+
+  background:
+    rgba(255,255,255,.12);
+
+  backdrop-filter:
+    blur(7px);
+
+  -webkit-backdrop-filter:
+    blur(7px);
+
+  color: white;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.22);
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.about-card-button:hover {
+
+  transform:
+    translateY(-7px);
+
+  background:
+    rgba(20,118,198,.42);
+
+  border-color:
+    rgba(255,255,255,.75);
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.35);
+}
+
+.about-card-button.active {
+
+  background:
+    rgba(20,118,198,.58);
+
+  border-color:
+    #ffffff;
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 18px 42px rgba(0,0,0,.38);
+}
+
+
+/* =========================
+   ICONOS
+========================= */
+
+.about-card-icon {
+
+  width: 55px;
+
+  height: 55px;
+
+  margin:
+    0 auto 12px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    rgba(255,255,255,.18);
+
+  border:
+    1px solid rgba(255,255,255,.40);
+
+  font-size: 28px;
+
+  transition:
+    transform .3s ease,
+    background .3s ease;
+}
+
+.about-card-button:hover
+.about-card-icon {
+
+  transform:
+    scale(1.12);
+
+  background:
+    rgba(255,255,255,.28);
+}
+
+.about-card-button h3 {
+
+  margin: 0;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 21px;
+
+  letter-spacing: 1px;
+
+  color: white;
+
+  text-shadow:
+    0 2px 5px rgba(0,0,0,.45);
+}
+
+
+/* =========================
+   INFORMACIÓN DESPLEGABLE
+========================= */
+
+.about-info {
+
+  display: none;
+
+  max-width: 1000px;
+
+  margin:
+    25px auto 0;
+
+  padding:
+    30px 32px;
+
+  border-radius: 18px;
+
+  background:
+    rgba(255,255,255,.95);
+
+  color: #102033;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.28);
+
+  animation:
+    aparecerAbout .35s ease;
+}
+
+.about-info.active {
+
+  display: block;
+}
+
+.about-info h3 {
+
+  margin:
+    0 0 12px;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 27px;
+
+  color: #102033;
+}
+
+.about-info p {
+
+  margin: 0;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #536577;
+}
+
+.about-info ul {
+
+  margin:
+    8px 0 0;
+
+  padding-left: 22px;
+
+  color: #536577;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+@keyframes aparecerAbout {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(15px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
 }
 
 
@@ -1569,14 +1837,19 @@ footer {
   }
 
 
-  /* SOBRE SIPSA */
+  /* =========================
+     SOBRE SIPSA - CELULAR
+  ========================= */
 
   .about {
 
-    grid-template-columns: 1fr;
-
     padding:
-      60px 24px;
+      60px 20px;
+  }
+
+  .about-header {
+
+    margin-bottom: 30px;
   }
 
   .about .eyebrow {
@@ -1586,12 +1859,78 @@ footer {
 
   .about h2 {
 
-    font-size: 36px;
+    font-size: 34px;
+
+    line-height: 1.15;
   }
 
-  .about > p {
+  .about-description {
+
+    font-size: 18px;
+
+    line-height: 1.65;
+  }
+
+
+  /* TARJETAS MISIÓN / VISIÓN / VALORES */
+
+  .about-cards {
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    margin-top: 30px;
+  }
+
+  .about-card-button {
+
+    min-height: 115px;
+
+    padding:
+      20px 15px;
+  }
+
+  .about-card-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+  }
+
+  .about-card-button h3 {
 
     font-size: 19px;
+  }
+
+
+  /* INFORMACIÓN DESPLEGABLE */
+
+  .about-info {
+
+    padding:
+      25px 20px;
+
+    margin-top: 18px;
+
+    border-radius: 15px;
+  }
+
+  .about-info h3 {
+
+    font-size: 24px;
+  }
+
+  .about-info p,
+  .about-info ul {
+
+    font-size: 17px;
+
+    line-height: 1.65;
   }
 
 
@@ -2259,14 +2598,11 @@ class="about"
 id="nosotros">
 
 
-<div>
+<div class="about-header">
 
 <p class="eyebrow">
-
 SOBRE SIPSA
-
 </p>
-
 
 <h2>
 
@@ -2275,10 +2611,7 @@ y la confidencialidad.
 
 </h2>
 
-</div>
-
-
-<p>
+<p class="about-description">
 
 En SIPSA POLIGRAFIA trabajamos para
 brindar información útil, clara y
@@ -2288,6 +2621,162 @@ donde la confianza, la verificación y
 la confidencialidad son fundamentales.
 
 </p>
+
+</div>
+
+
+<!-- =========================
+     BOTONES MISIÓN / VISIÓN / VALORES
+========================= -->
+
+<div class="about-cards">
+
+
+<button
+type="button"
+class="about-card-button"
+onclick="mostrarAbout('mision-info', this)">
+
+<div class="about-card-icon">
+🎯
+</div>
+
+<h3>
+MISIÓN
+</h3>
+
+</button>
+
+
+<button
+type="button"
+class="about-card-button"
+onclick="mostrarAbout('vision-info', this)">
+
+<div class="about-card-icon">
+👁️
+</div>
+
+<h3>
+VISIÓN
+</h3>
+
+</button>
+
+
+<button
+type="button"
+class="about-card-button"
+onclick="mostrarAbout('valores-info', this)">
+
+<div class="about-card-icon">
+⭐
+</div>
+
+<h3>
+VALORES
+</h3>
+
+</button>
+
+
+</div>
+
+
+<!-- =========================
+     INFORMACIÓN MISIÓN
+========================= -->
+
+<div
+id="mision-info"
+class="about-info">
+
+<h3>
+Nuestra Misión
+</h3>
+
+<p>
+
+Somos una empresa que brinda servicios integrales de poligrafía,
+selección de personal, capacitaciones y estudios socioeconómicos,
+cuyos resultados son escenciales y complementarios para el apoyo
+en la gestión humana de todo tipo de empresas aportando
+seguridad, estabilidad y confiabilidad a nuestros clientes.
+
+</p>
+
+</div>
+
+
+<!-- =========================
+     INFORMACIÓN VISIÓN
+========================= -->
+
+<div
+id="vision-info"
+class="about-info">
+
+<h3>
+Nuestra Visión
+</h3>
+
+<p>
+
+Ser una empresa líder en el área de poligrafía en Guatemala y
+con presencia internacional. Que se distinga por nuestro
+cimiento de valores..
+
+</p>
+
+</div>
+
+
+<!-- =========================
+     INFORMACIÓN VALORES
+========================= -->
+
+<div
+id="valores-info"
+class="about-info">
+
+<h3>
+Nuestros Valores
+</h3>
+
+<ul>
+
+<li>
+<strong>Confidencialidad:</strong>
+Protegemos la información de nuestros
+clientes.
+</li>
+
+<li>
+<strong>Honestidad:</strong>
+Trabajando siempre de la manera correcta con responsabilidad y
+dedicación.
+</li>
+
+<li>
+<strong>Lealtad:</strong>
+ Principios a la organización, manteniendo la confianza en todo momento.
+</li>
+
+<li>
+<strong>Responsabilidad:</strong>
+Cumplimos nuestros compromisos con
+nuestros clientes.
+</li>
+
+<li>
+<strong>Respeto pór la diginidad y los derechos humanos:</strong>
+Cada persona tiene un valor único y merece vivir con libertad, justicia y sin discriminación.
+</li>
+
+</ul>
+
+</div>
+
 
 </section>
 
@@ -2551,6 +3040,11 @@ Todos los derechos reservados.
 
 <script>
 
+
+/* =========================
+   SERVICIOS
+========================= */
+
 function mostrarServicio(id) {
 
   const bloques =
@@ -2603,6 +3097,83 @@ function regresarServicios() {
     });
 
 }
+
+
+/* =========================
+   MISIÓN / VISIÓN / VALORES
+========================= */
+
+function mostrarAbout(id, boton) {
+
+  const bloques =
+    document.querySelectorAll('.about-info');
+
+  const botones =
+    document.querySelectorAll('.about-card-button');
+
+
+  /* Si ya está abierto, lo cerramos */
+
+  const seleccionado =
+    document.getElementById(id);
+
+  if (
+    seleccionado &&
+    seleccionado.classList.contains('active')
+  ) {
+
+    seleccionado.classList.remove('active');
+
+    boton.classList.remove('active');
+
+    return;
+
+  }
+
+
+  /* Cerrar todos los contenidos */
+
+  bloques.forEach(function(bloque) {
+
+    bloque.classList.remove('active');
+
+  });
+
+
+  /* Quitar estado activo de todos los botones */
+
+  botones.forEach(function(botonItem) {
+
+    botonItem.classList.remove('active');
+
+  });
+
+
+  /* Abrir el seleccionado */
+
+  if (seleccionado) {
+
+    seleccionado.classList.add('active');
+
+    boton.classList.add('active');
+
+
+    setTimeout(function() {
+
+      seleccionado.scrollIntoView({
+
+        behavior: 'smooth',
+
+        block: 'center'
+
+      });
+
+    }, 50);
+
+  }
+
+}
+
 
 </script>
 
