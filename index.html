@@ -753,9 +753,9 @@ h1 {
 }
 
 
-/* =========================
+/* =====================================================
    SOBRE SIPSA
-========================= */
+===================================================== */
 
 .about {
 
@@ -871,9 +871,9 @@ h1 {
 }
 
 
-/* =========================
-   TARJETAS MISIÓN VISIÓN VALORES
-========================= */
+/* =====================================================
+   NUEVOS RECUADROS MISIÓN / VISIÓN / VALORES
+===================================================== */
 
 .about-cards {
 
@@ -882,36 +882,32 @@ h1 {
   grid-template-columns:
     repeat(3, 1fr);
 
-  gap: 22px;
+  gap: 25px;
 
-  max-width: 1000px;
+  max-width: 1050px;
 
   margin:
     45px auto 0;
 }
 
+
+/* =========================
+   RECUADRO GENERAL
+========================= */
+
 .about-card-button {
 
-  appearance: none;
+  position: relative;
 
-  border:
-    1px solid rgba(255,255,255,.45);
+  min-height: 300px;
 
-  border-radius: 18px;
+  border: none;
 
-  padding:
-    25px 18px;
+  border-radius: 20px;
 
-  min-height: 145px;
+  overflow: hidden;
 
-  background:
-    rgba(255,255,255,.12);
-
-  backdrop-filter:
-    blur(7px);
-
-  -webkit-backdrop-filter:
-    blur(7px);
+  padding: 0;
 
   color: white;
 
@@ -919,56 +915,104 @@ h1 {
 
   text-align: center;
 
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
   box-shadow:
-    0 10px 30px rgba(0,0,0,.22);
+    0 15px 40px rgba(0,0,0,.30);
+
+  background-size: cover;
+
+  background-position: center;
 
   transition:
-    transform .3s ease,
-    background .3s ease,
-    box-shadow .3s ease,
-    border-color .3s ease;
-}
-
-.about-card-button:hover {
-
-  transform:
-    translateY(-7px);
-
-  background:
-    rgba(20,118,198,.42);
-
-  border-color:
-    rgba(255,255,255,.75);
-
-  box-shadow:
-    0 18px 40px rgba(0,0,0,.35);
-}
-
-.about-card-button.active {
-
-  background:
-    rgba(20,118,198,.58);
-
-  border-color:
-    #ffffff;
-
-  transform:
-    translateY(-5px);
-
-  box-shadow:
-    0 18px 42px rgba(0,0,0,.38);
+    transform .35s ease,
+    box-shadow .35s ease;
 }
 
 
 /* =========================
-   ICONOS
+   IMÁGENES TEMPORALES
 ========================= */
+
+.about-card-button.mision {
+
+  background-image:
+    url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80");
+}
+
+.about-card-button.vision {
+
+  background-image:
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80");
+}
+
+.about-card-button.valores {
+
+  background-image:
+    url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80");
+}
+
+
+/* =========================
+   OSCURECER IMAGEN
+========================= */
+
+.about-card-button::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.88),
+      rgba(0,0,0,.50),
+      rgba(0,0,0,.15)
+    );
+
+  z-index: 0;
+
+  transition:
+    background .35s ease;
+}
+
+.about-card-button:hover::before {
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.92),
+      rgba(20,118,198,.48),
+      rgba(0,0,0,.20)
+    );
+}
+
+
+/* =========================
+   CONTENIDO DEL RECUADRO
+========================= */
+
+.about-card-button > * {
+
+  position: relative;
+
+  z-index: 1;
+}
 
 .about-card-icon {
 
-  width: 55px;
+  width: 65px;
 
-  height: 55px;
+  height: 65px;
 
   margin:
     0 auto 12px;
@@ -982,16 +1026,21 @@ h1 {
   justify-content: center;
 
   background:
-    rgba(255,255,255,.18);
+    rgba(255,255,255,.20);
 
   border:
-    1px solid rgba(255,255,255,.40);
+    1px solid rgba(255,255,255,.55);
 
-  font-size: 28px;
+  font-size: 32px;
+
+  backdrop-filter:
+    blur(5px);
+
+  -webkit-backdrop-filter:
+    blur(5px);
 
   transition:
-    transform .3s ease,
-    background .3s ease;
+    transform .3s ease;
 }
 
 .about-card-button:hover
@@ -999,34 +1048,78 @@ h1 {
 
   transform:
     scale(1.12);
-
-  background:
-    rgba(255,255,255,.28);
 }
 
 .about-card-button h3 {
 
-  margin: 0;
+  margin:
+    0 0 12px;
 
   font-family:
     "Montserrat",
     Arial,
     sans-serif;
 
-  font-size: 21px;
+  font-size: 25px;
 
   letter-spacing: 1px;
 
   color: white;
 
   text-shadow:
-    0 2px 5px rgba(0,0,0,.45);
+    0 3px 6px rgba(0,0,0,.65);
 }
 
 
 /* =========================
-   INFORMACIÓN DESPLEGABLE
+   BOTÓN VER MÁS
 ========================= */
+
+.about-more {
+
+  margin:
+    0 0 25px;
+
+  padding:
+    10px 22px;
+
+  border:
+    1px solid rgba(255,255,255,.65);
+
+  border-radius: 8px;
+
+  background:
+    rgba(20,118,198,.90);
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 15px rgba(0,0,0,.30);
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+.about-more:hover {
+
+  background:
+    #0b68b2;
+
+  transform:
+    scale(1.06);
+}
+
+
+/* =====================================================
+   INFORMACIÓN DESPLEGABLE NOSOTROS
+===================================================== */
 
 .about-info {
 
@@ -1035,23 +1128,23 @@ h1 {
   max-width: 1000px;
 
   margin:
-    25px auto 0;
+    30px auto 0;
 
   padding:
-    30px 32px;
+    35px;
 
-  border-radius: 18px;
+  border-radius: 20px;
 
   background:
-    rgba(255,255,255,.95);
+    rgba(255,255,255,.97);
 
   color: #102033;
 
   box-shadow:
-    0 15px 40px rgba(0,0,0,.28);
+    0 18px 45px rgba(0,0,0,.30);
 
   animation:
-    aparecerAbout .35s ease;
+    aparecerAbout .4s ease;
 }
 
 .about-info.active {
@@ -1062,25 +1155,26 @@ h1 {
 .about-info h3 {
 
   margin:
-    0 0 12px;
+    0 0 18px;
 
   font-family:
     "Montserrat",
     Arial,
     sans-serif;
 
-  font-size: 27px;
+  font-size: 30px;
 
   color: #102033;
 }
 
 .about-info p {
 
-  margin: 0;
+  margin:
+    0 0 20px;
 
   font-size: 18px;
 
-  line-height: 1.7;
+  line-height: 1.75;
 
   color: #536577;
 }
@@ -1088,15 +1182,59 @@ h1 {
 .about-info ul {
 
   margin:
-    8px 0 0;
+    8px 0 25px;
 
-  padding-left: 22px;
+  padding-left: 25px;
 
   color: #536577;
 
   font-size: 18px;
 
   line-height: 1.8;
+}
+
+
+/* =========================
+   BOTÓN REGRESAR NOSOTROS
+========================= */
+
+.about-back {
+
+  display: inline-block;
+
+  margin-top: 5px;
+
+  padding:
+    11px 22px;
+
+  border:
+    none;
+
+  border-radius: 8px;
+
+  background:
+    #102033;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+.about-back:hover {
+
+  background:
+    #1476c6;
+
+  transform:
+    scale(1.04);
 }
 
 @keyframes aparecerAbout {
@@ -1106,7 +1244,7 @@ h1 {
     opacity: 0;
 
     transform:
-      translateY(15px);
+      translateY(20px);
   }
 
   to {
@@ -1589,9 +1727,9 @@ footer {
 }
 
 
-/* =========================
+/* =====================================================
    CELULAR
-========================= */
+===================================================== */
 
 @media(max-width:760px) {
 
@@ -1878,33 +2016,36 @@ footer {
 
     grid-template-columns: 1fr;
 
-    gap: 14px;
+    gap: 18px;
 
     margin-top: 30px;
   }
 
   .about-card-button {
 
-    min-height: 115px;
-
-    padding:
-      20px 15px;
-  }
-
-  .about-card-icon {
-
-    width: 48px;
-
-    height: 48px;
-
-    font-size: 24px;
-
-    margin-bottom: 8px;
+    min-height: 280px;
   }
 
   .about-card-button h3 {
 
-    font-size: 19px;
+    font-size: 23px;
+  }
+
+  .about-card-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    font-size: 28px;
+  }
+
+  .about-more {
+
+    margin-bottom: 22px;
+
+    padding:
+      10px 20px;
   }
 
 
@@ -1913,16 +2054,16 @@ footer {
   .about-info {
 
     padding:
-      25px 20px;
+      28px 20px;
 
-    margin-top: 18px;
+    margin-top: 20px;
 
-    border-radius: 15px;
+    border-radius: 17px;
   }
 
   .about-info h3 {
 
-    font-size: 24px;
+    font-size: 25px;
   }
 
   .about-info p,
@@ -2353,35 +2494,25 @@ de selección, evaluación y verificación.
 </p>
 
 <p>
-
 Las pruebas poligraficas pueden ser las siguientes:
-
 </p>
 
 <p>
-
 <strong>PRE-EMPLEO:</strong> Candidato que está por ingresar a la empresa
-
 </p>
 
 <p>
-
 <strong>RUTINARIA:</strong> Candidato que se encuentra laborando en la empresa y se requiere saber sobre anomalias, sospechas o incidentes que se puedan estar cometiendo.
-
 </p>
 
 <p>
-
 <strong>ESPECIFICOS:</strong> Cuando ha ocurrido algún evento específico dentro de la empresa, robos, fraudes, falsificaciones entre otros.
-
 </p>
 
 <p>
-
 Nuestro servicio se caracteriza por el manejo
 confidencial de la información y una atención
 profesional durante todo el proceso.
-
 </p>
 
 <a
@@ -2589,9 +2720,9 @@ onclick="regresarServicios()">
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      NOSOTROS
-========================= -->
+===================================================== -->
 
 <section
 class="about"
@@ -2626,15 +2757,18 @@ la confidencialidad son fundamentales.
 
 
 <!-- =========================
-     BOTONES MISIÓN / VISIÓN / VALORES
+     RECUADROS
+     MISIÓN / VISIÓN / VALORES
 ========================= -->
 
 <div class="about-cards">
 
 
+<!-- MISIÓN -->
+
 <button
 type="button"
-class="about-card-button"
+class="about-card-button mision"
 onclick="mostrarAbout('mision-info', this)">
 
 <div class="about-card-icon">
@@ -2645,12 +2779,18 @@ onclick="mostrarAbout('mision-info', this)">
 MISIÓN
 </h3>
 
+<span class="about-more">
+Ver más
+</span>
+
 </button>
 
 
+<!-- VISIÓN -->
+
 <button
 type="button"
-class="about-card-button"
+class="about-card-button vision"
 onclick="mostrarAbout('vision-info', this)">
 
 <div class="about-card-icon">
@@ -2661,12 +2801,18 @@ onclick="mostrarAbout('vision-info', this)">
 VISIÓN
 </h3>
 
+<span class="about-more">
+Ver más
+</span>
+
 </button>
 
 
+<!-- VALORES -->
+
 <button
 type="button"
-class="about-card-button"
+class="about-card-button valores"
 onclick="mostrarAbout('valores-info', this)">
 
 <div class="about-card-icon">
@@ -2676,6 +2822,10 @@ onclick="mostrarAbout('valores-info', this)">
 <h3>
 VALORES
 </h3>
+
+<span class="about-more">
+Ver más
+</span>
 
 </button>
 
@@ -2705,6 +2855,15 @@ seguridad, estabilidad y confiabilidad a nuestros clientes.
 
 </p>
 
+<button
+type="button"
+class="about-back"
+onclick="regresarAbout()">
+
+← Regresar a Nosotros
+
+</button>
+
 </div>
 
 
@@ -2724,9 +2883,18 @@ Nuestra Visión
 
 Ser una empresa líder en el área de poligrafía en Guatemala y
 con presencia internacional. Que se distinga por nuestro
-cimiento de valores..
+cimiento de valores.
 
 </p>
+
+<button
+type="button"
+class="about-back"
+onclick="regresarAbout()">
+
+← Regresar a Nosotros
+
+</button>
 
 </div>
 
@@ -2759,7 +2927,7 @@ dedicación.
 
 <li>
 <strong>Lealtad:</strong>
- Principios a la organización, manteniendo la confianza en todo momento.
+Principios a la organización, manteniendo la confianza en todo momento.
 </li>
 
 <li>
@@ -2769,11 +2937,20 @@ nuestros clientes.
 </li>
 
 <li>
-<strong>Respeto pór la diginidad y los derechos humanos:</strong>
+<strong>Respeto por la dignidad y los derechos humanos:</strong>
 Cada persona tiene un valor único y merece vivir con libertad, justicia y sin discriminación.
 </li>
 
 </ul>
+
+<button
+type="button"
+class="about-back"
+onclick="regresarAbout()">
+
+← Regresar a Nosotros
+
+</button>
 
 </div>
 
@@ -2792,20 +2969,13 @@ id="contacto">
 
 <div class="contact-intro">
 
-
 <p class="eyebrow">
-
 CONTACTO
-
 </p>
 
-
 <h2>
-
 Estamos para atenderte
-
 </h2>
-
 
 <p>
 
@@ -2866,9 +3036,7 @@ CORREO ELECTRÓNICO
 <p>
 
 <a href="mailto:rrhh@sipsapoligrafia.com">
-
 rrhh@sipsapoligrafia.com
-
 </a>
 
 </p>
@@ -2925,7 +3093,6 @@ Ver ubicación en Google Maps
 <p class="bottom-navigation-title">
 SIPSA POLIGRAFIA
 </p>
-
 
 <div class="bottom-links">
 
@@ -3099,39 +3266,14 @@ function regresarServicios() {
 }
 
 
-/* =========================
+/* =====================================================
    MISIÓN / VISIÓN / VALORES
-========================= */
+===================================================== */
 
-function mostrarAbout(id, boton) {
+function mostrarAbout(id) {
 
   const bloques =
     document.querySelectorAll('.about-info');
-
-  const botones =
-    document.querySelectorAll('.about-card-button');
-
-
-  /* Si ya está abierto, lo cerramos */
-
-  const seleccionado =
-    document.getElementById(id);
-
-  if (
-    seleccionado &&
-    seleccionado.classList.contains('active')
-  ) {
-
-    seleccionado.classList.remove('active');
-
-    boton.classList.remove('active');
-
-    return;
-
-  }
-
-
-  /* Cerrar todos los contenidos */
 
   bloques.forEach(function(bloque) {
 
@@ -3140,23 +3282,12 @@ function mostrarAbout(id, boton) {
   });
 
 
-  /* Quitar estado activo de todos los botones */
-
-  botones.forEach(function(botonItem) {
-
-    botonItem.classList.remove('active');
-
-  });
-
-
-  /* Abrir el seleccionado */
+  const seleccionado =
+    document.getElementById(id);
 
   if (seleccionado) {
 
     seleccionado.classList.add('active');
-
-    boton.classList.add('active');
-
 
     setTimeout(function() {
 
@@ -3164,7 +3295,7 @@ function mostrarAbout(id, boton) {
 
         behavior: 'smooth',
 
-        block: 'center'
+        block: 'start'
 
       });
 
@@ -3174,6 +3305,33 @@ function mostrarAbout(id, boton) {
 
 }
 
+
+/* =========================
+   REGRESAR A NOSOTROS
+========================= */
+
+function regresarAbout() {
+
+  const bloques =
+    document.querySelectorAll('.about-info');
+
+  bloques.forEach(function(bloque) {
+
+    bloque.classList.remove('active');
+
+  });
+
+
+  document.getElementById('nosotros')
+    .scrollIntoView({
+
+      behavior: 'smooth',
+
+      block: 'start'
+
+    });
+
+}
 
 </script>
 
