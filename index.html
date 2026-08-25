@@ -13,9 +13,7 @@ content="SIPSA POLIGRAFIA - servicios profesionales de poligrafía, estudios soc
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -34,7 +32,6 @@ body {
   background: #f7f9fc;
   line-height: 1.6;
 }
-
 
 /* =========================
    ENCABEZADO
@@ -97,7 +94,6 @@ header::after {
   pointer-events: none;
 }
 
-
 /* =========================
    NAVEGACIÓN
 ========================= */
@@ -116,7 +112,6 @@ nav {
   position: relative;
   z-index: 2;
 }
-
 
 /* =========================
    LOGO
@@ -157,7 +152,6 @@ nav {
   padding: 0;
   border: none;
 }
-
 
 /* =========================
    MENU SUPERIOR
@@ -206,7 +200,6 @@ nav {
     0 5px 14px rgba(0,0,0,.20);
 }
 
-
 /* =========================
    PORTADA
 ========================= */
@@ -249,7 +242,6 @@ h1 {
   max-width: 700px;
   color: #536577;
 }
-
 
 /* =========================
    TARJETA PRINCIPAL
@@ -348,7 +340,6 @@ h1 {
   font-weight: 600;
 }
 
-
 /* =========================
    SERVICIOS
 ========================= */
@@ -378,7 +369,6 @@ h1 {
   text-shadow:
     0 2px 4px rgba(20,40,60,.12);
 }
-
 
 /* =========================
    FILA HORIZONTAL
@@ -415,7 +405,6 @@ h1 {
   background: #1476c6;
   border-radius: 10px;
 }
-
 
 /* =========================
    TARJETAS SERVICIOS
@@ -507,7 +496,6 @@ h1 {
   line-height: 1.55;
 }
 
-
 /* =========================
    BOTÓN VER SERVICIO
 ========================= */
@@ -559,7 +547,6 @@ h1 {
   box-shadow:
     0 6px 16px rgba(0,0,0,.30);
 }
-
 
 /* =========================
    BOTÓN COTIZAR
@@ -613,7 +600,6 @@ h1 {
     0 6px 16px rgba(0,0,0,.30);
 }
 
-
 /* =========================
    IMÁGENES SERVICIOS
 ========================= */
@@ -637,7 +623,6 @@ h1 {
   background-image:
     url("./visita.jpg.jpeg");
 }
-
 
 /* =========================
    INFORMACIÓN DE SERVICIOS
@@ -752,7 +737,6 @@ h1 {
     scale(1.04);
 }
 
-
 /* =====================================================
    SOBRE SIPSA
 ===================================================== */
@@ -803,7 +787,6 @@ h1 {
 
   z-index: 1;
 }
-
 
 /* =========================
    ENCABEZADO SOBRE SIPSA
@@ -870,9 +853,8 @@ h1 {
     0 2px 5px rgba(0,0,0,.45);
 }
 
-
 /* =====================================================
-   NUEVOS RECUADROS MISIÓN / VISIÓN / VALORES
+   RECUADROS MISIÓN / VISIÓN / VALORES
 ===================================================== */
 
 .about-cards {
@@ -889,7 +871,6 @@ h1 {
   margin:
     45px auto 0;
 }
-
 
 /* =========================
    RECUADRO GENERAL
@@ -935,6 +916,18 @@ h1 {
     box-shadow .35s ease;
 }
 
+/* =========================
+   CRECIMIENTO AL PASAR CURSOR
+========================= */
+
+.about-card-button:hover {
+
+  transform:
+    scale(1.04);
+
+  box-shadow:
+    0 20px 48px rgba(0,0,0,.38);
+}
 
 /* =========================
    IMÁGENES TEMPORALES
@@ -957,7 +950,6 @@ h1 {
   background-image:
     url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80");
 }
-
 
 /* =========================
    OSCURECER IMAGEN
@@ -995,7 +987,6 @@ h1 {
       rgba(0,0,0,.20)
     );
 }
-
 
 /* =========================
    CONTENIDO DEL RECUADRO
@@ -1043,8 +1034,7 @@ h1 {
     transform .3s ease;
 }
 
-.about-card-button:hover
-.about-card-icon {
+.about-card-button:hover .about-card-icon {
 
   transform:
     scale(1.12);
@@ -1069,7 +1059,6 @@ h1 {
   text-shadow:
     0 3px 6px rgba(0,0,0,.65);
 }
-
 
 /* =========================
    BOTÓN VER MÁS
@@ -1115,7 +1104,6 @@ h1 {
   transform:
     scale(1.06);
 }
-
 
 /* =====================================================
    INFORMACIÓN DESPLEGABLE NOSOTROS
@@ -1193,9 +1181,8 @@ h1 {
   line-height: 1.8;
 }
 
-
 /* =========================
-   BOTÓN REGRESAR NOSOTROS
+   BOTÓN REGRESAR
 ========================= */
 
 .about-back {
@@ -1256,7 +1243,6 @@ h1 {
   }
 }
 
-
 /* =========================
    CONTACTO
 ========================= */
@@ -1310,7 +1296,6 @@ h1 {
 
   font-size: 19px;
 }
-
 
 /* =========================
    TARJETAS CONTACTO
@@ -1398,9 +1383,9 @@ h1 {
 .contact-card > * {
 
   position: relative;
+
   z-index: 1;
 }
-
 
 /* FONDOS CONTACTO */
 
@@ -1422,7 +1407,6 @@ h1 {
     url("./maps.jpg");
 }
 
-
 .contact-icon {
 
   width: 70px;
@@ -1439,6 +1423,7 @@ h1 {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   font-size: 38px;
@@ -1498,7 +1483,6 @@ h1 {
   text-decoration: underline;
 }
 
-
 /* =========================
    BOTÓN UBICACIÓN
 ========================= */
@@ -1544,7 +1528,6 @@ h1 {
   transform:
     scale(1.05);
 }
-
 
 /* =========================
    NAVEGACIÓN INFERIOR
@@ -1620,7 +1603,6 @@ h1 {
   transform:
     translateY(-2px);
 }
-
 
 /* =========================
    REDES SOCIALES
@@ -1706,7 +1688,6 @@ h1 {
   height: 42px;
 }
 
-
 /* =========================
    PIE DE PÁGINA
 ========================= */
@@ -1725,7 +1706,6 @@ footer {
 
   font-size: 14px;
 }
-
 
 /* =====================================================
    CELULAR
@@ -1803,7 +1783,6 @@ footer {
     padding: 0;
   }
 
-
   /* MENU SUPERIOR */
 
   .links {
@@ -1860,7 +1839,6 @@ footer {
       rgba(30,105,160,.48);
   }
 
-
   /* HERO */
 
   .hero {
@@ -1895,7 +1873,6 @@ footer {
 
     font-size: 16px;
   }
-
 
   /* SERVICIOS */
 
@@ -1948,7 +1925,6 @@ footer {
       scale(1.02);
   }
 
-
   /* INFORMACIÓN SERVICIO */
 
   .service-info {
@@ -1973,7 +1949,6 @@ footer {
 
     line-height: 1.65;
   }
-
 
   /* =========================
      SOBRE SIPSA - CELULAR
@@ -2008,7 +1983,6 @@ footer {
 
     line-height: 1.65;
   }
-
 
   /* TARJETAS MISIÓN / VISIÓN / VALORES */
 
@@ -2048,7 +2022,6 @@ footer {
       10px 20px;
   }
 
-
   /* INFORMACIÓN DESPLEGABLE */
 
   .about-info {
@@ -2073,7 +2046,6 @@ footer {
 
     line-height: 1.65;
   }
-
 
   /* CONTACTO */
 
@@ -2136,7 +2108,6 @@ footer {
     font-size: 18px;
   }
 
-
   /* NAVEGACIÓN INFERIOR */
 
   .bottom-navigation {
@@ -2157,7 +2128,6 @@ footer {
     padding:
       9px 13px;
   }
-
 
   /* REDES */
 
@@ -2204,9 +2174,7 @@ footer {
 
 </head>
 
-
 <body>
-
 
 <!-- =========================
      ENCABEZADO
@@ -2216,16 +2184,13 @@ footer {
 
 <nav>
 
-<a
-href="#inicio"
-class="logo">
+<a href="#inicio" class="logo">
 
 <img
 src="NUEVO%20LOGO%20SIPSA%202026.PNG"
 alt="SIPSA POLIGRAFIA">
 
 </a>
-
 
 <div class="links">
 
@@ -2251,49 +2216,35 @@ Contacto
 
 </header>
 
-
 <main>
-
 
 <!-- =========================
      PORTADA
 ========================= -->
 
-<section
-class="hero"
-id="inicio">
-
+<section class="hero" id="inicio">
 
 <div>
 
 <p class="eyebrow">
 
-PROFESIONALISMO ·
-CONFIDENCIALIDAD ·
-CONFIANZA
+PROFESIONALISMO · CONFIDENCIALIDAD · CONFIANZA
 
 </p>
 
-
 <h1>
 
-Información confiable
-para tomar las mejores
-decisiones.
+Información confiable para tomar las mejores decisiones.
 
 </h1>
 
-
 <p>
 
-Servicios profesionales
-de poligrafía,
-estudios socioeconómicos, visitas domiciliares y validaciones de infornet para empresas y particulares.
+Servicios profesionales de poligrafía, estudios socioeconómicos, visitas domiciliares y validaciones de infornet para empresas y particulares.
 
 </p>
 
 </div>
-
 
 <div class="hero-card">
 
@@ -2301,22 +2252,17 @@ estudios socioeconómicos, visitas domiciliares y validaciones de infornet para 
 ◉
 </div>
 
-
 <h2>
 SIPSA
 </h2>
-
 
 <p>
 POLIGRAFIA
 </p>
 
-
 <small>
 
-Evaluaciones profesionales
-con manejo confidencial
-de la información.
+Evaluaciones profesionales con manejo confidencial de la información.
 
 </small>
 
@@ -2324,30 +2270,21 @@ de la información.
 
 </section>
 
-
 <!-- =========================
      SERVICIOS
 ========================= -->
 
-<section
-class="section"
-id="servicios">
-
+<section class="section" id="servicios">
 
 <p class="eyebrow">
-
 NUESTROS SERVICIOS
-
 </p>
-
 
 <div class="grid">
 
-
 <!-- POLIGRAFÍA -->
 
-<article
-class="card card-poligrafia">
+<article class="card card-poligrafia">
 
 <div class="icon">
 ◉
@@ -2359,9 +2296,7 @@ Pruebas de Poligrafía
 
 <p>
 
-Evaluaciones poligráficas realizadas
-con metodología e instrumentación profesional y manejo
-confidencial de la información.
+Evaluaciones poligráficas realizadas con metodología e instrumentación profesional y manejo confidencial de la información.
 
 </p>
 
@@ -2375,11 +2310,9 @@ Ver servicio
 
 </article>
 
-
 <!-- SOCIOECONÓMICO -->
 
-<article
-class="card card-socioeconomico">
+<article class="card card-socioeconomico">
 
 <div class="icon">
 ▣
@@ -2391,8 +2324,7 @@ Estudio Socioeconómico
 
 <p>
 
-Validación de referencias laborales, personales, familiares
-documentación y visita domiciliar.
+Validación de referencias laborales, personales, familiares documentación y visita domiciliar.
 
 </p>
 
@@ -2406,11 +2338,9 @@ Ver servicio
 
 </article>
 
-
 <!-- INFORNET -->
 
-<article
-class="card card-infornet">
+<article class="card card-infornet">
 
 <div class="icon">
 ✓
@@ -2422,8 +2352,7 @@ Verificación de Infornet
 
 <p>
 
-Validación de historial crediticio,
-demandas y procesos judiciales.
+Validación de historial crediticio, demandas y procesos judiciales.
 
 </p>
 
@@ -2437,11 +2366,9 @@ Ver servicio
 
 </article>
 
-
 <!-- VISITA DOMICILIAR -->
 
-<article
-class="card card-visita">
+<article class="card card-visita">
 
 <div class="icon">
 ⌂
@@ -2453,8 +2380,7 @@ Visita Domiciliar
 
 <p>
 
-Conoce el entorno social,
-referencias vecinales y vivienda del candidato.
+Conoce el entorno social, referencias vecinales y vivienda del candidato.
 
 </p>
 
@@ -2468,17 +2394,13 @@ Ver servicio
 
 </article>
 
-
 </div>
-
 
 <!-- =========================
      INFORMACIÓN POLIGRAFÍA
 ========================= -->
 
-<div
-id="poligrafia-info"
-class="service-info">
+<div id="poligrafia-info" class="service-info">
 
 <h2>
 Prueba de Poligrafía
@@ -2486,10 +2408,7 @@ Prueba de Poligrafía
 
 <p>
 
-En SIPSA POLIGRAFIA realizamos evaluaciones
-poligráficas de manera profesional, utilizando el equipo poligrafico computarizado Lafayette LX500,
-metodología e instrumentacion especializada para apoyar procesos
-de selección, evaluación y verificación.
+En SIPSA POLIGRAFIA realizamos evaluaciones poligráficas de manera profesional, utilizando el equipo poligrafico computarizado Lafayette LX500, metodología e instrumentacion especializada para apoyar procesos de selección, evaluación y verificación.
 
 </p>
 
@@ -2498,21 +2417,30 @@ Las pruebas poligraficas pueden ser las siguientes:
 </p>
 
 <p>
-<strong>PRE-EMPLEO:</strong> Candidato que está por ingresar a la empresa
+
+<strong>PRE-EMPLEO:</strong>
+Candidato que está por ingresar a la empresa
+
 </p>
 
 <p>
-<strong>RUTINARIA:</strong> Candidato que se encuentra laborando en la empresa y se requiere saber sobre anomalias, sospechas o incidentes que se puedan estar cometiendo.
+
+<strong>RUTINARIA:</strong>
+Candidato que se encuentra laborando en la empresa y se requiere saber sobre anomalias, sospechas o incidentes que se puedan estar cometiendo.
+
 </p>
 
 <p>
-<strong>ESPECIFICOS:</strong> Cuando ha ocurrido algún evento específico dentro de la empresa, robos, fraudes, falsificaciones entre otros.
+
+<strong>ESPECIFICOS:</strong>
+Cuando ha ocurrido algún evento específico dentro de la empresa, robos, fraudes, falsificaciones entre otros.
+
 </p>
 
 <p>
-Nuestro servicio se caracteriza por el manejo
-confidencial de la información y una atención
-profesional durante todo el proceso.
+
+Nuestro servicio se caracteriza por el manejo confidencial de la información y una atención profesional durante todo el proceso.
+
 </p>
 
 <a
@@ -2537,14 +2465,11 @@ onclick="regresarServicios()">
 
 </div>
 
-
 <!-- =========================
      INFORMACIÓN SOCIOECONÓMICO
 ========================= -->
 
-<div
-id="socioeconomico-info"
-class="service-info">
+<div id="socioeconomico-info" class="service-info">
 
 <h2>
 Estudios Socioeconómicos
@@ -2552,25 +2477,19 @@ Estudios Socioeconómicos
 
 <p>
 
-Los estudios socioeconómicos permiten conocer
-información relevante sobre el entorno laboral,
-social y familiar de una persona.
+Los estudios socioeconómicos permiten conocer información relevante sobre el entorno laboral, social y familiar de una persona.
 
 </p>
 
 <p>
 
-El proceso incluye validación de referencias
-laborales, Jefes inmediatos, familiares, personales, revisión de documentación y visita
-domiciliar, proporcionando información útil para
-procesos de contratación y verificación.
+El proceso incluye validación de referencias laborales, Jefes inmediatos, familiares, personales, revisión de documentación y visita domiciliar, proporcionando información útil para procesos de contratación y verificación.
 
 </p>
 
 <p>
 
-La información recopilada es manejada con
-profesionalismo y confidencialidad.
+La información recopilada es manejada con profesionalismo y confidencialidad.
 
 </p>
 
@@ -2596,14 +2515,11 @@ onclick="regresarServicios()">
 
 </div>
 
-
 <!-- =========================
      INFORMACIÓN INFORNET
 ========================= -->
 
-<div
-id="infornet-info"
-class="service-info">
+<div id="infornet-info" class="service-info">
 
 <h2>
 Verificación de Infornet
@@ -2611,27 +2527,19 @@ Verificación de Infornet
 
 <p>
 
-La verificación de Infornet permite consultar
-información relacionada con antecedentes
-crediticios y procesos registrados en las
-fuentes disponibles.
+La verificación de Infornet permite consultar información relacionada con antecedentes crediticios y procesos registrados en las fuentes disponibles.
 
 </p>
 
 <p>
 
-Puede incluir información sobre créditos,
-moras, procesos judiciales, demandas,
-incobrables o situaciones de embargo,
-según la información disponible.
+Puede incluir información sobre créditos, moras, procesos judiciales, demandas, incobrables o situaciones de embargo, según la información disponible.
 
 </p>
 
 <p>
 
-Este servicio puede apoyar procesos de
-selección y evaluación, proporcionando
-información adicional para la toma de decisiones.
+Este servicio puede apoyar procesos de selección y evaluación, proporcionando información adicional para la toma de decisiones.
 
 </p>
 
@@ -2657,14 +2565,11 @@ onclick="regresarServicios()">
 
 </div>
 
-
 <!-- =========================
      INFORMACIÓN VISITA
 ========================= -->
 
-<div
-id="visita-info"
-class="service-info">
+<div id="visita-info" class="service-info">
 
 <h2>
 Visita Domiciliar
@@ -2672,25 +2577,19 @@ Visita Domiciliar
 
 <p>
 
-Las visitas domiciliares permiten conocer
-de manera directa el entorno donde reside
-una persona.
+Las visitas domiciliares permiten conocer de manera directa el entorno donde reside una persona.
 
 </p>
 
 <p>
 
-Durante el proceso pueden recopilarse
-referencias vecinales, descripción del entorno
-social y documentación fotográfica de la
-vivienda, de acuerdo con el servicio solicitado.
+Durante el proceso pueden recopilarse referencias vecinales, descripción del entorno social y documentación fotográfica de la vivienda, de acuerdo con el servicio solicitado.
 
 </p>
 
 <p>
 
-La información obtenida se maneja de forma
-profesional y confidencial.
+La información obtenida se maneja de forma profesional y confidencial.
 
 </p>
 
@@ -2716,18 +2615,13 @@ onclick="regresarServicios()">
 
 </div>
 
-
 </section>
-
 
 <!-- =====================================================
      NOSOTROS
 ===================================================== -->
 
-<section
-class="about"
-id="nosotros">
-
+<section class="about" id="nosotros">
 
 <div class="about-header">
 
@@ -2737,24 +2631,17 @@ SOBRE SIPSA
 
 <h2>
 
-Compromiso con la información
-y la confidencialidad.
+Compromiso con la información y la confidencialidad.
 
 </h2>
 
 <p class="about-description">
 
-En SIPSA POLIGRAFIA trabajamos para
-brindar información útil, clara y
-profesional. Nuestro enfoque busca
-apoyar a nuestros clientes en procesos
-donde la confianza, la verificación y
-la confidencialidad son fundamentales.
+En SIPSA POLIGRAFIA trabajamos para brindar información útil, clara y profesional. Nuestro enfoque busca apoyar a nuestros clientes en procesos donde la confianza, la verificación y la confidencialidad son fundamentales.
 
 </p>
 
 </div>
-
 
 <!-- =========================
      RECUADROS
@@ -2762,7 +2649,6 @@ la confidencialidad son fundamentales.
 ========================= -->
 
 <div class="about-cards">
-
 
 <!-- MISIÓN -->
 
@@ -2785,7 +2671,6 @@ Ver más
 
 </button>
 
-
 <!-- VISIÓN -->
 
 <button
@@ -2806,7 +2691,6 @@ Ver más
 </span>
 
 </button>
-
 
 <!-- VALORES -->
 
@@ -2829,17 +2713,13 @@ Ver más
 
 </button>
 
-
 </div>
-
 
 <!-- =========================
      INFORMACIÓN MISIÓN
 ========================= -->
 
-<div
-id="mision-info"
-class="about-info">
+<div id="mision-info" class="about-info">
 
 <h3>
 Nuestra Misión
@@ -2847,11 +2727,7 @@ Nuestra Misión
 
 <p>
 
-Somos una empresa que brinda servicios integrales de poligrafía,
-selección de personal, capacitaciones y estudios socioeconómicos,
-cuyos resultados son escenciales y complementarios para el apoyo
-en la gestión humana de todo tipo de empresas aportando
-seguridad, estabilidad y confiabilidad a nuestros clientes.
+Somos una empresa que brinda servicios integrales de poligrafía, selección de personal, capacitaciones y estudios socioeconómicos, cuyos resultados son escenciales y complementarios para el apoyo en la gestión humana de todo tipo de empresas aportando seguridad, estabilidad y confiabilidad a nuestros clientes.
 
 </p>
 
@@ -2860,20 +2736,17 @@ type="button"
 class="about-back"
 onclick="regresarAbout()">
 
-← Regresar a Nosotros
+← Regresar
 
 </button>
 
 </div>
 
-
 <!-- =========================
      INFORMACIÓN VISIÓN
 ========================= -->
 
-<div
-id="vision-info"
-class="about-info">
+<div id="vision-info" class="about-info">
 
 <h3>
 Nuestra Visión
@@ -2881,9 +2754,7 @@ Nuestra Visión
 
 <p>
 
-Ser una empresa líder en el área de poligrafía en Guatemala y
-con presencia internacional. Que se distinga por nuestro
-cimiento de valores.
+Ser una empresa líder en el área de poligrafía en Guatemala y con presencia internacional. Que se distinga por nuestro cimiento de valores.
 
 </p>
 
@@ -2892,20 +2763,17 @@ type="button"
 class="about-back"
 onclick="regresarAbout()">
 
-← Regresar a Nosotros
+← Regresar
 
 </button>
 
 </div>
 
-
 <!-- =========================
      INFORMACIÓN VALORES
 ========================= -->
 
-<div
-id="valores-info"
-class="about-info">
+<div id="valores-info" class="about-info">
 
 <h3>
 Nuestros Valores
@@ -2915,14 +2783,12 @@ Nuestros Valores
 
 <li>
 <strong>Confidencialidad:</strong>
-Protegemos la información de nuestros
-clientes.
+Protegemos la información de nuestros clientes.
 </li>
 
 <li>
 <strong>Honestidad:</strong>
-Trabajando siempre de la manera correcta con responsabilidad y
-dedicación.
+Trabajando siempre de la manera correcta con responsabilidad y dedicación.
 </li>
 
 <li>
@@ -2932,8 +2798,7 @@ Principios a la organización, manteniendo la confianza en todo momento.
 
 <li>
 <strong>Responsabilidad:</strong>
-Cumplimos nuestros compromisos con
-nuestros clientes.
+Cumplimos nuestros compromisos con nuestros clientes.
 </li>
 
 <li>
@@ -2948,24 +2813,19 @@ type="button"
 class="about-back"
 onclick="regresarAbout()">
 
-← Regresar a Nosotros
+← Regresar
 
 </button>
 
 </div>
 
-
 </section>
-
 
 <!-- =========================
      CONTACTO
 ========================= -->
 
-<section
-class="contact"
-id="contacto">
-
+<section class="contact" id="contacto">
 
 <div class="contact-intro">
 
@@ -2979,18 +2839,13 @@ Estamos para atenderte
 
 <p>
 
-Comunícate con SIPSA POLIGRAFIA
-para solicitar información sobre
-nuestros servicios y coordinar una
-atención profesional.
+Comunícate con SIPSA POLIGRAFIA para solicitar información sobre nuestros servicios y coordinar una atención profesional.
 
 </p>
 
 </div>
 
-
 <div class="contact-grid">
-
 
 <!-- PBX -->
 
@@ -3020,7 +2875,6 @@ PBX
 
 </div>
 
-
 <!-- CORREO -->
 
 <div class="contact-card">
@@ -3043,7 +2897,6 @@ rrhh@sipsapoligrafia.com
 
 </div>
 
-
 <!-- UBICACIÓN -->
 
 <div class="contact-card">
@@ -3058,9 +2911,7 @@ UBICACIÓN
 
 <p>
 
-Avenida Reforma 12 calle 12-01,
-Edificio Reforma Montúfar,
-Torre A, zona 10, Guatemala.
+Avenida Reforma 12 calle 12-01, Edificio Reforma Montúfar, Torre A, zona 10, Guatemala.
 
 </p>
 
@@ -3076,13 +2927,11 @@ Ver ubicación en Google Maps
 
 </div>
 
-
 </div>
 
 </section>
 
 </main>
-
 
 <!-- =========================
      NAVEGACIÓN INFERIOR
@@ -3116,13 +2965,11 @@ Contacto
 
 </div>
 
-
 <!-- =========================
      REDES SOCIALES
 ========================= -->
 
 <div class="social-row">
-
 
 <!-- WHATSAPP -->
 
@@ -3139,7 +2986,6 @@ alt="WhatsApp">
 
 </a>
 
-
 <!-- FACEBOOK -->
 
 <a
@@ -3154,7 +3000,6 @@ alt="Facebook">
 
 </a>
 
-
 <!-- INSTAGRAM -->
 
 <a
@@ -3168,7 +3013,6 @@ src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
 alt="Instagram">
 
 </a>
-
 
 <!-- LINKEDIN -->
 
@@ -3185,9 +3029,7 @@ alt="LinkedIn">
 
 </a>
 
-
 </div>
-
 
 <!-- =========================
      PIE DE PÁGINA
@@ -3195,18 +3037,15 @@ alt="LinkedIn">
 
 <footer>
 
-© 2026 SIPSA POLIGRAFIA ·
-Todos los derechos reservados.
+© 2026 SIPSA POLIGRAFIA · Todos los derechos reservados.
 
 </footer>
-
 
 <!-- =========================
      JAVASCRIPT
 ========================= -->
 
 <script>
-
 
 /* =========================
    SERVICIOS
@@ -3223,7 +3062,6 @@ function mostrarServicio(id) {
 
   });
 
-
   const seleccionado =
     document.getElementById(id);
 
@@ -3234,8 +3072,11 @@ function mostrarServicio(id) {
     setTimeout(function() {
 
       seleccionado.scrollIntoView({
+
         behavior: 'smooth',
+
         block: 'start'
+
       });
 
     }, 50);
@@ -3243,7 +3084,6 @@ function mostrarServicio(id) {
   }
 
 }
-
 
 function regresarServicios() {
 
@@ -3256,15 +3096,16 @@ function regresarServicios() {
 
   });
 
-
   document.getElementById('servicios')
     .scrollIntoView({
+
       behavior: 'smooth',
+
       block: 'start'
+
     });
 
 }
-
 
 /* =====================================================
    MISIÓN / VISIÓN / VALORES
@@ -3281,7 +3122,6 @@ function mostrarAbout(id) {
 
   });
 
-
   const seleccionado =
     document.getElementById(id);
 
@@ -3305,7 +3145,6 @@ function mostrarAbout(id) {
 
 }
 
-
 /* =========================
    REGRESAR A NOSOTROS
 ========================= */
@@ -3321,7 +3160,6 @@ function regresarAbout() {
 
   });
 
-
   document.getElementById('nosotros')
     .scrollIntoView({
 
@@ -3334,7 +3172,6 @@ function regresarAbout() {
 }
 
 </script>
-
 
 </body>
 </html>
