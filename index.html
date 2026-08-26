@@ -42,7 +42,8 @@ body {
 
 header {
   width: 100%;
-  min-height: 210px;
+  min-height: 175px;
+  height: 175px;
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid #e5e9ef;
@@ -104,7 +105,9 @@ header::after {
 
 nav {
   width: 100%;
-  min-height: 210px;
+  height: 175px;
+  min-height: 175px;
+
   margin: 0;
   padding: 0 25px 0 0;
 
@@ -127,6 +130,7 @@ nav {
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
+
   margin: 0;
   padding: 0;
 
@@ -184,27 +188,38 @@ nav {
 
 }
 
+
+/* ANIMACIÓN AL PASAR EL MOUSE */
+
 .logo:hover {
   transform:
-    scale(1.06)
-    translateY(-4px);
+    translateY(-4px)
+    scale(1.06);
 
   filter:
     drop-shadow(
-      0 8px 12px rgba(0,0,0,.25)
+      0 8px 14px rgba(0,0,0,.30)
     );
 }
 
+
 .logo img {
-  height: 230px;
+  height: 175px;
   width: auto;
-  max-width: 560px;
+  max-width: 500px;
+
   object-fit: contain;
 
   display: block;
+
   margin: 0;
   padding: 0;
+
   border: none;
+
+  transition:
+    transform .35s ease,
+    filter .35s ease;
 }
 
 
@@ -222,6 +237,7 @@ nav {
 .links a {
   color: #ffffff;
   text-decoration: none;
+
   font-weight: 900;
   font-size: 21px;
   letter-spacing: .3px;
@@ -234,6 +250,7 @@ nav {
     rgba(30,105,160,.48);
 
   padding: 10px 15px;
+
   border-radius: 8px;
 
   transition:
@@ -290,12 +307,16 @@ h1 {
     clamp(42px,6vw,70px);
 
   line-height: 1.05;
-  margin: 12px 0 22px;
+
+  margin:
+    12px 0 22px;
 }
 
 .hero p {
   font-size: 19px;
+
   max-width: 700px;
+
   color: #536577;
 }
 
@@ -317,6 +338,7 @@ h1 {
   color: white;
 
   padding: 35px;
+
   border-radius: 24px;
 
   box-shadow:
@@ -327,8 +349,11 @@ h1 {
   min-height: 390px;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
   align-items: center;
 
   transition:
@@ -338,6 +363,7 @@ h1 {
 
 .hero-card::before {
   content: "";
+
   position: absolute;
   inset: 0;
 
@@ -370,30 +396,40 @@ h1 {
 
 .hero-card h2 {
   font-size: 46px;
+
   line-height: 1.05;
-  margin: 5px 0 3px;
+
+  margin:
+    5px 0 3px;
 
   color: white;
+
   font-weight: 800;
 }
 
 .hero-card p {
   color: white;
+
   margin: 0;
 
   font-weight: 800;
+
   letter-spacing: 3px;
+
   font-size: 24px;
 }
 
 .hero-card small {
   display: block;
+
   margin-top: 20px;
 
   color: #ffffff;
 
   font-size: 17px;
+
   line-height: 1.5;
+
   font-weight: 600;
 }
 
@@ -404,8 +440,11 @@ h1 {
 
 .section {
   max-width: 100%;
+
   margin: auto;
-  padding: 85px 24px;
+
+  padding:
+    85px 24px;
 }
 
 .section > .eyebrow {
@@ -415,10 +454,13 @@ h1 {
     sans-serif;
 
   font-size: 38px;
+
   letter-spacing: 2px;
+
   font-weight: 800;
 
-  margin: 5px 0 40px;
+  margin:
+    5px 0 40px;
 
   text-align: center;
 
@@ -435,11 +477,13 @@ h1 {
 
 .grid {
   display: flex;
+
   flex-wrap: nowrap;
 
   gap: 25px;
 
   overflow-x: auto;
+
   overflow-y: hidden;
 
   padding:
@@ -457,11 +501,13 @@ h1 {
 
 .grid::-webkit-scrollbar-track {
   background: #e5edf4;
+
   border-radius: 10px;
 }
 
 .grid::-webkit-scrollbar-thumb {
   background: #1476c6;
+
   border-radius: 10px;
 }
 
@@ -472,18 +518,23 @@ h1 {
 
 .card {
   min-width: 300px;
+
   width: 300px;
+
   min-height: 440px;
 
   flex: 0 0 300px;
 
   position: relative;
+
   overflow: hidden;
 
   border-radius: 20px;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: flex-end;
 
   padding: 30px;
@@ -491,6 +542,7 @@ h1 {
   color: white;
 
   background-size: cover;
+
   background-position: center;
 
   box-shadow:
@@ -511,7 +563,9 @@ h1 {
 
 .card::before {
   content: "";
+
   position: absolute;
+
   inset: 0;
 
   background:
@@ -527,23 +581,28 @@ h1 {
 
 .card > * {
   position: relative;
+
   z-index: 1;
 }
 
 .card .icon {
   font-size: 38px;
+
   color: white;
+
   margin-bottom: 5px;
 }
 
 .card h3 {
   font-size: 30px;
+
   line-height: 1.15;
 
   margin:
     8px 0 14px;
 
   color: white;
+
   font-weight: 800;
 }
 
@@ -553,6 +612,7 @@ h1 {
   color: white;
 
   font-size: 16px;
+
   line-height: 1.55;
 }
 
@@ -562,12 +622,12 @@ h1 {
 ========================= */
 
 .more-button {
-
   display: inline-block;
 
   margin-top: 14px;
 
-  padding: 8px 14px;
+  padding:
+    8px 14px;
 
   border: none;
 
@@ -598,7 +658,6 @@ h1 {
 }
 
 .more-button:hover {
-
   background:
     #0b68b2;
 
@@ -615,12 +674,12 @@ h1 {
 ========================= */
 
 .quote-button {
-
   display: inline-block;
 
   margin-top: 10px;
 
-  padding: 8px 14px;
+  padding:
+    8px 14px;
 
   border: none;
 
@@ -651,7 +710,6 @@ h1 {
 }
 
 .quote-button:hover {
-
   background:
     #1ebe5d;
 
@@ -689,20 +747,22 @@ h1 {
 
 
 /* =========================
-   INFORMACIÓN DE SERVICIOS
+   INFORMACIÓN SERVICIOS
 ========================= */
 
 .service-info {
-
   display: none;
 
   max-width: 1050px;
 
-  margin: 35px auto 0;
+  margin:
+    35px auto 0;
 
-  padding: 45px 35px;
+  padding:
+    45px 35px;
 
-  background: white;
+  background:
+    white;
 
   border-radius: 22px;
 
@@ -725,12 +785,14 @@ h1 {
 
   from {
     opacity: 0;
+
     transform:
       translateY(20px);
   }
 
   to {
     opacity: 1;
+
     transform:
       translateY(0);
   }
@@ -738,7 +800,6 @@ h1 {
 }
 
 .service-info h2 {
-
   margin-top: 0;
 
   margin-bottom: 18px;
@@ -754,7 +815,6 @@ h1 {
 }
 
 .service-info p {
-
   color: #536577;
 
   font-size: 18px;
@@ -765,12 +825,12 @@ h1 {
 }
 
 .back-button {
-
   display: inline-block;
 
   margin-top: 15px;
 
-  padding: 11px 22px;
+  padding:
+    11px 22px;
 
   border: none;
 
@@ -793,7 +853,6 @@ h1 {
 }
 
 .back-button:hover {
-
   background:
     #1476c6;
 
@@ -807,7 +866,6 @@ h1 {
 ================================================== */
 
 .about {
-
   position: relative;
 
   background-image:
@@ -830,7 +888,6 @@ h1 {
 }
 
 .about::before {
-
   content: "";
 
   position: absolute;
@@ -847,7 +904,6 @@ h1 {
 }
 
 .about > * {
-
   position: relative;
 
   z-index: 1;
@@ -859,7 +915,6 @@ h1 {
 ========================= */
 
 .about-header {
-
   text-align: center;
 
   max-width: 950px;
@@ -869,7 +924,6 @@ h1 {
 }
 
 .about .eyebrow {
-
   font-family:
     "Montserrat",
     Arial,
@@ -891,7 +945,6 @@ h1 {
 }
 
 .about h2 {
-
   font-size: 42px;
 
   line-height: 1.15;
@@ -903,7 +956,6 @@ h1 {
 }
 
 .about-description {
-
   max-width: 900px;
 
   margin:
@@ -925,7 +977,6 @@ h1 {
 ================================================== */
 
 .about-cards {
-
   display: grid;
 
   grid-template-columns:
@@ -943,7 +994,6 @@ h1 {
 /* TARJETA GENERAL */
 
 .about-card-button {
-
   appearance: none;
 
   position: relative;
@@ -958,7 +1008,7 @@ h1 {
   padding:
     25px 18px;
 
-  min-height: 180px;
+  min-height: 195px;
 
   background-size: cover;
 
@@ -983,7 +1033,6 @@ h1 {
 /* CAPA OSCURA */
 
 .about-card-button::before {
-
   content: "";
 
   position: absolute;
@@ -1003,10 +1052,9 @@ h1 {
 }
 
 
-/* CONTENIDO SOBRE LA IMAGEN */
+/* CONTENIDO */
 
 .about-card-button > * {
-
   position: relative;
 
   z-index: 1;
@@ -1016,7 +1064,6 @@ h1 {
 /* IMAGEN MISIÓN */
 
 .about-card-button:nth-child(1) {
-
   background-image:
     url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80");
 }
@@ -1025,7 +1072,6 @@ h1 {
 /* IMAGEN VISIÓN */
 
 .about-card-button:nth-child(2) {
-
   background-image:
     url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80");
 }
@@ -1034,14 +1080,12 @@ h1 {
 /* IMAGEN VALORES */
 
 .about-card-button:nth-child(3) {
-
   background-image:
     url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80");
 }
 
 
 .about-card-button:hover {
-
   transform:
     translateY(-7px)
     scale(1.02);
@@ -1054,7 +1098,6 @@ h1 {
 }
 
 .about-card-button:hover::before {
-
   background:
     linear-gradient(
       rgba(10,50,80,.30),
@@ -1063,7 +1106,6 @@ h1 {
 }
 
 .about-card-button.active {
-
   border-color:
     #ffffff;
 
@@ -1075,7 +1117,6 @@ h1 {
 }
 
 .about-card-button.active::before {
-
   background:
     linear-gradient(
       rgba(20,118,198,.30),
@@ -1089,13 +1130,12 @@ h1 {
 ========================= */
 
 .about-card-icon {
-
   width: 55px;
 
   height: 55px;
 
   margin:
-    0 auto 12px;
+    0 auto 10px;
 
   border-radius: 50%;
 
@@ -1120,7 +1160,6 @@ h1 {
 
 .about-card-button:hover
 .about-card-icon {
-
   transform:
     scale(1.12);
 
@@ -1129,8 +1168,8 @@ h1 {
 }
 
 .about-card-button h3 {
-
-  margin: 0;
+  margin:
+    0 0 10px;
 
   font-family:
     "Montserrat",
@@ -1149,11 +1188,69 @@ h1 {
 
 
 /* ==================================================
+   BOTÓN VER MÁS
+================================================== */
+
+.about-more-button {
+  display: inline-block;
+
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 2px;
+
+  padding:
+    6px 14px;
+
+  border:
+    1px solid rgba(255,255,255,.65);
+
+  border-radius: 7px;
+
+  background:
+    rgba(20,118,198,.88);
+
+  color: white;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: .3px;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,.22);
+
+  transition:
+    background .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.about-card-button:hover
+.about-more-button {
+  background:
+    #1476c6;
+
+  transform:
+    scale(1.06);
+
+  box-shadow:
+    0 5px 14px rgba(0,0,0,.30);
+}
+
+
+/* ==================================================
    INFORMACIÓN DESPLEGABLE
 ================================================== */
 
 .about-info {
-
   display: none;
 
   max-width: 1000px;
@@ -1179,12 +1276,10 @@ h1 {
 }
 
 .about-info.active {
-
   display: block;
 }
 
 .about-info h3 {
-
   margin:
     0 0 12px;
 
@@ -1199,7 +1294,6 @@ h1 {
 }
 
 .about-info p {
-
   margin: 0;
 
   font-size: 18px;
@@ -1210,7 +1304,6 @@ h1 {
 }
 
 .about-info ul {
-
   margin:
     8px 0 0;
 
@@ -1224,12 +1317,12 @@ h1 {
 }
 
 .about-back {
-
   display: inline-block;
 
   margin-top: 20px;
 
-  padding: 9px 18px;
+  padding:
+    9px 18px;
 
   border: none;
 
@@ -1252,7 +1345,6 @@ h1 {
 }
 
 .about-back:hover {
-
   background:
     #1476c6;
 
@@ -1263,7 +1355,6 @@ h1 {
 @keyframes aparecerAbout {
 
   from {
-
     opacity: 0;
 
     transform:
@@ -1271,22 +1362,20 @@ h1 {
   }
 
   to {
-
     opacity: 1;
 
     transform:
       translateY(0);
   }
+
 }
 
 
 /* ==================================================
    ESTADÍSTICAS
-   DEBAJO DE MISIÓN / VISIÓN / VALORES
 ================================================== */
 
 .stats-section {
-
   width: 100%;
 
   padding:
@@ -1307,7 +1396,6 @@ h1 {
 }
 
 .stats-header {
-
   max-width: 900px;
 
   margin:
@@ -1315,8 +1403,8 @@ h1 {
 }
 
 .stats-eyebrow {
-
-  margin: 0 0 8px;
+  margin:
+    0 0 8px;
 
   font-family:
     "Montserrat",
@@ -1333,7 +1421,6 @@ h1 {
 }
 
 .stats-header p {
-
   margin: 0;
 
   color:
@@ -1343,7 +1430,6 @@ h1 {
 }
 
 .stats-grid {
-
   max-width: 1100px;
 
   margin: auto;
@@ -1357,7 +1443,6 @@ h1 {
 }
 
 .stat-card {
-
   min-height: 190px;
 
   padding:
@@ -1395,7 +1480,6 @@ h1 {
 }
 
 .stat-card:hover {
-
   transform:
     translateY(-7px)
     scale(1.03);
@@ -1408,7 +1492,6 @@ h1 {
 }
 
 .stat-number {
-
   display: block;
 
   font-family:
@@ -1431,7 +1514,6 @@ h1 {
 }
 
 .stat-label {
-
   font-size: 17px;
 
   line-height: 1.35;
@@ -1451,7 +1533,6 @@ h1 {
 ========================= */
 
 .stat-number.counting {
-
   animation:
     aparecerNumero .35s ease;
 }
@@ -1459,7 +1540,6 @@ h1 {
 @keyframes aparecerNumero {
 
   from {
-
     opacity: .35;
 
     transform:
@@ -1467,7 +1547,6 @@ h1 {
   }
 
   to {
-
     opacity: 1;
 
     transform:
@@ -1479,17 +1558,19 @@ h1 {
 
 /* ==================================================
    CONTACTO
-   MÁS COMPACTO
+   MISMO ANCHO - MENOR ALTURA
 ================================================== */
 
 .contact {
-
   max-width: 1080px;
 
-  margin: 0 auto;
+  width: calc(100% - 48px);
+
+  margin:
+    20px auto;
 
   padding:
-    55px 24px;
+    35px 24px 32px;
 
   background:
     #ffffff;
@@ -1500,21 +1581,18 @@ h1 {
   box-shadow:
     0 12px 35px
     rgba(20,40,60,.10);
-
 }
 
 .contact-intro {
-
   text-align: center;
 
   max-width: 700px;
 
   margin:
-    0 auto 32px;
+    0 auto 25px;
 }
 
 .contact-intro .eyebrow {
-
   font-family:
     "Montserrat",
     Arial,
@@ -1528,21 +1606,22 @@ h1 {
 
   color: #102033;
 
+  margin:
+    0 0 4px;
+
   text-shadow:
     0 2px 4px rgba(20,40,60,.12);
 }
 
 .contact-intro h2 {
-
   margin:
-    5px 0 12px;
+    3px 0 8px;
 
   font-size: 38px;
 }
 
 .contact-intro p {
-
-  font-size: 18px;
+  font-size: 17px;
 
   margin:
     0;
@@ -1554,7 +1633,6 @@ h1 {
 ========================= */
 
 .contact-grid {
-
   display: grid;
 
   grid-template-columns:
@@ -1568,7 +1646,6 @@ h1 {
 }
 
 .contact-card {
-
   position: relative;
 
   overflow: hidden;
@@ -1579,14 +1656,14 @@ h1 {
   border-radius: 16px;
 
   padding:
-    20px 18px;
+    16px 18px;
 
   text-align: center;
 
   box-shadow:
     0 10px 30px rgba(20,40,60,.20);
 
-  min-height: 215px;
+  min-height: 190px;
 
   display: flex;
 
@@ -1606,7 +1683,6 @@ h1 {
 }
 
 .contact-card:hover {
-
   transform:
     scale(1.03)
     translateY(-4px);
@@ -1616,7 +1692,6 @@ h1 {
 }
 
 .contact-card::before {
-
   content: "";
 
   position: absolute;
@@ -1633,7 +1708,6 @@ h1 {
 }
 
 .contact-card > * {
-
   position: relative;
 
   z-index: 1;
@@ -1643,31 +1717,28 @@ h1 {
 /* FONDOS CONTACTO */
 
 .contact-card:nth-child(1) {
-
   background-image:
     url("./callcenter.jpg");
 }
 
 .contact-card:nth-child(2) {
-
   background-image:
     url("./correo.jpg");
 }
 
 .contact-card:nth-child(3) {
-
   background-image:
     url("./maps.jpg");
 }
 
 
 .contact-icon {
+  width: 58px;
 
-  width: 62px;
-  height: 62px;
+  height: 58px;
 
   margin:
-    0 auto 12px;
+    0 auto 8px;
 
   border-radius: 50%;
 
@@ -1677,9 +1748,10 @@ h1 {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  font-size: 34px;
+  font-size: 31px;
 
   color: #ffffff;
 
@@ -1687,11 +1759,10 @@ h1 {
 }
 
 .contact-card h3 {
-
   margin:
-    6px 0 9px;
+    4px 0 7px;
 
-  font-size: 20px;
+  font-size: 19px;
 
   color: #ffffff;
 
@@ -1700,37 +1771,34 @@ h1 {
 }
 
 .contact-card p {
-
   margin: 0;
 
   color: #ffffff;
 
-  font-size: 17px;
+  font-size: 16px;
 
   font-weight: 400;
 
-  line-height: 1.55;
+  line-height: 1.45;
 
   text-shadow:
     0 2px 4px rgba(0,0,0,.65);
 }
 
 .contact-card a {
-
   color: #ffffff;
 
   text-decoration: none;
 
   font-weight: 400;
 
-  font-size: 17px;
+  font-size: 16px;
 
   text-shadow:
     0 2px 4px rgba(0,0,0,.65);
 }
 
 .contact-card a:hover {
-
   color: #8ed0ff;
 
   text-decoration: underline;
@@ -1742,12 +1810,12 @@ h1 {
 ========================= */
 
 .location-button {
-
   display: inline-block;
 
-  margin-top: 8px;
+  margin-top: 6px;
 
-  padding: 8px 13px;
+  padding:
+    7px 12px;
 
   border-radius: 8px;
 
@@ -1756,7 +1824,7 @@ h1 {
 
   color: white !important;
 
-  font-size: 14px !important;
+  font-size: 13px !important;
 
   font-weight: 800 !important;
 
@@ -1773,7 +1841,6 @@ h1 {
 }
 
 .location-button:hover {
-
   background:
     #0b68b2;
 
@@ -1789,7 +1856,6 @@ h1 {
 ========================= */
 
 .bottom-navigation {
-
   background:
     #102033;
 
@@ -1800,7 +1866,6 @@ h1 {
 }
 
 .bottom-navigation-title {
-
   color: white;
 
   font-family:
@@ -1815,7 +1880,6 @@ h1 {
 }
 
 .bottom-links {
-
   display: flex;
 
   justify-content: center;
@@ -1828,7 +1892,6 @@ h1 {
 }
 
 .bottom-links a {
-
   color: white;
 
   text-decoration: none;
@@ -1851,7 +1914,6 @@ h1 {
 }
 
 .bottom-links a:hover {
-
   background:
     #1476c6;
 
@@ -1865,7 +1927,6 @@ h1 {
 ========================= */
 
 .social-row {
-
   position: fixed;
 
   right: 24px;
@@ -1884,7 +1945,6 @@ h1 {
 }
 
 .social-row a {
-
   width: 68px;
 
   height: 68px;
@@ -1908,7 +1968,6 @@ h1 {
 }
 
 .social-row a:hover {
-
   transform:
     scale(1.1);
 
@@ -1917,8 +1976,8 @@ h1 {
 }
 
 .social-row img {
-
   width: 42px;
+
   height: 42px;
 
   object-fit: contain;
@@ -1927,20 +1986,19 @@ h1 {
 }
 
 .whatsapp-button {
-
   background:
     #25D366 !important;
 }
 
 .whatsapp-button img {
-
   width: 44px;
+
   height: 44px;
 }
 
 .linkedin-button img {
-
   width: 42px;
+
   height: 42px;
 }
 
@@ -1950,7 +2008,6 @@ h1 {
 ========================= */
 
 footer {
-
   text-align: center;
 
   padding: 28px;
@@ -1972,15 +2029,12 @@ footer {
 @media(max-width:760px) {
 
   header {
+    min-height: 175px;
 
-    min-height: 205px;
-
-    background-position:
-      center;
+    height: 175px;
   }
 
   header::before {
-
     width: 140%;
 
     left: -20%;
@@ -1993,10 +2047,11 @@ footer {
   }
 
   nav {
-
     width: 100%;
 
-    min-height: 205px;
+    min-height: 175px;
+
+    height: 175px;
 
     padding: 0;
 
@@ -2015,7 +2070,6 @@ footer {
   }
 
   .logo {
-
     width: auto;
 
     margin: 0;
@@ -2027,12 +2081,11 @@ footer {
   }
 
   .logo img {
-
-    height: 145px;
+    height: 120px;
 
     width: auto;
 
-    max-width: 350px;
+    max-width: 300px;
 
     display: block;
 
@@ -2042,7 +2095,6 @@ footer {
   }
 
   .links {
-
     width: 100%;
 
     display: flex;
@@ -2074,12 +2126,10 @@ footer {
   }
 
   .links::-webkit-scrollbar {
-
     display: none;
   }
 
   .links a {
-
     flex: 0 0 auto;
 
     font-size: 18px;
@@ -2099,7 +2149,6 @@ footer {
   /* HERO */
 
   .hero {
-
     grid-template-columns: 1fr;
 
     padding:
@@ -2109,7 +2158,6 @@ footer {
   }
 
   .hero-card {
-
     padding:
       35px 20px;
 
@@ -2117,17 +2165,14 @@ footer {
   }
 
   .hero-card h2 {
-
     font-size: 40px;
   }
 
   .hero-card p {
-
     font-size: 22px;
   }
 
   .hero-card small {
-
     font-size: 16px;
   }
 
@@ -2135,13 +2180,11 @@ footer {
   /* SERVICIOS */
 
   .section {
-
     padding:
       60px 12px;
   }
 
   .section > .eyebrow {
-
     font-size: 30px;
 
     font-weight: 800;
@@ -2152,7 +2195,6 @@ footer {
   }
 
   .grid {
-
     gap: 18px;
 
     padding-left: 12px;
@@ -2161,7 +2203,6 @@ footer {
   }
 
   .card {
-
     min-width: 300px;
 
     width: 300px;
@@ -2172,13 +2213,11 @@ footer {
   }
 
   .card h3 {
-
     font-size: 29px;
   }
 
   .card:hover,
   .hero-card:hover {
-
     transform:
       scale(1.02);
   }
@@ -2187,7 +2226,6 @@ footer {
   /* INFORMACIÓN SERVICIO */
 
   .service-info {
-
     padding:
       30px 22px;
 
@@ -2198,12 +2236,10 @@ footer {
   }
 
   .service-info h2 {
-
     font-size: 28px;
   }
 
   .service-info p {
-
     font-size: 17px;
 
     line-height: 1.65;
@@ -2213,25 +2249,21 @@ footer {
   /* ESTADÍSTICAS */
 
   .stats-section {
-
     padding:
       55px 16px;
   }
 
   .stats-eyebrow {
-
     font-size: 30px;
 
     line-height: 1.2;
   }
 
   .stats-header p {
-
     font-size: 17px;
   }
 
   .stats-grid {
-
     grid-template-columns:
       repeat(2, 1fr);
 
@@ -2239,7 +2271,6 @@ footer {
   }
 
   .stat-card {
-
     min-height: 165px;
 
     padding:
@@ -2247,12 +2278,10 @@ footer {
   }
 
   .stat-number {
-
     font-size: 38px;
   }
 
   .stat-label {
-
     font-size: 14px;
   }
 
@@ -2260,30 +2289,25 @@ footer {
   /* SOBRE SIPSA */
 
   .about {
-
     padding:
       60px 20px;
   }
 
   .about-header {
-
     margin-bottom: 30px;
   }
 
   .about .eyebrow {
-
     font-size: 30px;
   }
 
   .about h2 {
-
     font-size: 34px;
 
     line-height: 1.15;
   }
 
   .about-description {
-
     font-size: 18px;
 
     line-height: 1.65;
@@ -2293,7 +2317,6 @@ footer {
   /* TARJETAS */
 
   .about-cards {
-
     grid-template-columns: 1fr;
 
     gap: 14px;
@@ -2302,34 +2325,39 @@ footer {
   }
 
   .about-card-button {
-
-    min-height: 135px;
+    min-height: 150px;
 
     padding:
       20px 15px;
   }
 
   .about-card-icon {
-
     width: 48px;
 
     height: 48px;
 
     font-size: 24px;
 
-    margin-bottom: 8px;
+    margin-bottom: 7px;
   }
 
   .about-card-button h3 {
-
     font-size: 19px;
+
+    margin-bottom: 8px;
+  }
+
+  .about-more-button {
+    font-size: 13px;
+
+    padding:
+      6px 13px;
   }
 
 
   /* INFORMACIÓN */
 
   .about-info {
-
     padding:
       25px 20px;
 
@@ -2339,13 +2367,11 @@ footer {
   }
 
   .about-info h3 {
-
     font-size: 24px;
   }
 
   .about-info p,
   .about-info ul {
-
     font-size: 17px;
 
     line-height: 1.65;
@@ -2355,19 +2381,20 @@ footer {
   /* CONTACTO */
 
   .contact {
+    width:
+      calc(100% - 24px);
 
     margin:
       20px 12px;
 
     padding:
-      45px 16px;
+      35px 16px 28px;
 
     border-radius:
       20px;
   }
 
   .contact-grid {
-
     grid-template-columns: 1fr;
 
     max-width: 400px;
@@ -2376,65 +2403,59 @@ footer {
   }
 
   .contact-intro .eyebrow {
-
     font-size: 30px;
   }
 
   .contact-intro h2 {
-
     font-size: 34px;
   }
 
+  .contact-intro p {
+    font-size: 17px;
+  }
+
   .contact-card {
-
     padding:
-      22px 18px;
+      18px 18px;
 
-    min-height: 215px;
+    min-height: 195px;
   }
 
   .contact-card:hover {
-
     transform:
       scale(1.02);
   }
 
   .contact-icon {
+    width: 62px;
 
-    width: 70px;
+    height: 62px;
 
-    height: 70px;
-
-    font-size: 38px;
+    font-size: 34px;
   }
 
   h1 {
-
     font-size: 44px;
   }
 
   .contact-card p,
   .contact-card a {
-
-    font-size: 18px;
+    font-size: 17px;
   }
 
 
   /* NAVEGACIÓN INFERIOR */
 
   .bottom-navigation {
-
     padding:
       30px 15px;
   }
 
   .bottom-links {
-
     gap: 8px;
   }
 
   .bottom-links a {
-
     font-size: 15px;
 
     padding:
@@ -2445,7 +2466,6 @@ footer {
   /* REDES */
 
   .social-row {
-
     right: 12px;
 
     bottom: 12px;
@@ -2454,28 +2474,24 @@ footer {
   }
 
   .social-row a {
-
     width: 58px;
 
     height: 58px;
   }
 
   .social-row img {
-
     width: 36px;
 
     height: 36px;
   }
 
   .whatsapp-button img {
-
     width: 38px;
 
     height: 38px;
   }
 
   .linkedin-button img {
-
     width: 36px;
 
     height: 36px;
@@ -3041,6 +3057,10 @@ onclick="mostrarAbout('mision-info', this)">
 MISIÓN
 </h3>
 
+<span class="about-more-button">
+Ver más
+</span>
+
 </button>
 
 
@@ -3057,6 +3077,10 @@ onclick="mostrarAbout('vision-info', this)">
 VISIÓN
 </h3>
 
+<span class="about-more-button">
+Ver más
+</span>
+
 </button>
 
 
@@ -3072,6 +3096,10 @@ onclick="mostrarAbout('valores-info', this)">
 <h3>
 VALORES
 </h3>
+
+<span class="about-more-button">
+Ver más
+</span>
 
 </button>
 
@@ -3209,7 +3237,6 @@ onclick="regresarAbout()">
 
 <!-- ==================================================
      NUESTRA EXPERIENCIA
-     AHORA DEBAJO DE MISIÓN / VISIÓN / VALORES
 ================================================== -->
 
 <section
@@ -3688,8 +3715,7 @@ function regresarAbout() {
 
 /* ==================================================
    CONTADORES
-   SE REINICIAN CADA VEZ QUE LA SECCIÓN
-   VUELVE A ENTRAR EN PANTALLA
+   ANIMACIÓN PROGRESIVA 0 → NÚMERO FINAL
 ================================================== */
 
 const seccionEstadisticas =
@@ -3698,8 +3724,9 @@ const seccionEstadisticas =
 const contadores =
   document.querySelectorAll('.stat-number');
 
-
 let contadorActivo = false;
+
+let animacionesContadores = [];
 
 
 function iniciarContadores() {
@@ -3711,25 +3738,27 @@ function iniciarContadores() {
   contadorActivo = true;
 
 
+  /* Cancelar cualquier animación anterior */
+
+  animacionesContadores.forEach(function(id) {
+
+    cancelAnimationFrame(id);
+
+  });
+
+  animacionesContadores = [];
+
+
   contadores.forEach(function(contador) {
 
     const objetivo =
-      parseInt(contador.dataset.target);
+      parseInt(
+        contador.dataset.target,
+        10
+      );
 
     const sufijo =
       contador.dataset.suffix || "";
-
-    let actual = 0;
-
-    const duracion = 2200;
-
-    const intervalo = 25;
-
-    const pasos =
-      duracion / intervalo;
-
-    const incremento =
-      objetivo / pasos;
 
 
     contador.textContent = "0";
@@ -3741,27 +3770,63 @@ function iniciarContadores() {
     contador.classList.add('counting');
 
 
-    const animacion =
-      setInterval(function() {
+    const duracion = 2200;
 
-        actual += incremento;
+    const inicio = performance.now();
 
 
-        if (actual >= objetivo) {
+    function actualizarNumero(tiempoActual) {
 
-          actual = objetivo;
+      const progreso =
+        Math.min(
+          (tiempoActual - inicio) / duracion,
+          1
+        );
 
-          clearInterval(animacion);
 
-        }
+      /* Efecto suave de aceleración y desaceleración */
 
+      const progresoSuave =
+        1 - Math.pow(1 - progreso, 3);
+
+
+      const actual =
+        Math.floor(
+          objetivo * progresoSuave
+        );
+
+
+      contador.textContent =
+        actual.toLocaleString('es-GT')
+        + sufijo;
+
+
+      if (progreso < 1) {
+
+        const id =
+          requestAnimationFrame(
+            actualizarNumero
+          );
+
+        animacionesContadores.push(id);
+
+      } else {
 
         contador.textContent =
-          Math.floor(actual)
-          .toLocaleString('es-GT')
+          objetivo.toLocaleString('es-GT')
           + sufijo;
 
-      }, intervalo);
+      }
+
+    }
+
+
+    const idInicial =
+      requestAnimationFrame(
+        actualizarNumero
+      );
+
+    animacionesContadores.push(idInicial);
 
   });
 
@@ -3770,14 +3835,14 @@ function iniciarContadores() {
 
     contadorActivo = false;
 
-  }, duracion + 300);
+  }, 2500);
 
 }
 
 
 /* ==================================================
-   REINICIAR CONTADORES CADA VEZ QUE
-   SE LLEGA NUEVAMENTE A LA SECCIÓN
+   REINICIAR CONTADORES CADA VEZ QUE LA SECCIÓN
+   VUELVE A ENTRAR EN PANTALLA
 ================================================== */
 
 if ('IntersectionObserver' in window) {
@@ -3806,7 +3871,9 @@ if ('IntersectionObserver' in window) {
     );
 
 
-  observador.observe(seccionEstadisticas);
+  observador.observe(
+    seccionEstadisticas
+  );
 
 } else {
 
