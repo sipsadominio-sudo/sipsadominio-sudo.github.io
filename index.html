@@ -14,7 +14,7 @@ content="SIPSA POLIGRAFIA - servicios profesionales de poligrafía, estudios soc
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
-href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap"
+href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
 rel="stylesheet">
 
 <style>
@@ -130,10 +130,65 @@ nav {
   margin: 0;
   padding: 0;
 
+  animation:
+    entradaLogo 1.4s ease-out forwards;
+
   transition:
     transform .35s ease,
     filter .35s ease;
 }
+
+
+/* =========================
+   ANIMACIÓN DE ENTRADA LOGO
+========================= */
+
+@keyframes entradaLogo {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      scale(.82)
+      translateY(-12px);
+
+    filter:
+      blur(4px)
+      drop-shadow(
+        0 0 0 rgba(255,255,255,0)
+      );
+  }
+
+  60% {
+    opacity: 1;
+
+    transform:
+      scale(1.04)
+      translateY(2px);
+
+    filter:
+      blur(0)
+      drop-shadow(
+        0 0 12px rgba(255,255,255,.35)
+      );
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+
+    filter:
+      blur(0)
+      drop-shadow(
+        0 0 0 rgba(255,255,255,0)
+      );
+  }
+
+}
+
 
 .logo:hover {
   transform:
@@ -754,6 +809,201 @@ h1 {
 
 
 /* =========================
+   ESTADÍSTICAS SIPSA
+========================= */
+
+.stats-section {
+
+  width: 100%;
+
+  padding:
+    75px 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #102033,
+      #1476c6
+    );
+
+  color: white;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.stats-header {
+
+  max-width: 900px;
+
+  margin:
+    0 auto 45px;
+}
+
+.stats-eyebrow {
+
+  margin: 0 0 8px;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 38px;
+
+  letter-spacing: 2px;
+
+  font-weight: 800;
+
+  color: white;
+}
+
+.stats-header p {
+
+  margin: 0;
+
+  color: rgba(255,255,255,.88);
+
+  font-size: 18px;
+}
+
+.stats-grid {
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.stat-card {
+
+  min-height: 190px;
+
+  padding:
+    30px 18px;
+
+  border-radius: 18px;
+
+  background:
+    rgba(255,255,255,.12);
+
+  border:
+    1px solid rgba(255,255,255,.28);
+
+  backdrop-filter:
+    blur(7px);
+
+  -webkit-backdrop-filter:
+    blur(7px);
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.20);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    box-shadow .3s ease;
+}
+
+.stat-card:hover {
+
+  transform:
+    translateY(-7px)
+    scale(1.03);
+
+  background:
+    rgba(255,255,255,.18);
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,.28);
+}
+
+.stat-number {
+
+  display: block;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 48px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  color: white;
+
+  margin-bottom: 14px;
+
+  text-shadow:
+    0 3px 8px rgba(0,0,0,.25);
+}
+
+.stat-label {
+
+  font-size: 17px;
+
+  line-height: 1.35;
+
+  font-weight: 800;
+
+  color: white;
+
+  text-transform: uppercase;
+
+  letter-spacing: .7px;
+}
+
+
+/* =========================
+   ANIMACIÓN CONTADORES
+========================= */
+
+.stat-number.counting {
+
+  animation:
+    aparecerNumero .35s ease;
+}
+
+@keyframes aparecerNumero {
+
+  from {
+
+    opacity: .35;
+
+    transform:
+      scale(.85);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      scale(1);
+  }
+
+}
+
+
+/* =========================
    SOBRE SIPSA
 ========================= */
 
@@ -961,7 +1211,7 @@ h1 {
 
 
 /* =========================
-   ICONOS MISIÓN VISIÓN VALORES
+   ICONOS
 ========================= */
 
 .about-card-icon {
@@ -988,8 +1238,6 @@ h1 {
     1px solid rgba(255,255,255,.40);
 
   font-size: 28px;
-
-  font-weight: 800;
 
   transition:
     transform .3s ease,
@@ -1118,245 +1366,6 @@ h1 {
     transform:
       translateY(0);
   }
-}
-
-
-/* ==================================================
-   ESTADÍSTICAS / EXPERIENCIA
-================================================== */
-
-.stats-section {
-
-  position: relative;
-
-  padding:
-    75px 24px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #081522,
-      #102d46,
-      #123f61
-    );
-
-  overflow: hidden;
-
-  color: white;
-
-  text-align: center;
-}
-
-.stats-section::before {
-
-  content: "";
-
-  position: absolute;
-
-  width: 500px;
-
-  height: 500px;
-
-  border-radius: 50%;
-
-  background:
-    rgba(20,118,198,.14);
-
-  top: -250px;
-
-  left: -150px;
-}
-
-.stats-section::after {
-
-  content: "";
-
-  position: absolute;
-
-  width: 450px;
-
-  height: 450px;
-
-  border-radius: 50%;
-
-  background:
-    rgba(255,255,255,.05);
-
-  bottom: -250px;
-
-  right: -150px;
-}
-
-.stats-container {
-
-  position: relative;
-
-  z-index: 1;
-
-  max-width: 1120px;
-
-  margin: auto;
-}
-
-.stats-title {
-
-  margin:
-    0 0 10px;
-
-  font-family:
-    "Montserrat",
-    Arial,
-    sans-serif;
-
-  font-size:
-    clamp(28px,4vw,42px);
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-
-  color: white;
-}
-
-.stats-subtitle {
-
-  max-width: 750px;
-
-  margin:
-    0 auto 45px;
-
-  font-size: 18px;
-
-  line-height: 1.6;
-
-  color: #d9e6f1;
-}
-
-.stats-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 20px;
-}
-
-.stat-card {
-
-  position: relative;
-
-  padding:
-    30px 18px;
-
-  min-height: 190px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  align-items: center;
-
-  border-radius: 18px;
-
-  background:
-    rgba(255,255,255,.09);
-
-  border:
-    1px solid rgba(255,255,255,.20);
-
-  backdrop-filter:
-    blur(8px);
-
-  -webkit-backdrop-filter:
-    blur(8px);
-
-  box-shadow:
-    0 12px 30px rgba(0,0,0,.18);
-
-  transition:
-    transform .3s ease,
-    background .3s ease,
-    box-shadow .3s ease;
-}
-
-.stat-card:hover {
-
-  transform:
-    translateY(-8px)
-    scale(1.03);
-
-  background:
-    rgba(20,118,198,.35);
-
-  box-shadow:
-    0 20px 45px rgba(0,0,0,.28);
-}
-
-.stat-icon {
-
-  width: 50px;
-
-  height: 50px;
-
-  margin-bottom: 12px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background:
-    rgba(255,255,255,.14);
-
-  border:
-    1px solid rgba(255,255,255,.25);
-
-  font-size: 24px;
-
-  color: white;
-}
-
-.stat-number {
-
-  font-family:
-    "Montserrat",
-    Arial,
-    sans-serif;
-
-  font-size:
-    clamp(34px,4vw,48px);
-
-  line-height: 1;
-
-  font-weight: 900;
-
-  color: white;
-
-  margin-bottom: 10px;
-
-  text-shadow:
-    0 3px 8px rgba(0,0,0,.25);
-}
-
-.stat-label {
-
-  font-size: 16px;
-
-  line-height: 1.35;
-
-  font-weight: 800;
-
-  color: #e6f0f7;
-
-  text-transform: uppercase;
-
-  letter-spacing: .8px;
 }
 
 
@@ -1830,9 +1839,9 @@ footer {
 }
 
 
-/* ==================================================
+/* =========================
    CELULAR
-================================================== */
+========================= */
 
 @media(max-width:760px) {
 
@@ -2079,6 +2088,55 @@ footer {
 
 
   /* =========================
+     ESTADÍSTICAS CELULAR
+  ========================= */
+
+  .stats-section {
+
+    padding:
+      60px 16px;
+  }
+
+  .stats-eyebrow {
+
+    font-size: 30px;
+
+    line-height: 1.2;
+  }
+
+  .stats-header p {
+
+    font-size: 17px;
+  }
+
+  .stats-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 14px;
+  }
+
+  .stat-card {
+
+    min-height: 165px;
+
+    padding:
+      25px 10px;
+  }
+
+  .stat-number {
+
+    font-size: 38px;
+  }
+
+  .stat-label {
+
+    font-size: 14px;
+  }
+
+
+  /* =========================
      SOBRE SIPSA - CELULAR
   ========================= */
 
@@ -2172,72 +2230,6 @@ footer {
     font-size: 17px;
 
     line-height: 1.65;
-  }
-
-
-  /* =========================
-     ESTADÍSTICAS - CELULAR
-  ========================= */
-
-  .stats-section {
-
-    padding:
-      60px 18px;
-  }
-
-  .stats-title {
-
-    font-size: 29px;
-
-    line-height: 1.2;
-  }
-
-  .stats-subtitle {
-
-    font-size: 16px;
-
-    margin-bottom: 30px;
-  }
-
-  .stats-grid {
-
-    grid-template-columns:
-      repeat(2, 1fr);
-
-    gap: 12px;
-  }
-
-  .stat-card {
-
-    min-height: 165px;
-
-    padding:
-      22px 10px;
-
-    border-radius: 15px;
-  }
-
-  .stat-icon {
-
-    width: 44px;
-
-    height: 44px;
-
-    font-size: 21px;
-
-    margin-bottom: 10px;
-  }
-
-  .stat-number {
-
-    font-size: 34px;
-  }
-
-  .stat-label {
-
-    font-size: 13px;
-
-    letter-spacing: .5px;
   }
 
 
@@ -2737,8 +2729,8 @@ social y familiar de una persona.
 <p>
 
 El proceso incluye validación de referencias
-laborales, Jefes inmediatos, familiares, personales,
-documentación y visita domiciliar, proporcionando información útil para
+laborales, Jefes inmediatos, familiares, personales, revisión de documentación y visita
+domiciliar, proporcionando información útil para
 procesos de contratación y verificación.
 
 </p>
@@ -2897,6 +2889,107 @@ onclick="regresarServicios()">
 
 
 <!-- =========================
+     ESTADÍSTICAS
+========================= -->
+
+<section
+class="stats-section"
+id="estadisticas">
+
+<div class="stats-header">
+
+<p class="stats-eyebrow">
+NUESTRA EXPERIENCIA
+</p>
+
+<p>
+Experiencia y trayectoria al servicio de nuestros clientes.
+</p>
+
+</div>
+
+
+<div class="stats-grid">
+
+
+<!-- PRUEBAS -->
+
+<div class="stat-card">
+
+<span
+class="stat-number"
+data-target="5000"
+data-suffix="+">
+0
+</span>
+
+<div class="stat-label">
+Pruebas de Poligrafía
+</div>
+
+</div>
+
+
+<!-- ESTUDIOS -->
+
+<div class="stat-card">
+
+<span
+class="stat-number"
+data-target="5000"
+data-suffix="+">
+0
+</span>
+
+<div class="stat-label">
+Estudios Socioeconómicos
+</div>
+
+</div>
+
+
+<!-- EXPERIENCIA -->
+
+<div class="stat-card">
+
+<span
+class="stat-number"
+data-target="10"
+data-suffix="+">
+0
+</span>
+
+<div class="stat-label">
+Años de experiencia
+</div>
+
+</div>
+
+
+<!-- PERSONAS -->
+
+<div class="stat-card">
+
+<span
+class="stat-number"
+data-target="5000"
+data-suffix="+">
+0
+</span>
+
+<div class="stat-label">
+Personas evaluadas
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
      NOSOTROS
 ========================= -->
 
@@ -2961,7 +3054,7 @@ class="about-card-button"
 onclick="mostrarAbout('vision-info', this)">
 
 <div class="about-card-icon">
-◈
+👁️
 </div>
 
 <h3>
@@ -2977,7 +3070,7 @@ class="about-card-button"
 onclick="mostrarAbout('valores-info', this)">
 
 <div class="about-card-icon">
-★
+⭐
 </div>
 
 <h3>
@@ -3096,113 +3189,6 @@ de calidad.
 
 </div>
 
-
-</section>
-
-
-<!-- ==================================================
-     ESTADÍSTICAS
-================================================== -->
-
-<section class="stats-section">
-
-<div class="stats-container">
-
-<h2 class="stats-title">
-Experiencia que respalda nuestro trabajo
-</h2>
-
-<p class="stats-subtitle">
-
-Nuestra trayectoria y experiencia nos permiten
-brindar servicios profesionales enfocados en la
-confianza, confidencialidad y calidad de la información.
-
-</p>
-
-
-<div class="stats-grid">
-
-
-<!-- PRUEBAS DE POLIGRAFÍA -->
-
-<div class="stat-card">
-
-<div class="stat-icon">
-◉
-</div>
-
-<div class="stat-number">
-+5,000
-</div>
-
-<div class="stat-label">
-Pruebas de Poligrafía
-</div>
-
-</div>
-
-
-<!-- ESTUDIOS SOCIOECONÓMICOS -->
-
-<div class="stat-card">
-
-<div class="stat-icon">
-▣
-</div>
-
-<div class="stat-number">
-+5,000
-</div>
-
-<div class="stat-label">
-Estudios Socioeconómicos
-</div>
-
-</div>
-
-
-<!-- AÑOS DE EXPERIENCIA -->
-
-<div class="stat-card">
-
-<div class="stat-icon">
-◆
-</div>
-
-<div class="stat-number">
-+10
-</div>
-
-<div class="stat-label">
-Años de experiencia
-</div>
-
-</div>
-
-
-<!-- PERSONAS EVALUADAS -->
-
-<div class="stat-card">
-
-<div class="stat-icon">
-●
-</div>
-
-<div class="stat-number">
-+5,000
-</div>
-
-<div class="stat-label">
-Personas evaluadas
-</div>
-
-</div>
-
-
-</div>
-
-</div>
 
 </section>
 
@@ -3538,8 +3524,6 @@ function mostrarAbout(id, boton) {
     document.querySelectorAll('.about-card-button');
 
 
-  /* Si ya está abierto, lo cerramos */
-
   const seleccionado =
     document.getElementById(id);
 
@@ -3557,8 +3541,6 @@ function mostrarAbout(id, boton) {
   }
 
 
-  /* Cerrar todos los contenidos */
-
   bloques.forEach(function(bloque) {
 
     bloque.classList.remove('active');
@@ -3566,16 +3548,12 @@ function mostrarAbout(id, boton) {
   });
 
 
-  /* Quitar estado activo de todos los botones */
-
   botones.forEach(function(botonItem) {
 
     botonItem.classList.remove('active');
 
   });
 
-
-  /* Abrir el seleccionado */
 
   if (seleccionado) {
 
@@ -3597,6 +3575,172 @@ function mostrarAbout(id, boton) {
     }, 50);
 
   }
+
+}
+
+
+/* =========================
+   CONTADORES ESTADÍSTICAS
+========================= */
+
+const contadores =
+  document.querySelectorAll('.stat-number');
+
+
+/*
+   Esta función reinicia todos los contadores
+   y vuelve a ejecutar la animación desde 0.
+*/
+
+function iniciarContadores() {
+
+  contadores.forEach(function(contador) {
+
+    const objetivo =
+      parseInt(contador.dataset.target);
+
+    const sufijo =
+      contador.dataset.suffix || "";
+
+    let actual = 0;
+
+    const duracion = 2200;
+
+    const intervalo = 25;
+
+    const pasos =
+      duracion / intervalo;
+
+    const incremento =
+      objetivo / pasos;
+
+
+    /*
+       Reiniciar el contador a cero
+       cada vez que entra nuevamente
+       en la pantalla.
+    */
+
+    contador.textContent = "0";
+
+    contador.classList.remove('counting');
+
+    /*
+       Forzar que el navegador vuelva a
+       reconocer la animación CSS.
+    */
+
+    void contador.offsetWidth;
+
+    contador.classList.add('counting');
+
+
+    const animacion =
+      setInterval(function() {
+
+        actual += incremento;
+
+
+        if (actual >= objetivo) {
+
+          actual = objetivo;
+
+          clearInterval(animacion);
+
+        }
+
+
+        contador.textContent =
+          Math.floor(actual).toLocaleString('es-GT')
+          + sufijo;
+
+      }, intervalo);
+
+  });
+
+}
+
+
+/* =========================
+   ANIMACIÓN CADA VEZ QUE
+   SE LLEGA A LA SECCIÓN
+========================= */
+
+const seccionEstadisticas =
+  document.getElementById('estadisticas');
+
+
+if ('IntersectionObserver' in window) {
+
+  const observador =
+    new IntersectionObserver(
+
+      function(entries) {
+
+        entries.forEach(function(entry) {
+
+          /*
+             Cuando la sección entra
+             nuevamente en pantalla,
+             reiniciamos los contadores.
+          */
+
+          if (entry.isIntersecting) {
+
+            iniciarContadores();
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold: 0.35
+      }
+
+    );
+
+
+  observador.observe(seccionEstadisticas);
+
+} else {
+
+  /*
+     Compatibilidad con navegadores
+     que no soporten IntersectionObserver.
+  */
+
+  let seccionVisibleAnterior = false;
+
+
+  window.addEventListener('scroll', function() {
+
+    const rect =
+      seccionEstadisticas.getBoundingClientRect();
+
+    const ventana =
+      window.innerHeight ||
+      document.documentElement.clientHeight;
+
+    const visible =
+      rect.top < ventana * 0.65 &&
+      rect.bottom > ventana * 0.35;
+
+
+    if (
+      visible &&
+      !seccionVisibleAnterior
+    ) {
+
+      iniciarContadores();
+
+    }
+
+
+    seccionVisibleAnterior = visible;
+
+  });
 
 }
 
