@@ -136,10 +136,6 @@ nav {
 
   animation:
     entradaLogo 1.4s ease-out forwards;
-
-  transition:
-    transform .35s ease,
-    filter .35s ease;
 }
 
 @keyframes entradaLogo {
@@ -191,7 +187,7 @@ nav {
 
 /* ANIMACIÓN AL PASAR EL MOUSE */
 
-.logo:hover {
+.logo:hover img {
   transform:
     translateY(-4px)
     scale(1.06);
@@ -1379,7 +1375,7 @@ h1 {
   width: 100%;
 
   padding:
-    70px 24px;
+    75px 24px 80px;
 
   background:
     linear-gradient(
@@ -1396,28 +1392,36 @@ h1 {
 }
 
 .stats-header {
-  max-width: 900px;
+  max-width: 1000px;
 
   margin:
-    0 auto 45px;
+    0 auto 55px;
 }
+
+
+/* TÍTULO MÁS GRANDE */
 
 .stats-eyebrow {
   margin:
-    0 0 8px;
+    0 0 12px;
 
   font-family:
     "Montserrat",
     Arial,
     sans-serif;
 
-  font-size: 38px;
+  font-size: 52px;
+
+  line-height: 1.1;
 
   letter-spacing: 2px;
 
   font-weight: 800;
 
   color: white;
+
+  text-shadow:
+    0 3px 8px rgba(0,0,0,.25);
 }
 
 .stats-header p {
@@ -1426,8 +1430,13 @@ h1 {
   color:
     rgba(255,255,255,.88);
 
-  font-size: 18px;
+  font-size: 19px;
 }
+
+
+/* =========================
+   ESTADÍSTICAS SIN RECUADROS
+========================= */
 
 .stats-grid {
   max-width: 1100px;
@@ -1439,31 +1448,26 @@ h1 {
   grid-template-columns:
     repeat(4, 1fr);
 
-  gap: 20px;
+  gap: 35px;
 }
 
+
+/* SE ELIMINA EL RECUADRO */
+
 .stat-card {
-  min-height: 190px;
+  min-height: 170px;
 
   padding:
-    30px 18px;
-
-  border-radius: 18px;
+    20px 12px;
 
   background:
-    rgba(255,255,255,.12);
+    transparent;
 
   border:
-    1px solid rgba(255,255,255,.28);
-
-  backdrop-filter:
-    blur(7px);
-
-  -webkit-backdrop-filter:
-    blur(7px);
+    none;
 
   box-shadow:
-    0 12px 35px rgba(0,0,0,.20);
+    none;
 
   display: flex;
 
@@ -1474,22 +1478,26 @@ h1 {
   justify-content: center;
 
   transition:
-    transform .3s ease,
-    background .3s ease,
-    box-shadow .3s ease;
+    transform .3s ease;
 }
+
+
+/* EFECTO AL PASAR EL MOUSE */
 
 .stat-card:hover {
   transform:
-    translateY(-7px)
-    scale(1.03);
+    translateY(-8px)
+    scale(1.04);
 
   background:
-    rgba(255,255,255,.18);
+    transparent;
 
   box-shadow:
-    0 20px 45px rgba(0,0,0,.28);
+    none;
 }
+
+
+/* NÚMERO */
 
 .stat-number {
   display: block;
@@ -1499,7 +1507,7 @@ h1 {
     Arial,
     sans-serif;
 
-  font-size: 48px;
+  font-size: 58px;
 
   line-height: 1;
 
@@ -1507,11 +1515,22 @@ h1 {
 
   color: white;
 
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 
   text-shadow:
-    0 3px 8px rgba(0,0,0,.25);
+    0 4px 10px rgba(0,0,0,.30);
+
+  transition:
+    transform .3s ease;
 }
+
+.stat-card:hover .stat-number {
+  transform:
+    scale(1.08);
+}
+
+
+/* TEXTO */
 
 .stat-label {
   font-size: 17px;
@@ -1525,6 +1544,8 @@ h1 {
   text-transform: uppercase;
 
   letter-spacing: .7px;
+
+  max-width: 220px;
 }
 
 
@@ -1534,16 +1555,16 @@ h1 {
 
 .stat-number.counting {
   animation:
-    aparecerNumero .35s ease;
+    aparecerNumero .45s ease;
 }
 
 @keyframes aparecerNumero {
 
   from {
-    opacity: .35;
+    opacity: .20;
 
     transform:
-      scale(.85);
+      scale(.75);
   }
 
   to {
@@ -1558,19 +1579,19 @@ h1 {
 
 /* ==================================================
    CONTACTO
-   MISMO ANCHO - MENOR ALTURA
+   AHORA OCUPA CASI TODO EL ANCHO
 ================================================== */
 
 .contact {
-  max-width: 1080px;
+  max-width: none;
 
-  width: calc(100% - 48px);
+  width: calc(100% - 24px);
 
   margin:
-    20px auto;
+    20px 12px;
 
   padding:
-    35px 24px 32px;
+    45px 30px 38px;
 
   background:
     #ffffff;
@@ -1586,10 +1607,10 @@ h1 {
 .contact-intro {
   text-align: center;
 
-  max-width: 700px;
+  max-width: 800px;
 
   margin:
-    0 auto 25px;
+    0 auto 30px;
 }
 
 .contact-intro .eyebrow {
@@ -1598,7 +1619,7 @@ h1 {
     Arial,
     sans-serif;
 
-  font-size: 34px;
+  font-size: 38px;
 
   letter-spacing: 2px;
 
@@ -1617,11 +1638,11 @@ h1 {
   margin:
     3px 0 8px;
 
-  font-size: 38px;
+  font-size: 40px;
 }
 
 .contact-intro p {
-  font-size: 17px;
+  font-size: 18px;
 
   margin:
     0;
@@ -1638,9 +1659,11 @@ h1 {
   grid-template-columns:
     repeat(3, 1fr);
 
-  gap: 18px;
+  gap: 22px;
 
-  max-width: 1020px;
+  width: 100%;
+
+  max-width: 1200px;
 
   margin: auto;
 }
@@ -2250,13 +2273,19 @@ footer {
 
   .stats-section {
     padding:
-      55px 16px;
+      60px 16px 65px;
   }
 
   .stats-eyebrow {
-    font-size: 30px;
+    font-size: 36px;
 
-    line-height: 1.2;
+    line-height: 1.15;
+
+    margin-bottom: 12px;
+  }
+
+  .stats-header {
+    margin-bottom: 40px;
   }
 
   .stats-header p {
@@ -2267,22 +2296,26 @@ footer {
     grid-template-columns:
       repeat(2, 1fr);
 
-    gap: 14px;
+    gap: 25px 10px;
   }
 
   .stat-card {
-    min-height: 165px;
+    min-height: 145px;
 
     padding:
-      25px 10px;
+      15px 8px;
   }
 
   .stat-number {
-    font-size: 38px;
+    font-size: 40px;
+
+    margin-bottom: 12px;
   }
 
   .stat-label {
-    font-size: 14px;
+    font-size: 13px;
+
+    max-width: 170px;
   }
 
 
@@ -2382,13 +2415,13 @@ footer {
 
   .contact {
     width:
-      calc(100% - 24px);
+      calc(100% - 16px);
 
     margin:
-      20px 12px;
+      16px 8px;
 
     padding:
-      35px 16px 28px;
+      35px 14px 28px;
 
     border-radius:
       20px;
@@ -2397,7 +2430,9 @@ footer {
   .contact-grid {
     grid-template-columns: 1fr;
 
-    max-width: 400px;
+    width: 100%;
+
+    max-width: 500px;
 
     gap: 16px;
   }
@@ -3738,7 +3773,7 @@ function iniciarContadores() {
   contadorActivo = true;
 
 
-  /* Cancelar cualquier animación anterior */
+  /* Cancelar animaciones anteriores */
 
   animacionesContadores.forEach(function(id) {
 
@@ -3770,7 +3805,9 @@ function iniciarContadores() {
     contador.classList.add('counting');
 
 
-    const duracion = 2200;
+    /* DURACIÓN MÁS LARGA */
+
+    const duracion = 4000;
 
     const inicio = performance.now();
 
@@ -3784,7 +3821,7 @@ function iniciarContadores() {
         );
 
 
-      /* Efecto suave de aceleración y desaceleración */
+      /* Aceleración y desaceleración suave */
 
       const progresoSuave =
         1 - Math.pow(1 - progreso, 3);
@@ -3835,14 +3872,13 @@ function iniciarContadores() {
 
     contadorActivo = false;
 
-  }, 2500);
+  }, 4300);
 
 }
 
 
 /* ==================================================
-   REINICIAR CONTADORES CADA VEZ QUE LA SECCIÓN
-   VUELVE A ENTRAR EN PANTALLA
+   REINICIAR CONTADORES AL VOLVER A LA SECCIÓN
 ================================================== */
 
 if ('IntersectionObserver' in window) {
